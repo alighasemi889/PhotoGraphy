@@ -14,6 +14,7 @@
       .non__active{
         display: none;
       }
+     
       .hamberger__show{
         /* display: block; */
         display: block;
@@ -66,5 +67,9 @@
       .rounded-xl{
         object-fit: contain;
       }
-      
+      #responsive__mobile{
+        position: relative;
+        left: 59px;
+        margin: 0 auto;
+      }
 }
