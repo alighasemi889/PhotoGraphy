@@ -1,4 +1,5 @@
 /*----------------- small screens responsive code--------------- */
+
 @media screen and (max-width:862px){
     .first__Section{
         display: flex;
@@ -78,3 +79,39 @@
         left: 0;
       }
 }
+/*----------------- big  screens responsive code--------------- */
+@media screen and (min-width:862px) and (max-width:1313px){
+  .non__active{
+    display: none;
+  }
+  .left__Wedding{
+    margin-right: 10px;
+  }
+  #logo__header{
+    position: absolute;
+        right: 4rem;
+        /* left: 10px; */
+        top: 1.1rem;
+  }
+    .left__position{
+      position: absolute;
+      // left: 0;
+      top: 10px;
+      left: 4px;
+  }
+  .hamberger__show{
+    position: absolute;
+    right: 0;
+  }
+  .desktop {
+    display: flex;
+    justify-content: space-around;
+  }
+  #hide__link{
+    display: none;
+  }
+  .sidebar{
+    display: flex;
+  }
+}
+
