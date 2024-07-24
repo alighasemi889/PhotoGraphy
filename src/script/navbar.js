@@ -79,4 +79,3 @@ function darkmode() {
     const dark = document.body;
     dark.classList.toggle("dark-mode")
 }
-// sidebar close outside
