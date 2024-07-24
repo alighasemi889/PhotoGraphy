@@ -1,0 +1,12 @@
+{
+  "name": "photography",
+  "version": "1.0.0",
+  "description": "In the name of god <img src=\"public/images/view.PNG\">",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ali-Ghasemi",
+  "license": "ISC"
+}
