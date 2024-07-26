@@ -138,7 +138,7 @@
     transition: 1.2s ease-out;
   }
   button.bg__color.color__txt {
-    width: 100px;
+    width: calc(200px - 100px);
     padding: 12px;
     line-height: 1.2;
     font-size: 16px;
@@ -159,6 +159,7 @@
     border-radius: 10px;
     border: none;
     padding: 10px;
+    font-size: 1.2rem;
   }
   .wrapper__btn {
     display: flex;

@@ -32,7 +32,8 @@ Here're some of the project's best features:
 
 <h2>🛠️ Installation Steps:</h2>
 
-<p>1. use it very simple</p>
+<p>1. Import it rapdly </p>
+<p>1. In this version , there is not any special depedencies😎</p>
 
 ```
 
@@ -61,6 +62,6 @@ This project is licensed under the Code-master\_\_movie
 
 <h2>💖Like my work?</h2>
 
-If you have any question you can send a messsage to :alihj4223@gmail.com
+If you have any question you can send a messsage to : alihj4223@gmail.com
  
 

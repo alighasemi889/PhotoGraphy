@@ -1,3 +1,4 @@
+"use strict";
 // loader part
 // Create a function to display the loader
 function showLoader() {
@@ -44,7 +45,7 @@ function closesidebar() {
     sidebar.style.transition = '3.s ease-out'
 }
 // typewriter text 
-const words = ["خوش امدید", "به سایت ما خوش آمدید", "به وب سایت ما خوش آمدید"];
+const words = ["خوش آمدید", "به سایت ما خوش آمدید", "به وب سایت ما خوش آمدید"];
 let i = 0;
 let j = 0;
 let currentWord = "";
