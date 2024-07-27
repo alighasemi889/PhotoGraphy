@@ -80,3 +80,21 @@ function darkmode() {
     const dark = document.body;
     dark.classList.toggle("dark-mode")
 }
+// modal user and manager probably apply
+// function closemodel(){
+//   const btn = document.getElementById("user__choose");
+//   const model = document.getElementById("YOUR_ID");
+//   btn.addEventListener("click",modelclose());
+// }
+// function modelclose() {
+//   const btn = document.getElementById("user__choose");
+//   const model = document.getElementById("YOUR_ID");
+//     model.style.display = "none";
+// }
+
+// const btn_close = document.getElementById("user__choose");
+// const btn__model = document.getElementById("YOUR_ID");
+// btn__close.addEventListener('click',closemodal());
+// function closemodal() {
+// btn__model.style.display = "none";
+// }
