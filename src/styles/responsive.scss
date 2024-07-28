@@ -100,8 +100,9 @@
       left: 4px;
   }
   .hamberger__show{
-    position: absolute;
-    right: 0;
+    // position: absolute;
+    // right: 0;
+    display: none;
   }
   .desktop {
     display: flex;

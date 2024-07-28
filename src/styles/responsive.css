@@ -15,6 +15,7 @@
     display: none;
   }
   .hamberger__show {
+    /* display: block; */
     display: block;
     position: absolute;
     right: 0;
@@ -47,7 +48,7 @@
   }
   .left__Wedding {
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
     padding: unset;
     object-fit: cover;
     padding: unset;
@@ -78,11 +79,6 @@
     left: 0;
   }
 }
-@media screen and (min-width:1314px){
-  .hamberger__show{
-    display: none;
-  }
-}
 /*----------------- big  screens responsive code--------------- */
 @media screen and (min-width: 862px) and (max-width: 1313px) {
   .non__active {
@@ -94,6 +90,7 @@
   #logo__header {
     position: absolute;
     right: 4rem;
+    /* left: 10px; */
     top: 1.1rem;
   }
   .left__position {
@@ -102,8 +99,7 @@
     left: 4px;
   }
   .hamberger__show {
-    position: absolute;
-    right: 0;
+    display: none;
   }
   .desktop {
     display: flex;
@@ -115,4 +111,4 @@
   .sidebar {
     display: flex;
   }
-}
+}/*# sourceMappingURL=responsive.css.map */

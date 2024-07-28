@@ -6,62 +6,35 @@
     <title>درباره با ما</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="src/styles/style.css">
-
+    <style>
+      .map {
+    /* position: relative; */
+    text-align: right;
+    width: 100%;
+    height: 829px;
+    position: absolute;
+}
+    </style>
 </head>
 <body>
-  <ul id="sidebar" class="desktop sidebar__right">
-    <div class="img__header">
-        <img id="logo__header" src="public/images/logo.png" alt="logo__header" loading="lazy" width="100px" height="100px">
-    </div>
-    <div class="close">
-      <li onclick="closesidebar()"><a href="#">
-        <img class="close__img__sidebar" src="public/images/icons8-close-64 (1).png" alt="close" loading="lazy">
-      </a></li>
-    </div>
-    <!-- <label class="ui-switch">
-        <input onclick="darkmode()" type="checkbox">
-        <div class="slider">
-          <div class="circle"></div>
-        </div>
-      </label> -->
-      
-    <li><a class="active__link" href="#">آتلیه عکاسی طوس استودیو</a></li>
-    <li><a href="#">خدمات و پکیج ها</a></li>
-    <li><a href="#">لوکیشن ها</a></li>
-    <li><a href="#">نمونه کار های طوس</a></li>
-    <li><a href="contactus.html">ارتباط با ما</a></li>
-    <li><a href="#">مراحل عقد قرارداد</a></li>
-    <li><a href="#">مقالات</a></li>
-    <div class="wrapper__btn__header">
-        <a href="#">
-            <div class="btn__ header__btn">
-                <a href="login.html">
-                    <button id="responsive__mobile" class="bg__color color__txt sidebar__btn res__mobile">تماس با ما</button>
-
-                </a>
-            </div>
-        </a>
-    </div>
-</ul>
-   <!-- main component -->
+ 
 <section class="text-gray-600 body-font relative">
-    <div class="absolute inset-0 bg-gray-300">
-      <iframe width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="map" scrolling="no" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed" style=""></iframe>
-    </div>
+  <iframe class="map" width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=100%&amp;height=200%&amp;hl=en&amp;q=IRAN,TEHRAN%20+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <a href='https://www.acadoo.de/'>Doktorarbeit Writer</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=49f63ed43103276ccd688cae04a97636d4e10a4f'></script>
     <div class="container px-5 py-24 mx-auto flex">
       <div class="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
         <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">نظرات</h2>
-        <p class="leading-relaxed mb-5 text-gray-600">Post-ironic portland shabby chic echo park, banjo fashion axe</p>
+        <p class="leading-relaxed mb-5 text-gray-600">نظرات خود را بگویید</p>
         <div class="relative mb-4">
           <label for="email" class="leading-7 text-sm text-gray-600">ایمیل</label>
           <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
         </div>
+        
         <div class="relative mb-4">
           <label for="message" class="leading-7 text-sm text-gray-600">پیام</label>
           <textarea id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
         </div>
-        <button class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-        <p class="text-xs text-gray-500 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p>
+        <button class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">ارسال</button>
+        <p class="text-xs text-gray-500 mt-3">پیام خود را برای ما وارد کنید</p>
       </div>
     </div>
   </section>
