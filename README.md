@@ -14,6 +14,9 @@ In the name of god
 
 <h2>🚀 Demo</h2>
 
+
+https://alighasemi889.github.io/PhotoGraphy/
+
 <h2>Project Screenshots:</h2>
 
 <img src="public/images/view.PNG">
@@ -35,9 +38,7 @@ Here're some of the project's best features:
 <p>1. Run npm install </p>
 <p>1. Run npm run build</p>
 
-```
 
-```
 
 <h2>🍰 Contribution Guidelines:</h2>
 
