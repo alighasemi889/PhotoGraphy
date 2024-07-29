@@ -80,21 +80,24 @@ function darkmode() {
     const dark = document.body;
     dark.classList.toggle("dark-mode")
 }
-// modal user and manager probably apply
-// function closemodel(){
-//   const btn = document.getElementById("user__choose");
-//   const model = document.getElementById("YOUR_ID");
-//   btn.addEventListener("click",modelclose());
-// }
-// function modelclose() {
-//   const btn = document.getElementById("user__choose");
-//   const model = document.getElementById("YOUR_ID");
-//     model.style.display = "none";
-// }
 
-// const btn_close = document.getElementById("user__choose");
-// const btn__model = document.getElementById("YOUR_ID");
-// btn__close.addEventListener('click',closemodal());
-// function closemodal() {
-// btn__model.style.display = "none";
-// }
+// ----------------------show the modal------------
+const show_modal_btn = document.getElementById("show_modal");
+const login = document.getElementById("login-popup");
+const change_position = document.getElementById("left__position");
+show_modal_btn.onclick = function indicate_form() {
+   login.style.display = "block";
+    change_position.style.right = "34rem";
+    change_position.style.top = "3rem";
+   
+}
+const login2 = document.getElementById("login-popup");
+const change_position2 = document.getElementById("left__position");
+const btn2 = docuemnt.getElementById("btn__close");
+btn2.onclick = function closeali() {
+  login2.style.display ="none";
+  
+}
+
+
+

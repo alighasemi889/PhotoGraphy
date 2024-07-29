@@ -20,11 +20,12 @@
 
 html {
   line-height: 1.125;
+  font-family: "Vazir";
 }
 
 @font-face {
   font-family: "Vazir";
-  src: url(../font/Vazir-Light-FD-WOL.ttf);
+  src: url(../font/Vazir-FD-WOL.woff2);
 }
 :root {
   --white:#fff;
@@ -38,7 +39,7 @@ html {
 }
 
 body {
-  font-family: Vazir;
+  font-family: "Vazir";
   overflow-x: hidden;
   font-weight: 700;
   font-size: 15px;
@@ -116,7 +117,7 @@ a:is(:hover) {
   justify-content: center;
 }
 
-.left__Wedding {
+/* .left__Wedding {
   overflow: hidden;
   max-width: 100%;
   width: 1600px;
@@ -126,7 +127,7 @@ a:is(:hover) {
   margin: 40px 0 0 0;
   border-radius: 1rem;
   border-radius: 10px;
-}
+} */
 
 ul.desktop.sidebar__right {
   animation: slide-in 0.5s ease-out forwards; /* adjust the animation duration and easing to your liking */
@@ -540,4 +541,8 @@ ul {
 .example-2 .icon-content a[data-social=telegram] .filled,
 .example-2 .icon-content a[data-social=telegram] ~ .tooltip {
   background-color: #0088cc;
+}
+
+#login-popup {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

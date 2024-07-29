@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="src/styles/tailwindbase.css">
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -23,7 +24,93 @@
 <div id="loader-container">
     <div id="loader-text">در حال بارگذاری</div>
   </div>
-  
+  <div id="login-popup" tabindex="-1"
+    class="bg-black/50 overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 h-full items-center justify-center flex">
+    <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+
+        <div id="left__position" class="relative bg-white rounded-lg shadow">
+            <button onclick="closeali()" id="btn__close" type="button"
+                class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center popup-close"><svg
+                    aria-hidden="true" class="w-5 h-5" fill="#c6c7c7" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        cliprule="evenodd"></path>
+                </svg>
+                <span  class="sr-only">Close popup</span>
+            </button>
+
+            <div class="p-5">
+                <h3 class="text-2xl mb-0.5 font-medium"></h3>
+                <p class="mb-4 text-sm font-normal text-gray-800"></p>
+
+                <div class="text-center">
+                    <p class="mb-3 text-2xl font-semibold leading-5 text-slate-900">
+                      به اکانت خود ورود کنید
+                    </p>
+                    <p class="mt-2 text-sm leading-4 text-slate-600">
+                       باید ورود کنید وگرنه نمیتوانید دسترسی داشته باشید
+                    </p>
+                </div>
+
+                <div class="mt-7 flex flex-col gap-2">
+
+                    <button
+                        class="inline-flex h-10 w-full items-center justify-center gap-2 rounded border border-slate-300 bg-white p-2 text-sm font-medium text-black outline-none focus:ring-2 focus:ring-[#333] focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-60"><img
+                            src="https://www.svgrepo.com/show/512317/github-142.svg" alt="GitHub"
+                            class="h-[18px] w-[18px] ">
+                        ادامه با گیت هاب
+                    </button>
+
+                    <button
+                        class="inline-flex h-10 w-full items-center justify-center gap-2 rounded border border-slate-300 bg-white p-2 text-sm font-medium text-black outline-none focus:ring-2 focus:ring-[#333] focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-60"><img
+                            src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google"
+                            class="h-[18px] w-[18px] ">Continue with
+                        Google
+                    </button>
+
+
+                    <button
+                        class="inline-flex h-10 w-full items-center justify-center gap-2 rounded border border-slate-300 bg-white p-2 text-sm font-medium text-black outline-none focus:ring-2 focus:ring-[#333] focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-60"><img
+                            src="https://www.svgrepo.com/show/448234/linkedin.svg" alt="Google"
+                            class="h-[18px] w-[18px] ">ادامه با لینکدین
+                    </button>
+                </div>
+
+                <div class="flex w-full items-center gap-2 py-6 text-sm text-slate-600">
+                    <div class="h-px w-full bg-slate-200"></div>
+                    OR
+                    <div class="h-px w-full bg-slate-200"></div>
+                </div>
+
+
+                <form class="w-full">
+                    <label for="email" class="sr-only">ایمیل</label>
+                    <input name="email" type="email" autocomplete="email" required=""
+                        class="block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1"
+                        placeholder="ایمیل" value="">
+                    <label for="password" class="sr-only">رمز</label>
+                    <input name="password" type="password" autocomplete="current-password" required=""
+                        class="mt-2 block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1"
+                        placeholder="رمز " value="" maxlength="12" minlength="5">
+                    <p class="mb-3 mt-2 text-sm text-gray-500">
+                        <a href="/forgot-password" class="text-blue-800 hover:text-blue-600">بازگردانی رمز</a>
+                    </p>
+                    <button type="submit"
+                        class="inline-flex w-full items-center justify-center rounded-lg bg-black p-2 py-3 text-sm font-medium text-white outline-none focus:ring-2 focus:ring-black focus:ring-offset-1 disabled:bg-gray-400">
+                        ادامه
+                    </button>
+                </form>
+
+                <div class="mt-6 text-center text-sm text-slate-600">
+                  اکانت ندارم؟
+                    <a href="/signup" class="font-medium text-[#4285f4]">ثبت نام</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
   
     <!---------------- Header start----------------- -->
     <header>
@@ -44,12 +131,13 @@
                     <a href="#">
                         <div class="btn__ header__btn">
                             <a href="login.html">
-                                <button class="bg__color color__txt left__position">تماس با ما</button>
-
+                                <button onclick="indicate_form()" id="show_modal" class="button is-dark bg__color color__txt left__position">تماس با ما</button>
                             </a>
                         </div>
+                        
                     </a>
                 </div>
+                
             </ul>
             <ul id="sidebar" class="desktop sidebar__right">
                 <div class="img__header">
@@ -100,7 +188,7 @@
                         <br>
                          <span class="yellow">عروس و داماد</span></h3>
                 </div>
-                <h3 class="des">
+                <h3 class="header_title">
                     به استودیو عکاسی طوس خوش امدید!
                     <br>
     بانهایت افتخار و سربلندی اعلام می‌ کنیم که تونستیم لحظات خوب و ماندگار زیادی رو برای عروس و دامادهای سراسر ایران به تصویر بکشیم.
@@ -113,7 +201,7 @@
                
             </div>
             <div class="left__img">
-                <img  class="animate__animated animate__backInLeft left__Wedding" src="public/images/e3-1.jpg" alt="wedding" loading="lazy">
+                <img  class="animate__animated animate__backInLeft wal_hpicture_left" src="public/images/e3-1.jpg" alt="wedding" loading="lazy">
             </div>
         </div>
             </h3>
@@ -349,7 +437,7 @@
         <h2 class="title__wireframe">
             نمونه کار های فیلمبرداری عروس و داماد
         </h2>
-        <h3 class="explain__wireframe">
+        <h3 class="wire__txt">
             در این بخش می‌توانید به  نمونه‌کارهای بی‌نظیر فیلمبرداری و عکاسی عروس و داماد از آتلیه طوس استودیو دسترسی سریع داشته باشید.
         </h3>
         <div class="wireframe__Section">
@@ -590,6 +678,74 @@
         </div>
     
     </div>
+    <section>
+        <div class="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-16 max-w-7xl lg:py-24">
+          <div class="flex w-full mx-auto text-left">
+            <div class="relative inline-flex items-center mx-auto align-middle">
+              <div class="text-center">
+                <h1 class="max-w-5xl text-2xl font-bold leading-none tracking-tighter text-neutral-600 md:text-5xl lg:text-6xl lg:max-w-7xl">
+                  در این ماجراجویی همراه ما باش <br class="hidden lg:block">
+                و در این مسیر لذت ببر
+                </h1>
+                <p class="max-w-xl mx-auto mt-8 text-base leading-relaxed text-gray-500">با بهترین آتلیه عکاسی همراه ما باش و لذت ببر</p>
+                <div class="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
+                  <div class="mt-3 rounded-lg sm:mt-0">
+                    <button class="px-5 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 lg:px-10 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">ثبت نام</button>
+                  </div>
+                  <div class="mt-3 rounded-lg sm:mt-0 sm:ml-3">
+                    <button class="items-center block px-5 lg:px-10 py-3.5 text-base font-medium text-center text-blue-600 transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">امکانات</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-700 body-font">
+        <div class="flex justify-center mt-10 text-4xl font-regular">
+           چرا آتلیه ما؟
+        </div>
+        <div class="container px-5 py-12 mx-auto">
+          <div class="flex flex-wrap text-center justify-center">
+            <div class="p-4 md:w-1/4 sm:w-1/2">
+              <div class="px-4 py-6 transform transition duration-500 hover:scale-110">
+                <div class="flex justify-center">
+                  <img src="https://image3.jdomni.in/banner/13062021/58/97/7C/E53960D1295621EFCB5B13F335_1623567851299.png?output-format=webp" class="w-32 mb-3">
+                </div>
+                <h2 class="title-font font-regular text-2xl text-gray-900">افراد مجرب</h2>
+              </div>
+            </div>
+      
+            <div class="p-4 md:w-1/4 sm:w-1/2">
+              <div class="px-4 py-6 transform transition duration-500 hover:scale-110">
+                <div class="flex justify-center">
+                  <img src="https://image2.jdomni.in/banner/13062021/3E/57/E8/1D6E23DD7E12571705CAC761E7_1623567977295.png?output-format=webp" class="w-32 mb-3">
+                </div>
+                <h2 class="title-font font-regular text-2xl text-gray-900">رتبه بالا</h2>
+              </div>
+            </div>
+      
+            <div class="p-4 md:w-1/4 sm:w-1/2">
+              <div class="px-4 py-6 transform transition duration-500 hover:scale-110">
+                <div class="flex justify-center">
+                  <img src="https://image3.jdomni.in/banner/13062021/16/7E/7E/5A9920439E52EF309F27B43EEB_1623568010437.png?output-format=webp" class="w-32 mb-3">
+                </div>
+                <h2 class="title-font font-regular text-2xl text-gray-900">سریع و چابک</h2>
+              </div>
+            </div>
+      
+            <div class="p-4 md:w-1/4 sm:w-1/2">
+              <div class="px-4 py-6 transform transition duration-500 hover:scale-110">
+                <div class="flex justify-center">
+                  <img src="https://image3.jdomni.in/banner/13062021/EB/99/EE/8B46027500E987A5142ECC1CE1_1623567959360.png?output-format=webp" class="w-32 mb-3">
+                </div>
+                <h2 class="title-font font-regular text-2xl text-gray-900">تجربه موفق</h2>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </section>
     <div data-aos="flip-up" class="mx-auto mt-32 max-w-7xl px-6 sm:mt-56 lg:px-8">
         <div
             class="relative isolate overflow-hidden bg-gray-900 px-6 py-24 shadow-2xl rounded-2xl sm:rounded-3xl sm:px-24 xl:py-32">
@@ -724,9 +880,9 @@
       
       </main>
       <!------------------------ finish main section---------------- -->
-      </body>
-        <!-- faq place -->
+      </body>             
     </main>
+   
     <!-- footer part -->
     <div class="bg-gray-100">
         <div class="max-w-screen-lg px-4 sm:px-6 text-gray-800 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto">
@@ -735,15 +891,15 @@
             </div>
             <div class="p-5">
                 <div class="text-sm uppercase text-indigo-600 font-bold">بلاگ</div>
-                <a class="my-3 block" href="/#">Documentation <span class="text-teal-600 text-xs p-1"></span></a><a
-                    class="my-3 block" href="/#">Tutorials <span class="text-teal-600 text-xs p-1"></span></a><a
-                    class="my-3 block" href="/#">Support <span class="text-teal-600 text-xs p-1">New</span></a>
+                <a class="my-3 block" href="/#">فعلی <span class="text-teal-600 text-xs p-1"></span></a><a
+                    class="my-3 block" href="/#">فعلی <span class="text-teal-600 text-xs p-1"></span></a><a
+                    class="my-3 block" href="/#">فعلی <span class="text-teal-600 text-xs p-1">به زودی</span></a>
             </div>
             <div class="p-5">
                 <div class="text-sm uppercase text-indigo-600 font-bold">لینک های مفید</div>
-                <a class="my-3 block" href="/#">Help Center <span class="text-teal-600 text-xs p-1"></span></a><a
-                    class="my-3 block" href="/#">Privacy Policy <span class="text-teal-600 text-xs p-1"></span></a><a
-                    class="my-3 block" href="/#">Conditions <span class="text-teal-600 text-xs p-1"></span></a>
+                <a class="my-3 block" href="/#">فعلی <span class="text-teal-600 text-xs p-1"></span></a><a
+                    class="my-3 block" href="/#">فعلی <span class="text-teal-600 text-xs p-1"></span></a><a
+                    class="my-3 block" href="/#">فعلی <span class="text-teal-600 text-xs p-1"></span></a>
             </div>
             <div class="p-5">
                 <div class="text-sm uppercase text-indigo-600 font-bold">ارتباط با ما</div>
@@ -852,15 +1008,19 @@
             </div>
             <div class="my-5">تمامی حق و حقوق متعلق به سایت میباشد</div>
         </div>
+        
     </div>
     
     <!-- Credit: Componentity.com -->
         <!----------------------- javascript scripts ---------------- -->
+        
         <script src="src/script/main.js"></script>
         <!---------------------- Aos for animation base on scrool--------------- -->
         <script>
         AOS.init();
        </script>
+     
+       
 
 </body>
 

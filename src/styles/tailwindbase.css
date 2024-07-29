@@ -1,0 +1,45 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-center {
+    text-align: center;
+  }
+  .header_title{
+    font-size: 0.98rem;
+    width: 80%;
+    line-height: 1.5;
+    max-width: 100%;
+    color: rgba(51, 51, 51, 0.65);
+    white-space: collapse;
+    padding-top: 10px;
+    overflow: initial;
+  }
+ .font18{
+    font-size: 18px;
+  }
+  .white-color{
+    color: white;
+  }
+  .flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .wire__txt{
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .wal_hpicture_left{
+    overflow: hidden;
+    max-width: 100%;
+    width: 1600px;
+    margin: 40px 0 0 0;
+    border-radius: 10px;
+    padding-left: 30px;
+    margin: 40px 0 0 0;
+    border-radius: 1rem;
+    border-radius: 10px;
+  }
