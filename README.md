@@ -32,8 +32,8 @@ Here're some of the project's best features:
 
 <h2>🛠️ Installation Steps:</h2>
 
-<p>1. Import it rapdly </p>
-<p>1. In this version , there is not any special depedencies😎</p>
+<p>1. Run npm install </p>
+<p>1. Run npm run build</p>
 
 ```
 
@@ -54,6 +54,7 @@ Technologies used in the project:
 *   CSS3
 *   Aos
 *   SASS
+*   jquery
 *   Tailwind
 
 <h2>🛡️ License:</h2>
