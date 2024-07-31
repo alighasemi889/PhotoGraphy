@@ -8,6 +8,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="src/styles/style.css">
     <link rel="stylesheet" href="src/styles/tailwindbase.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -24,94 +25,6 @@
 <div id="loader-container">
     <div id="loader-text">در حال بارگذاری</div>
   </div>
-  <div id="login-popup" tabindex="-1"
-    class="bg-black/50 overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 h-full items-center justify-center flex">
-    <div class="relative p-4 w-full max-w-md h-full md:h-auto">
-
-        <div id="left__position" class="relative bg-white rounded-lg shadow">
-            <button onclick="closeali()" id="btn__close" type="button"
-                class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center popup-close"><svg
-                    aria-hidden="true" class="w-5 h-5" fill="#c6c7c7" viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                        cliprule="evenodd"></path>
-                </svg>
-                <span  class="sr-only">Close popup</span>
-            </button>
-
-            <div class="p-5">
-                <h3 class="text-2xl mb-0.5 font-medium"></h3>
-                <p class="mb-4 text-sm font-normal text-gray-800"></p>
-
-                <div class="text-center">
-                    <p class="mb-3 text-2xl font-semibold leading-5 text-slate-900">
-                      به اکانت خود ورود کنید
-                    </p>
-                    <p class="mt-2 text-sm leading-4 text-slate-600">
-                       باید ورود کنید وگرنه نمیتوانید دسترسی داشته باشید
-                    </p>
-                </div>
-
-                <div class="mt-7 flex flex-col gap-2">
-
-                    <button
-                        class="inline-flex h-10 w-full items-center justify-center gap-2 rounded border border-slate-300 bg-white p-2 text-sm font-medium text-black outline-none focus:ring-2 focus:ring-[#333] focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-60"><img
-                            src="https://www.svgrepo.com/show/512317/github-142.svg" alt="GitHub"
-                            class="h-[18px] w-[18px] ">
-                        ادامه با گیت هاب
-                    </button>
-
-                    <button
-                        class="inline-flex h-10 w-full items-center justify-center gap-2 rounded border border-slate-300 bg-white p-2 text-sm font-medium text-black outline-none focus:ring-2 focus:ring-[#333] focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-60"><img
-                            src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google"
-                            class="h-[18px] w-[18px] ">Continue with
-                        Google
-                    </button>
-
-
-                    <button
-                        class="inline-flex h-10 w-full items-center justify-center gap-2 rounded border border-slate-300 bg-white p-2 text-sm font-medium text-black outline-none focus:ring-2 focus:ring-[#333] focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-60"><img
-                            src="https://www.svgrepo.com/show/448234/linkedin.svg" alt="Google"
-                            class="h-[18px] w-[18px] ">ادامه با لینکدین
-                    </button>
-                </div>
-
-                <div class="flex w-full items-center gap-2 py-6 text-sm text-slate-600">
-                    <div class="h-px w-full bg-slate-200"></div>
-                    OR
-                    <div class="h-px w-full bg-slate-200"></div>
-                </div>
-
-
-                <form class="w-full">
-                    <label for="email" class="sr-only">ایمیل</label>
-                    <input name="email" type="email" autocomplete="email" required=""
-                        class="block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1"
-                        placeholder="ایمیل" value="">
-                    <label for="password" class="sr-only">رمز</label>
-                    <input name="password" type="password" autocomplete="current-password" required=""
-                        class="mt-2 block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1"
-                        placeholder="رمز " value="" maxlength="12" minlength="5">
-                    <p class="mb-3 mt-2 text-sm text-gray-500">
-                        <a href="/forgot-password" class="text-blue-800 hover:text-blue-600">بازگردانی رمز</a>
-                    </p>
-                    <button type="submit"
-                        class="inline-flex w-full items-center justify-center rounded-lg bg-black p-2 py-3 text-sm font-medium text-white outline-none focus:ring-2 focus:ring-black focus:ring-offset-1 disabled:bg-gray-400">
-                        ادامه
-                    </button>
-                </form>
-
-                <div class="mt-6 text-center text-sm text-slate-600">
-                  اکانت ندارم؟
-                    <a href="/signup" class="font-medium text-[#4285f4]">ثبت نام</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-  
     <!---------------- Header start----------------- -->
     <header>
         <nav>
@@ -780,102 +693,60 @@
     
         </div>
     </div>
-    <div class="bg-gray-100">
-        <div class="container mx-auto px-4 py-8">
-            <h1 class="text-4xl font-bold text-center mb-8">لوکیشن های عروسی</h1>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <!-- Large item  && picture-->
-                <div class="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="public/images/location__one.jpg" alt="Nature" class="w-full h-full object-cover" loading="lazy">
-                    <div
-                        class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div class="absolute bottom-0 left-0 right-0 p-4">
-                            <h3 class="text-2xl font-bold text-white">Explore Nature</h3>
-                            <p class="text-white">Discover the beauty of the natural world</p>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Two small items -->
-                <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="public/images/comment3.jpg" alt="Food" class="w-full h-48 object-cover" loading="lazy">
-                    <div
-                        class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div class="absolute bottom-0 left-0 right-0 p-4">
-                            <h4 class="text-xl font-bold text-white">Culinary Delights</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="public/images/comment__one.jpg" alt="Technology" class="w-full h-48 object-cover" loading="lazy">
-                    <div
-                        class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div class="absolute bottom-0 left-0 right-0 p-4">
-                            <h4 class="text-xl font-bold text-white">Tech Innovations</h4>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Three medium items -->
-                <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="public/images/comment4.jpg" alt="Travel" class="w-full h-48 object-cover" loading="lazy">
-                    <div
-                        class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div class="absolute bottom-0 left-0 right-0 p-4">
-                            <h4 class="text-xl font-bold text-white">Travel Adventures</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="public/images/comment2.jpg" alt="Art" class="w-full h-48 object-cover" loading="lazy">
-                    <div
-                        class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div class="absolute bottom-0 left-0 right-0 p-4">
-                            <h4 class="text-xl font-bold text-white">Artistic Expressions</h4>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- bottom cards -->
-                <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="public/images/comment3.jpg" alt="Sport" class="w-full h-48 object-cover" loading="lazy">
-                    <div
-                        class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div class="absolute bottom-0 left-0 right-0 p-4">
-                            <h4 class="text-xl font-bold text-white">Swimming</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="public/images/comment_five.jpg" alt="Sport" class="w-full h-48 object-cover" loading="lazy">
-                    <div
-                        class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div class="absolute bottom-0 left-0 right-0 p-4">
-                            <h4 class="text-xl font-bold text-white">Chess</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="public/images/location__second.jpg" alt="Sport" class="w-full h-48 object-cover" loading="lazy">
-                    <div
-                        class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div class="absolute bottom-0 left-0 right-0 p-4">
-                            <h4 class="text-xl font-bold text-white">Football</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                    <img src="public/images/location__one.jpg" alt="Sport" class="w-full h-48 object-cover" loading="lazy">
-                    <div
-                        class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div class="absolute bottom-0 left-0 right-0 p-4">
-                            <h4 class="text-xl font-bold text-white">Cricket</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
+   
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="grid gap-4">
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
         </div>
-    </div>     
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
+        </div>
+    </div>
+    <div class="grid gap-4">
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="">
+        </div>
+    </div>
+    <div class="grid gap-4">
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
+        </div>
+    </div>
+    <div class="grid gap-4">
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+                
+            
+    
+            
+            
       
       
       </main>
@@ -1011,10 +882,10 @@
         
     </div>
     
-    <!-- Credit: Componentity.com -->
+   
         <!----------------------- javascript scripts ---------------- -->
-        
         <script src="src/script/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
         <!---------------------- Aos for animation base on scrool--------------- -->
         <script>
         AOS.init();

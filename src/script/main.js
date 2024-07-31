@@ -81,23 +81,7 @@ function darkmode() {
     dark.classList.toggle("dark-mode")
 }
 
-// ----------------------show the modal------------
-const show_modal_btn = document.getElementById("show_modal");
-const login = document.getElementById("login-popup");
-const change_position = document.getElementById("left__position");
-show_modal_btn.onclick = function indicate_form() {
-   login.style.display = "block";
-    change_position.style.right = "34rem";
-    change_position.style.top = "3rem";
-   
-}
-const login2 = document.getElementById("login-popup");
-const change_position2 = document.getElementById("left__position");
-const btn2 = docuemnt.getElementById("btn__close");
-btn2.onclick = function closeali() {
-  login2.style.display ="none";
-  
-}
+
 
 
 
