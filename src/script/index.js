@@ -40,12 +40,20 @@ function type() {
 type();
 // --------------------dark mode toggle----------------
 
-function darkmode() {
-    const dark = document.body;
-    dark.classList.toggle("dark-mode")
+// function darkmode() {
+//     const dark = document.body;
+//     dark.classList.toggle("dark-mode")
+// }
+const scroolTop = () => {
+  window.scrollTo({
+    top : 0,
+    behavior : 'smooth',
+  
+  })
 }
 
-
-
-
-
+const btn__form = document.getElementById("show_modal");
+const form_modal = document.getElementById("main__form");
+btn__form.onclick = function click() {
+  form_modal.style.display = "block"
+}

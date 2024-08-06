@@ -1,104 +1,147 @@
+<!-- component -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .form {
-  background-color: #fff;
-  display: block;
-  padding: 1rem;
-  max-width: 350px;
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-.form-title {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-weight: 600;
-  text-align: center;
-  color: #000;
-}
-
-.input-container {
-  position: relative;
-}
-
-.input-container input, .form button {
-  outline: none;
-  border: 1px solid #e5e7eb;
-  margin: 8px 0;
-}
-
-.input-container input {
-  background-color: #fff;
-  padding: 1rem;
-  padding-right: 3rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  width: 300px;
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-}
-
-.submit {
-  display: block;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  background-color: #4F46E5;
-  color: #ffffff;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 500;
-  width: 100%;
-  border-radius: 0.5rem;
-  text-transform: uppercase;
-}
-
-.signup-link {
-  color: #6B7280;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  text-align: center;
-}
-
-.signup-link a {
-  text-decoration: underline;
-}
-.center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-    </style>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
 </head>
+
 <body>
-    <div class="center">
-        <form class="form">
-            <p class="form-title">به اکانت خود ورود کنید</p>
-             <div class="input-container">
-               <input type="email" placeholder="ایمیل را وارد کنید">
-               <span>
-               </span>
-           </div>
-           <div class="input-container">
-               <input type="password" placeholder="رمز را وارد کنید">
-             </div>
-              <button type="submit" class="submit">
-          ورود
-           </button>
-     
-           <p class="signup-link">
-             اکانت ندارم ?
-             <a href="signup.html">ثبت نام</a>
-           </p>
+  <div class="min-h-screen flex flex-col items-center justify-center bg-gray-100">
+    <div class="
+          flex flex-col
+          bg-white
+          shadow-md
+          px-4
+          sm:px-6
+          md:px-8
+          lg:px-10
+          py-8
+          rounded-3xl
+          w-50
+          max-w-md
+        ">
+      <div class="font-medium self-center text-xl sm:text-3xl text-gray-800">
+        خوش آمدید
+      </div>
+      <div class="mt-4 self-center text-xl sm:text-sm text-gray-800">
+        اطلاعات خود را وارد کنید
+      </div>
+
+      <div class="mt-10">
+        <form onsubmit="validform()" id="myform" action="#">
+          <div class="flex flex-col mb-5">
+            <label for="email" class="mb-1 text-xs tracking-wide text-gray-600">ایمیل:</label>
+            <div class="relative">
+              <div class="
+                    inline-flex
+                    items-center
+                    justify-center
+                    absolute
+                    left-0
+                    top-0
+                    h-full
+                    w-10
+                    text-gray-400
+                  ">
+                <i class="fas fa-at text-blue-500"></i>
+              </div>
+              <span id="email__eror"></span>
+              <input id="email" type="email" name="email" class="
+                    text-sm
+                    placeholder-gray-500
+                    pl-10
+                    pr-4
+                    rounded-2xl
+                    border border-gray-400
+                    w-full
+                    py-2
+                    focus:outline-none focus:border-blue-400
+                  " placeholder="ایمیل خود را وارد کنید" />
+            </div>
+          </div>
+          <div class="flex flex-col mb-6">
+            <label for="password" class="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">رمز:</label>
+            <div class="relative">
+              <div class="
+                    inline-flex
+                    items-center
+                    justify-center
+                    absolute
+                    left-0
+                    top-0
+                    h-full
+                    w-10
+                    text-gray-400
+                  ">
+                <span>
+                  <i class="fas fa-lock text-blue-500"></i>
+                </span>
+              </div>
+              <span id="eror__pass"></span>
+              <input id="password" type="password" name="password" class="
+                    text-sm
+                    placeholder-gray-500
+                    pl-10
+                    pr-4
+                    rounded-2xl
+                    border border-gray-400
+                    w-full
+                    py-2
+                    focus:outline-none focus:border-blue-400
+                  " placeholder="رمز خود را وارد کنید" />
+            </div>
+          </div>
+
+          <div class="flex w-full">
+            <button type="submit" class="
+                  flex
+                  mt-2
+                  items-center
+                  justify-center
+                  focus:outline-none
+                  text-white text-sm
+                  sm:text-base
+                  bg-blue-500
+                  hover:bg-blue-600
+                  rounded-2xl
+                  py-2
+                  w-full
+                  transition
+                  duration-150
+                  ease-in
+                " </button>
+              <span class="mr-2 uppercase">ورود</span>
+              <span>
+                <svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  viewBox="0 0 24 24" stroke="currentColor">
+                  <path d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+            </button>
+          </div>
         </form>
-     
+      </div>
     </div>
-  
+    <div class="flex justify-center items-center mt-6">
+      <a href="#" target="_blank" class="
+            inline-flex
+            items-center
+            text-gray-700
+            font-medium
+            text-xs text-center
+          ">
+        <span class="ml-2">اکانتی ندارید?
+          <a href="signup.html" class="text-xs ml-2 text-blue-500 font-semibold">ثبت نام کنید</a></span>
+      </a>
+    </div>
+  </div>
+  <script src="src/script/validation.js"></script>
 </body>
+
 </html>

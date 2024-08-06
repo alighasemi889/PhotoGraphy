@@ -15,7 +15,6 @@
     display: none;
   }
   .hamberger__show {
-    /* display: block; */
     display: block;
     position: absolute;
     right: 0;
@@ -90,7 +89,6 @@
   #logo__header {
     position: absolute;
     right: 4rem;
-    /* left: 10px; */
     top: 1.1rem;
   }
   .left__position {
@@ -99,16 +97,21 @@
     left: 4px;
   }
   .hamberger__show {
-    display: none;
+    visibility: hidden;
   }
-  .desktop {
+  .hamberger__show .desktop {
     display: flex;
     justify-content: space-around;
   }
-  #hide__link {
+  .hamberger__show #hide__link {
     display: none;
   }
-  .sidebar {
+  .hamberger__show .sidebar {
     display: flex;
+  }
+}
+@media screen and (min-width: 1313px) {
+  .hamberger__show {
+    display: none;
   }
 }/*# sourceMappingURL=responsive.css.map */

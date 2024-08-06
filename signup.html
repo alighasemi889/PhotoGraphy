@@ -1,194 +1,67 @@
 <!DOCTYPE html>
-<html lang="fa" dir="ltr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بازیابی رمز</title>
-    <style>
-        body{         
-            height: 100vh;
-            overflow: hidden;
-        }
-        .form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 350px;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 20px;
-  position: relative;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-.title {
-  font-size: 28px;
-  color: royalblue;
-  font-weight: 600;
-  letter-spacing: -1px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding-left: 30px;
-}
-
-.title::before,.title::after {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
-  left: 0px;
-  background-color: royalblue;
-}
-
-.title::before {
-  width: 18px;
-  height: 18px;
-  background-color: royalblue;
-}
-.title{
-    margin: 0 auto;
-}
-.title::after {
-  width: 18px;
-  height: 18px;
-  animation: pulse 1s linear infinite;
-}
-
-.message, .signin {
-  color: rgba(88, 87, 87, 0.822);
-  font-size: 14px;
-}
-.message{
-    text-align: center;
-}
-.signin {
-  text-align: center;
-}
-
-.signin a {
-  color: royalblue;
-}
-
-.signin a:hover {
-  text-decoration: underline royalblue;
-}
-
-.flex {
-  display: flex;
-  width: 100%;
-  gap: 6px;
-}
-
-.form label {
-  position: relative;
-}
-
-.form label .input {
-  width: 100%;
-  padding: 10px 10px 20px 10px;
-  outline: 0;
-  border: 1px solid rgba(105, 105, 105, 0.397);
-  border-radius: 10px;
-}
-
-.form label .input + span {
-  position: absolute;
-  left: 10px;
-  top: 15px;
-  color: grey;
-  font-size: 0.9em;
-  cursor: text;
-  transition: 0.3s ease;
-}
-
-.form label .input:placeholder-shown + span {
-  top: 15px;
-  font-size: 0.9em;
-}
-
-.form label .input:focus + span,.form label .input:valid + span {
-  top: 30px;
-  font-size: 0.7em;
-  font-weight: 600;
-}
-
-.form label .input:valid + span {
-  color: green;
-}
-
-.submit {
-  border: none;
-  outline: none;
-  background-color: royalblue;
-  padding: 10px;
-  border-radius: 10px;
-  color: #fff;
-  font-size: 16px;
-  transform: .3s ease;
-}
-
-.submit:hover {
-  background-color: rgb(56, 90, 194);
-}
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@keyframes pulse {
-  from {
-    transform: scale(0.9);
-    opacity: 1;
-  }
-
-  to {
-    transform: scale(1.8);
-    opacity: 0;
-  }
-} 
-
-    </style>
 </head>
 <body>
-    <div class="center">
-        
-    
-    <form class="form">
-        <p class="title"> ثبت نام</p>
-        <p class="message">ثبت نام کنید و به همه جا دسترسی داشته باشید</p>
-            <div class="flex">
-            <label>
-                <input required="" placeholder="" type="text" class="input">
-                <span>نام کاربری</span>
-            </label>
-    
-            <label>
-                <input required="" placeholder="" type="text" class="input">
-                <span>نام خانوادگی</span>
-            </label>
-        </div>  
-                
-        <label>
-            <input required="" placeholder="" type="email" class="input">
-            <span>ایمیل</span>
-        </label> 
-            
-        <label>
-            <input required="" placeholder="" type="password" class="input">
-            <span>رمز</span>
-        </label>
-        <label>
-            <input required="" placeholder="" type="password" class="input">
-            <span>تایید رمز</span>
-        </label>
-        <button class="submit">ارسال</button>
-        <p class="signin">اکانت دارم؟ <a href="login.html">ورود</a> </p>
-    </form>
+  <div class="bg-gray-100 flex h-screen items-center justify-center px-4 sm:px-6 lg:px-8">
+    <div class="w-full max-w-md space-y-8">
+        <div class="bg-white shadow-md rounded-md p-6">
+
+            <img class="mx-auto h-12 w-auto" src="https://www.svgrepo.com/show/499664/user-happy.svg" alt="" />
+
+            <h2 class="my-3 text-center text-3xl font-bold tracking-tight text-gray-900">
+                Sign up for an account
+            </h2>
+
+
+            <form class="space-y-6" method="POST">
+
+                <div>
+                    <label for="new-password" class="block text-sm font-medium text-gray-700">Username</label>
+                    <div class="mt-1">
+                        <input name="username" type="username" required
+                            class="px-2 py-3 mt-1 block w-full rounded-md border border-gray-300 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-sky-500 sm:text-sm" />
+                    </div>
+                </div>
+
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700">Email</label>
+                    <div class="mt-1">
+                        <input name="email" type="email-address" autocomplete="email-address" required
+                            class="px-2 py-3 mt-1 block w-full rounded-md border border-gray-300 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-sky-500 sm:text-sm" />
+                    </div>
+                </div>
+
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                    <div class="mt-1">
+                        <input name="password" type="password" autocomplete="password" required
+                            class="px-2 py-3 mt-1 block w-full rounded-md border border-gray-300 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-sky-500 sm:text-sm" />
+                    </div>
+                </div>
+
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700">Confirm Password</label>
+                    <div class="mt-1">
+                        <input name="confirm_password" type="password" autocomplete="confirm-password" required
+                            class="px-2 py-3 mt-1 block w-full rounded-md border border-gray-300 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-sky-500 sm:text-sm" />
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit"
+                        class="flex w-full justify-center rounded-md border border-transparent bg-sky-400 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-opacity-75 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2">Register
+                        Account
+                        </button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
-      <script src="src/script/validation.js"></script>
-     
-    
 </body>
 </html>

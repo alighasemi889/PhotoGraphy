@@ -1,118 +1,145 @@
 /*----------------- small screens responsive code--------------- */
 
-@media screen and (max-width:862px){
-    .first__Section{
-        display: flex;
-        flex-direction: column;
-    }
-    .wrapper__content {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        text-align: center;
-      }
-      .non__active{
-        display: none;
-      }
-     
-      .hamberger__show{
-        /* display: block; */
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 10px;
-        padding-right: 10px;
-      }
-      #logo__header{
-        display: none;
-      }
-      .active__link{
-        display: none;
-      }
-      .header__btn{
-        position: absolute;
-        left: 0;
-        padding-left: 10px;
-      }
-      .wireframe__Section{
-        flex-direction: column;
-        flex-wrap: wrap;
-      }
-      .explain__wireframe{
-        text-align: center;
-        max-width: 100%;
-        padding: 10px;
-      }
-      .title__wireframe{
-        padding: 10px;
-        text-align: center;
-      }
-      .left__Wedding{
-        object-fit: cover;
-        padding: unset;
-        object-fit: cover;
-        padding: unset;
-        width: 300px;
-        margin: 0 auto;
-        margin-top: 10px;
-        max-width: 100%;
-      }
-      .text-gray-500{
-        text-align: center;
-        font-size: 21px;
-      }
-      body{
-        overflow-x: hidden;
-      }
-      .rounded-xl{
-        object-fit: contain;
-      }
-      #responsive__mobile{
-        position: relative;
-        left: 59px;
-        margin: 0 auto;
-      }
-      .close__img__sidebar{
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-}
-/*----------------- big  screens responsive code--------------- */
-@media screen and (min-width:862px) and (max-width:1313px){
-  .non__active{
+@media screen and (max-width:862px) {
+  .first__Section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrapper__content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+  }
+
+  .non__active {
     display: none;
   }
-  .left__Wedding{
-    margin-right: 10px;
-  }
-  #logo__header{
+
+  .hamberger__show {
+    display: block;
     position: absolute;
-        right: 4rem;
-        /* left: 10px; */
-        top: 1.1rem;
+    right: 0;
+    top: 10px;
+    padding-right: 10px;
   }
-    .left__position{
-      position: absolute;
-      // left: 0;
-      top: 10px;
-      left: 4px;
-  }
-  .hamberger__show{
-    // position: absolute;
-    // right: 0;
+
+  #logo__header {
     display: none;
   }
-  .desktop {
-    display: flex;
-    justify-content: space-around;
-  }
-  #hide__link{
+
+  .active__link {
     display: none;
   }
-  .sidebar{
-    display: flex;
+
+  .header__btn {
+    position: absolute;
+    left: 0;
+    padding-left: 10px;
+  }
+
+  .wireframe__Section {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .explain__wireframe {
+    text-align: center;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .title__wireframe {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .left__Wedding {
+    object-fit: cover;
+    padding: unset;
+    object-fit: cover;
+    padding: unset;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 10px;
+    max-width: 100%;
+  }
+
+  .text-gray-500 {
+    text-align: center;
+    font-size: 21px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .rounded-xl {
+    object-fit: contain;
+  }
+
+  #responsive__mobile {
+    position: relative;
+    left: 59px;
+    margin: 0 auto;
+  }
+
+  .close__img__sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 
+/*----------------- big  screens responsive code--------------- */
+@media screen and (min-width:862px) and (max-width:1313px) {
+  .non__active {
+    display: none;
+  }
+
+  .left__Wedding {
+    margin-right: 10px;
+  }
+
+  #logo__header {
+    position: absolute;
+    right: 4rem;
+    top: 1.1rem;
+  }
+
+  .left__position {
+    position: absolute;
+    top: 10px;
+    left: 4px;
+  }
+
+  // .hamberger__show{
+  //   display: none;
+  // }
+  .hamberger__show {
+    visibility: hidden;
+
+    .desktop {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    #hide__link {
+      display: none;
+    }
+
+    .sidebar {
+      display: flex;
+    }
+  }
+
+}
+
+@media screen and (min-width:1313px) {
+  .hamberger__show {
+    display: none;
+  }
+
+}

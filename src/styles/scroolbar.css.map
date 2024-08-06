@@ -1,1 +1,1 @@
-{"version":3,"sources":["scroolbar.scss","scroolbar.css"],"names":[],"mappings":"AACA;EACI,yBAAA;EACA,yBAAA;EACA,eAAA;ACAJ;;ADGE;EACE,qBAAA;ACAJ;;ADGE;EACE,iCAAA;EACA,kBAAA;ACAJ;;ADGE;EACE,iCAAA;EACA,kBAAA;EACA,yBAAA;ACAJ;;ADGE;EACE;IACE,4DAAA;ECAJ;AACF","file":"scroolbar.css"}
+{"version":3,"sources":["scroolbar.scss","scroolbar.css"],"names":[],"mappings":"AAAA;EACE,yBAAA;EACA,yBAAA;EACA,eAAA;ACCF;;ADEA;EACE,qBAAA;ACCF;;ADEA;EACE,iCAAA;EACA,kBAAA;ACCF;;ADEA;EACE,iCAAA;EACA,kBAAA;EACA,yBAAA;ACCF;;ADEA;EACE;IACE,4DAAA;ECCF;AACF","file":"scroolbar.css"}
