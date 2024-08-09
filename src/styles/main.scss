@@ -208,7 +208,23 @@
     background: #fff;
     gap: 2.3rem;
   }
-
+  @mixin btn__Scrooltoptobutton{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    width: 60px;
+    border-radius: 10px;
+    background: #000;
+    height: auto;
+    color: #fff;
+    padding: 10px 0 0 0;
+    line-height: 1.1;
+    z-index:9999;
+  }
+    #top{
+      @include btn__Scrooltoptobutton();
+    }
   ul.desktop.sidebar__right {
     @include desktop_sidebar()
   }
@@ -831,3 +847,4 @@
   line-height: 1rem;
   color: rgba(156, 163, 175, 1);
 }
+// login styles

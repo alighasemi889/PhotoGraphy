@@ -76,6 +76,8 @@
     position: absolute;
     top: 0;
     left: 0;
+    width: 50px;
+    max-width: 51px;
   }
 }
 /*----------------- big  screens responsive code--------------- */

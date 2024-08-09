@@ -145,6 +145,21 @@ a:is(:hover) {
   justify-content: center;
 }
 
+#top {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  width: 60px;
+  border-radius: 10px;
+  background: #000;
+  height: auto;
+  color: #fff;
+  padding: 10px 0 0 0;
+  line-height: 1.1;
+  z-index: 9999;
+}
+
 ul.desktop.sidebar__right {
   animation: slide-in 0.5s ease-out forwards;
   /* adjust the animation duration and easing to your liking */

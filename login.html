@@ -1,147 +1,83 @@
-<!-- component -->
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
-
 <body>
-  <div class="min-h-screen flex flex-col items-center justify-center bg-gray-100">
-    <div class="
-          flex flex-col
-          bg-white
-          shadow-md
-          px-4
-          sm:px-6
-          md:px-8
-          lg:px-10
-          py-8
-          rounded-3xl
-          w-50
-          max-w-md
-        ">
-      <div class="font-medium self-center text-xl sm:text-3xl text-gray-800">
-        خوش آمدید
-      </div>
-      <div class="mt-4 self-center text-xl sm:text-sm text-gray-800">
-        اطلاعات خود را وارد کنید
-      </div>
-
-      <div class="mt-10">
-        <form onsubmit="validform()" id="myform" action="#">
-          <div class="flex flex-col mb-5">
-            <label for="email" class="mb-1 text-xs tracking-wide text-gray-600">ایمیل:</label>
-            <div class="relative">
-              <div class="
-                    inline-flex
-                    items-center
-                    justify-center
-                    absolute
-                    left-0
-                    top-0
-                    h-full
-                    w-10
-                    text-gray-400
-                  ">
-                <i class="fas fa-at text-blue-500"></i>
-              </div>
-              <span id="email__eror"></span>
-              <input id="email" type="email" name="email" class="
-                    text-sm
-                    placeholder-gray-500
-                    pl-10
-                    pr-4
-                    rounded-2xl
-                    border border-gray-400
-                    w-full
-                    py-2
-                    focus:outline-none focus:border-blue-400
-                  " placeholder="ایمیل خود را وارد کنید" />
+    <!-- component -->
+     <form id="form" novalidate class="... group"  action="">
+<div class="min-h-screen bg-gray-100 flex flex-col justify-center sm:py-12">
+    <div class="p-10 xs:p-0 mx-auto md:w-full md:max-w-md">
+      <h1 class="font-bold text-center text-2xl mb-5">آتلیه عکاسی تووس</h1>  
+      <div class="bg-white shadow w-full rounded-lg divide-y divide-gray-200">
+        <div class="px-5 py-7">
+          <label class="">ایمیل</label>
+          <input  title="لطفا درست وارد کنید" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="ایمیل"  type="email" class="... peer ... invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500 border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full" />
+          <span class="mt-2 hidden text-sm text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">
+          ادرس معتبر ایمیل را وارد کنید
+          </span>
+          <label class="font-semibold text-sm text-gray-600 pb-1 block">رمز</label>
+          <input  pattern=".{7,}" required placeholder="رمز" type="password" class="... invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500 border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full" />
+          <span class="mt-2 hidden text-sm text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">
+            لطفا رمز را وارد کنید
+          </span>
+          <button type="button" class="... group-invalid:pointer-events-none group-invalid:opacity-30 transition duration-200 bg-blue-500 hover:bg-blue-600 focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block">
+              <span class="inline-block mr-2">ورود</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4 inline-block">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+          </button>
+        </div>
+        <div class="py-5">
+          <div class="grid grid-cols-2 gap-1">
+            <div class="text-center sm:text-left whitespace-nowrap">
+              <button class="transition duration-200 mx-5 px-5 py-4 cursor-pointer font-normal text-sm rounded-lg text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-200 focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 ring-inset">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4 inline-block align-text-top">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                  </svg>
+                  <span class="inline-block ml-1">فراموشی رمز؟</span>
+              </button>
+            </div>
+            <div class="text-center sm:text-right  whitespace-nowrap">
+              <button class="transition duration-200 mx-5 px-5 py-4 cursor-pointer font-normal text-sm rounded-lg text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-200 focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 ring-inset">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4 inline-block align-text-bottom	">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                  </svg>
+                  <span class="inline-block ml-1">کمک</span>
+              </button>
             </div>
           </div>
-          <div class="flex flex-col mb-6">
-            <label for="password" class="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">رمز:</label>
-            <div class="relative">
-              <div class="
-                    inline-flex
-                    items-center
-                    justify-center
-                    absolute
-                    left-0
-                    top-0
-                    h-full
-                    w-10
-                    text-gray-400
-                  ">
-                <span>
-                  <i class="fas fa-lock text-blue-500"></i>
-                </span>
-              </div>
-              <span id="eror__pass"></span>
-              <input id="password" type="password" name="password" class="
-                    text-sm
-                    placeholder-gray-500
-                    pl-10
-                    pr-4
-                    rounded-2xl
-                    border border-gray-400
-                    w-full
-                    py-2
-                    focus:outline-none focus:border-blue-400
-                  " placeholder="رمز خود را وارد کنید" />
+        </div>
+      </div>
+      <div class="py-5">
+          <div class="grid grid-cols-2 gap-1">
+            <div class="text-center sm:text-left whitespace-nowrap">
+              <button class="transition duration-200 mx-5 px-5 py-4 cursor-pointer font-normal text-sm rounded-lg text-gray-500 hover:bg-gray-200 focus:outline-none focus:bg-gray-300 focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 ring-inset">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4 inline-block align-text-top">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                  </svg>
+                <a href="index.html">
+                  <span class="inline-block ml-1">سایت</span>
+                </a>
+              </button>
             </div>
           </div>
-
-          <div class="flex w-full">
-            <button type="submit" class="
-                  flex
-                  mt-2
-                  items-center
-                  justify-center
-                  focus:outline-none
-                  text-white text-sm
-                  sm:text-base
-                  bg-blue-500
-                  hover:bg-blue-600
-                  rounded-2xl
-                  py-2
-                  w-full
-                  transition
-                  duration-150
-                  ease-in
-                " </button>
-              <span class="mr-2 uppercase">ورود</span>
-              <span>
-                <svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  viewBox="0 0 24 24" stroke="currentColor">
-                  <path d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </span>
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="flex justify-center items-center mt-6">
-      <a href="#" target="_blank" class="
-            inline-flex
-            items-center
-            text-gray-700
-            font-medium
-            text-xs text-center
-          ">
-        <span class="ml-2">اکانتی ندارید?
-          <a href="signup.html" class="text-xs ml-2 text-blue-500 font-semibold">ثبت نام کنید</a></span>
-      </a>
+        </div>
     </div>
   </div>
-  <script src="src/script/validation.js"></script>
-</body>
+  </form>
+  <script>
+    const form  = document.getElementById("form");
+    form.addEventListener('submit', function valid(event) {
+        event.preventDefault();
 
+        form.onsubmit();
+        
+    })
+  </script>
+</body>
 </html>
