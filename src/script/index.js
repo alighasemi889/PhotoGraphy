@@ -1,7 +1,10 @@
 //   finish loader codes
+const sidebar3 = document.getElementById("menu_tailwind");
+sidebar3.style.display = "none"
 function show() {
-    const sidebar = document.querySelector(".sidebar__right");
-    sidebar.style.display = 'flex';
+    // const sidebar = document.querySelector(".sidebar__right");
+    const sidebar2 = document.getElementById("menu_tailwind")
+    sidebar2.style.display = 'flex';
 }
 function closesidebar() {
     const sidebar = document.querySelector(".sidebar__right");
