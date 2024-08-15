@@ -686,10 +686,11 @@ ul {
   fill: #fff;
 }
 aside#menu_tailwind {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 210px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 210px;
+  z-index: 9999;
 }
 .signup {
   text-align: center;
