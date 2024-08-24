@@ -36,12 +36,12 @@
     overflow: hidden;
     max-width: 100%;
     width: 1600px;
-    margin: 40px 0 0 0;
     border-radius: 10px;
     padding-left: 30px;
-    margin: 40px 0 0 0;
     border-radius: 1rem;
     border-radius: 10px;
+    margin-top: 40px;
+    margin-right: 14px;
   }
   
   .f-hight{

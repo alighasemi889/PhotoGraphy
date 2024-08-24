@@ -55,8 +55,24 @@ const scroolTop = () => {
   })
 }
 
-const btn__form = document.getElementById("show_modal");
-const form_modal = document.getElementById("main__form");
-btn__form.onclick = function click() {
-  form_modal.style.display = "block"
-}
+// const btn__form = document.getElementById("show_modal");
+// const form_modal = document.getElementById("main__form");
+// btn__form.onclick = function click() {
+//   form_modal.style.display = "block"
+// }
+
+// modal
+const modal = document.getElementById("modal");
+let close_modal = document.getElementById("close");
+modal.style.display = "none"
+
+setTimeout(() => {
+  modal.style.display = "flex"
+  close_modal.onclick =() =>{
+    modal.style.display = "none";
+  }
+  
+}, 4000);
+// close_modal.onclick =() =>{
+//   modal.style.display = "none";
+// }
