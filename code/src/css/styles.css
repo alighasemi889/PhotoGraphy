@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Button */
+  .btn:not(.btn-circle) {
+    @apply px-4 py-3 !h-fit !min-h-fit;
+  }
+
+  .btn:not(.btn-circle).btn-xs {
+    @apply px-2.5 py-1.5;
+  }
+
+  .btn:not(.btn-circle).btn-sm {
+    @apply px-3 py-2;
+  }
+
+  .btn:not(.btn-circle).btn-lg {
+    @apply px-6 py-4;
+  }
+
+  .btn-ghost:hover {
+    --tw-bg-opacity: 0.05;
+  }
+
+  /* Dropdown */
+  .dropdown-content {
+    @apply shadow-lg border border-base-300;
+  }
+}
+
+@font-face {
+  font-family: 'iran-yekan';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/fonts/iranyekanwebregularfanum.eot');
+  src: url('/assets/fonts/iranyekanwebregularfanum.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/iranyekanwebregularfanum.woff') format('woff'),
+    url('/assets/fonts/iranyekanwebregularfanum.ttf') format('truetype'),
+    url('/assets/fonts/iranyekanwebregularfanum.svg#IRANYekanWebFn') format('svg');
+}
+
+body {
+  font-family: 'iran-yekan', Arial, Helvetica, sans-serif;
+  @apply min-h-screen bg-base-200 overflow-x-hidden;
+}
+
+/* Window Scrollbar */
+:root::-webkit-scrollbar {
+  @apply w-1;
+}
+
+:root::-webkit-scrollbar-track {
+  @apply bg-base-300;
+}
+
+:root::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-md;
+}
+
+/* AlpineJs */
+[x-cloak] {
+  display: none !important;
+}
+
+/* code */
+code {
+  @apply text-secondary;
+}
+
+/* sidebar */
+.sidebar.open {
+  @apply translate-x-0;
+}
+
+.sidebar::-webkit-scrollbar {
+  @apply w-0;
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+  box-shadow: -0.25rem 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-menu::-webkit-scrollbar {
+  @apply w-0.5;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb {
+  @apply bg-neutral rounded;
+}
+
+.sidebar-menu-list {
+  @apply p-2;
+}
+
+.sidebar-menu-list a {
+  @apply block text-sm px-4 py-2 rounded-md transition-colors duration-200 hover:bg-base-300;
+}
+
+/* Dropdown Scrollbar */
+.dropdown-content::-webkit-scrollbar {
+  @apply w-0.5;
+}
+
+.dropdown-content::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+.dropdown-content::-webkit-scrollbar-thumb {
+  @apply bg-neutral rounded-md;
+}
+
+/* Charts */
+.apexcharts-tooltip {
+  @apply !bg-base-100;
+}
+
+.apexcharts-tooltip-title {
+  @apply !bg-base-200;
+}
+
+.apexcharts-xaxistooltip {
+  @apply !bg-base-300 rounded-md !border-base-300;
+}
+
+.apexcharts-xaxistooltip::before,
+.apexcharts-xaxistooltip::after {
+  @apply !border-b-base-300;
+}
+
+/* Note: You can remove this rule on production */
+.preview {
+  @apply p-6 rounded-box border border-base-200;
+  background-image: repeating-linear-gradient(
+    45deg,
+    oklch(var(--b1)),
+    oklch(var(--b1)) 13px,
+    oklch(var(--b2)) 13px,
+    oklch(var(--b2)) 14px
+  );
+}
+
+.icon-box {
+  @apply w-fit p-4 rounded-md cursor-pointer transition-colors duration-300 hover:bg-base-200 border border-base-200;
+}
+
+/* Chats Scrollbar */
+.chats-scrollbar::-webkit-scrollbar {
+  @apply w-1.5;
+}
+
+.chats-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-neutral rounded-md;
+}

@@ -1,0 +1,190 @@
+<!-- Header - START -->
+<header
+  class="navbar sticky top-0 z-50 bg-base-100 border-b border-b-base-300 md:border-r border-r-base-200 shadow-sm md:shadow-none"
+>
+  <div class="w-full max-w-7xl px-2 mx-auto flex items-center">
+    <!-- Sidebar Toggler - START -->
+    <button class="btn btn-ghost md:hidden" @click="$store.sidebar.toggle()">
+      <svg
+        class="w-5 h-5"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        />
+      </svg>
+    </button>
+    <!-- Sidebar Toggler - END -->
+
+    <div class="mr-auto flex items-center gap-x-1">
+      <!-- Themes Dropdown - START -->
+      <div class="tooltip tooltip-bottom" data-tip="تغییر تم">
+        <div class="dropdown">
+          <label tabindex="0" class="btn btn-ghost btn-circle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z"
+              />
+            </svg>
+          </label>
+          <ul
+            class="dropdown-content menu z-[1] block top-full left-0 mt-1 p-2 bg-base-100 w-40 max-h-64 overflow-x-hidden overflow-y-auto border border-base-300 rounded-box shadow"
+            tabindex="0"
+          >
+            <template x-for="theme in $store.theme.themesList">
+              <li class="block" @click="$store.theme.setTheme(theme.enName)">
+                <a x-text="theme.faName"></a>
+              </li>
+            </template>
+          </ul>
+        </div>
+      </div>
+      <!-- Themes Dropdown - END -->
+
+      <!-- Notifications Dropdown - START -->
+      <div class="tooltip tooltip-bottom" data-tip="اعلانات">
+        <div class="dropdown indicator">
+          <span class="indicator-item badge badge-primary badge-sm top-2 right-2">99+</span>
+
+          <label tabindex="0" class="btn btn-ghost btn-circle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+              ></path>
+            </svg>
+          </label>
+          <ul
+            tabindex="0"
+            class="menu menu-sm block dropdown-content w-60 sm:w-72 max-h-64 overflow-x-hidden overflow-y-auto top-full -left-1/2 sm:left-0 mt-1 z-[1] p-2 bg-base-100 border border-base-300 rounded-box shadow"
+          >
+            <template x-for="i in 10">
+              <!-- Notification Item - START -->
+              <li class="border-b border-b-base-300 last-of-type:border-b-0">
+                <a class="flex items-center gap-x-2 py-2" href="#">
+                  <!-- Avatar - START -->
+                  <div class="avatar">
+                    <div class="mask mask-squircle w-10 h-10">
+                      <img src="/assets/images/tailwind-css-component-profile-5@56w.png" alt="" />
+                    </div>
+                  </div>
+                  <!-- Avatar - END -->
+
+                  <div class="space-y-1">
+                    <p class="text-xs">پیام جدید از <span class="font-bold">مریم دماوندی</span></p>
+                    <p class="text-2xs opacity-80">2 دقیقه پیش</p>
+                  </div>
+                </a>
+              </li>
+              <!-- Notification Item - END -->
+            </template>
+          </ul>
+        </div>
+      </div>
+      <!-- Notifications Dropdown - END -->
+
+      <!-- User Menu - START -->
+      <div class="dropdown mr-2">
+        <label tabindex="0" class="btn btn-ghost btn-circle btn-sm">
+          <div class="avatar">
+            <div class="w-9 h-9 md:w-10 md:h-10 mask mask-circle">
+              <img src="/assets/images/tailwind-css-component-profile-5@56w.png" />
+            </div>
+          </div>
+        </label>
+        <ul
+          tabindex="0"
+          class="menu menu-sm sm:menu-md dropdown-content z-[1] w-48 sm:w-56 top-full left-0 mt-1 p-2 bg-base-100 border border-base-300 rounded-box shadow"
+        >
+          <li>
+            <a class="gap-x-2 text-xs sm:text-sm" href="settings.html">
+              <svg
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.1596 11.62C12.1296 11.62 12.1096 11.62 12.0796 11.62C12.0296 11.61 11.9596 11.61 11.8996 11.62C8.99963 11.53 6.80963 9.25 6.80963 6.44C6.80963 3.58 9.13963 1.25 11.9996 1.25C14.8596 1.25 17.1896 3.58 17.1896 6.44C17.1796 9.25 14.9796 11.53 12.1896 11.62C12.1796 11.62 12.1696 11.62 12.1596 11.62ZM11.9996 2.75C9.96963 2.75 8.30963 4.41 8.30963 6.44C8.30963 8.44 9.86963 10.05 11.8596 10.12C11.9096 10.11 12.0496 10.11 12.1796 10.12C14.1396 10.03 15.6796 8.42 15.6896 6.44C15.6896 4.41 14.0296 2.75 11.9996 2.75Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M12.1696 22.55C10.2096 22.55 8.23961 22.05 6.74961 21.05C5.35961 20.13 4.59961 18.87 4.59961 17.5C4.59961 16.13 5.35961 14.86 6.74961 13.93C9.74961 11.94 14.6096 11.94 17.5896 13.93C18.9696 14.85 19.7396 16.11 19.7396 17.48C19.7396 18.85 18.9796 20.12 17.5896 21.05C16.0896 22.05 14.1296 22.55 12.1696 22.55ZM7.57961 15.19C6.61961 15.83 6.09961 16.65 6.09961 17.51C6.09961 18.36 6.62961 19.18 7.57961 19.81C10.0696 21.48 14.2696 21.48 16.7596 19.81C17.7196 19.17 18.2396 18.35 18.2396 17.49C18.2396 16.64 17.7096 15.82 16.7596 15.19C14.2696 13.53 10.0696 13.53 7.57961 15.19Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+
+              پروفایل
+            </a>
+          </li>
+          <li>
+            <a class="gap-x-2 text-xs sm:text-sm" href="settings.html">
+              <svg
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 15.75C9.93 15.75 8.25 14.07 8.25 12C8.25 9.93 9.93 8.25 12 8.25C14.07 8.25 15.75 9.93 15.75 12C15.75 14.07 14.07 15.75 12 15.75ZM12 9.75C10.76 9.75 9.75 10.76 9.75 12C9.75 13.24 10.76 14.25 12 14.25C13.24 14.25 14.25 13.24 14.25 12C14.25 10.76 13.24 9.75 12 9.75Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M15.21 22.19C15 22.19 14.79 22.16 14.58 22.11C13.96 21.94 13.44 21.55 13.11 21L12.99 20.8C12.4 19.78 11.59 19.78 11 20.8L10.89 20.99C10.56 21.55 10.04 21.95 9.42 22.11C8.79 22.28 8.14 22.19 7.59 21.86L5.87 20.87C5.26 20.52 4.82 19.95 4.63 19.26C4.45 18.57 4.54 17.86 4.89 17.25C5.18 16.74 5.26 16.28 5.09 15.99C4.92 15.7 4.49 15.53 3.9 15.53C2.44 15.53 1.25 14.34 1.25 12.88V11.12C1.25 9.66001 2.44 8.47001 3.9 8.47001C4.49 8.47001 4.92 8.30001 5.09 8.01001C5.26 7.72001 5.19 7.26001 4.89 6.75001C4.54 6.14001 4.45 5.42001 4.63 4.74001C4.81 4.05001 5.25 3.48001 5.87 3.13001L7.6 2.14001C8.73 1.47001 10.22 1.86001 10.9 3.01001L11.02 3.21001C11.61 4.23001 12.42 4.23001 13.01 3.21001L13.12 3.02001C13.8 1.86001 15.29 1.47001 16.43 2.15001L18.15 3.14001C18.76 3.49001 19.2 4.06001 19.39 4.75001C19.57 5.44001 19.48 6.15001 19.13 6.76001C18.84 7.27001 18.76 7.73001 18.93 8.02001C19.1 8.31001 19.53 8.48001 20.12 8.48001C21.58 8.48001 22.77 9.67001 22.77 11.13V12.89C22.77 14.35 21.58 15.54 20.12 15.54C19.53 15.54 19.1 15.71 18.93 16C18.76 16.29 18.83 16.75 19.13 17.26C19.48 17.87 19.58 18.59 19.39 19.27C19.21 19.96 18.77 20.53 18.15 20.88L16.42 21.87C16.04 22.08 15.63 22.19 15.21 22.19ZM12 18.49C12.89 18.49 13.72 19.05 14.29 20.04L14.4 20.23C14.52 20.44 14.72 20.59 14.96 20.65C15.2 20.71 15.44 20.68 15.64 20.56L17.37 19.56C17.63 19.41 17.83 19.16 17.91 18.86C17.99 18.56 17.95 18.25 17.8 17.99C17.23 17.01 17.16 16 17.6 15.23C18.04 14.46 18.95 14.02 20.09 14.02C20.73 14.02 21.24 13.51 21.24 12.87V11.11C21.24 10.48 20.73 9.96001 20.09 9.96001C18.95 9.96001 18.04 9.52001 17.6 8.75001C17.16 7.98001 17.23 6.97001 17.8 5.99001C17.95 5.73001 17.99 5.42001 17.91 5.12001C17.83 4.82001 17.64 4.58001 17.38 4.42001L15.65 3.43001C15.22 3.17001 14.65 3.32001 14.39 3.76001L14.28 3.95001C13.71 4.94001 12.88 5.50001 11.99 5.50001C11.1 5.50001 10.27 4.94001 9.7 3.95001L9.59 3.75001C9.34 3.33001 8.78 3.18001 8.35 3.43001L6.62 4.43001C6.36 4.58001 6.16 4.83001 6.08 5.13001C6 5.43001 6.04 5.74001 6.19 6.00001C6.76 6.98001 6.83 7.99001 6.39 8.76001C5.95 9.53001 5.04 9.97001 3.9 9.97001C3.26 9.97001 2.75 10.48 2.75 11.12V12.88C2.75 13.51 3.26 14.03 3.9 14.03C5.04 14.03 5.95 14.47 6.39 15.24C6.83 16.01 6.76 17.02 6.19 18C6.04 18.26 6 18.57 6.08 18.87C6.16 19.17 6.35 19.41 6.61 19.57L8.34 20.56C8.55 20.69 8.8 20.72 9.03 20.66C9.27 20.6 9.47 20.44 9.6 20.23L9.71 20.04C10.28 19.06 11.11 18.49 12 18.49Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+
+              تنظیمات
+            </a>
+          </li>
+          <li>
+            <a class="gap-x-2 text-xs sm:text-sm" href="login.html">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9"
+                />
+              </svg>
+
+              خروج از حساب کاربری
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- User Menu - END -->
+    </div>
+  </div>
+</header>
+<!-- Header - END -->
