@@ -47,3 +47,44 @@
   .f-hight{
     height: 100vh;
   }
+  #body__signup{
+    background: url(../../public/images/wal__resept__pass.jpg);
+    width: 100%;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    /* height: 100vh; */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .fc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 60px;
+  } 
+  aside#menu_tailwind {
+    position: absolute;
+    z-index: 9999;
+    margin-top: -20px;
+}
+.left_close_icon {
+  width: 100%;
+  height: auto;
+  top: 0;
+  height: 100px;
+  left: 10px;
+    top: 0;
+    height: 100px;
+}
+.close_menu{
+  width: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    top: 0;
+    
+}

@@ -685,13 +685,7 @@ ul {
   width: 1.25rem;
   fill: #fff;
 }
-aside#menu_tailwind {
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 210px;
-  z-index: 9999;
-}
+
 .signup {
   text-align: center;
   font-size: 0.75rem;

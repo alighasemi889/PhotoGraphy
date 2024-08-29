@@ -83,10 +83,10 @@
           </a>
 
         </div>
-        <li onclick="show()"><a href="#"><img class="hamberger__show" src="public/images/hamberger__icon__renew.png"
+        <li onclick="show()"><a href="#"><img class="hamberger__show" loading="lazy" src="public/images/icon_hamberger.png"
               alt="hamberger__menu"></a></li>
 
-        <li><a id="hide__link" class="active__link" href="#"> آتلیه عکاسی توس</a></li>
+        <li><a id="hide__link" class="active__link" href="index.html"> آتلیه عکاسی توس</a></li>
         <li><a class="non__active" href="pricingplan.html"> قیمت ها </a></li>
         <li><a class="non__active" href="#">لوکیشن ها</a></li>
         <li><a class="non__active" href="#">نمونه کار های طوس</a></li>
@@ -110,9 +110,9 @@
       <aside id="menu_tailwind"
         class="flex flex-col w-64 h-screen px-4 py-8 overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700">
         <a href="#">
-          <img class="w-auto h-6 sm:h-7" src="https://merakiui.com/images/logo.svg" alt="">
+          <img class="w-auto h-6 sm:h-7" src="https://merakiui.com/images/logo.svg" alt="logo" loading="lazy">
         </a>
-
+        <div class="left_close_icon"><img onclick="close_side()" class="close_menu" src="public/images/close_icon.png" alt="close_icon"></div>
         <div class="relative mt-6">
           <span class="absolute inset-y-0 left-0 flex items-center pl-3">
             <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none">
@@ -152,18 +152,7 @@
 
               <span class="mx-4 font-medium">حساب کاربری</span>
             </a>
-            <!-- <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
-              href="#">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="currentColor"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-
-              <span class="mx-4 font-medium">حساب کاربری</span>
-            </a> -->
+         
 
             <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
               href="blog.html">
@@ -194,29 +183,17 @@
             <hr class="my-6 border-gray-200 dark:border-gray-600" />
 
             <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
-              href="signup.html">
+              href="contactus.html">
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M15 5V7M15 11V13M15 17V19M5 5C3.89543 5 3 5.89543 3 7V10C4.10457 10 5 10.8954 5 12C5 13.1046 4.10457 14 3 14V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V14C19.8954 14 19 13.1046 19 12C19 10.8954 19.8954 10 21 10V7C21 5.89543 20.1046 5 19 5H5Z"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
 
-              <span class="mx-4 font-medium">ورود</span>
+              <span class="mx-4 font-medium">درباره با ما</span>
             </a>
 
-            <!-- <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
-              href="#">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M10.3246 4.31731C10.751 2.5609 13.249 2.5609 13.6754 4.31731C13.9508 5.45193 15.2507 5.99038 16.2478 5.38285C17.7913 4.44239 19.5576 6.2087 18.6172 7.75218C18.0096 8.74925 18.5481 10.0492 19.6827 10.3246C21.4391 10.751 21.4391 13.249 19.6827 13.6754C18.5481 13.9508 18.0096 15.2507 18.6172 16.2478C19.5576 17.7913 17.7913 19.5576 16.2478 18.6172C15.2507 18.0096 13.9508 18.5481 13.6754 19.6827C13.249 21.4391 10.751 21.4391 10.3246 19.6827C10.0492 18.5481 8.74926 18.0096 7.75219 18.6172C6.2087 19.5576 4.44239 17.7913 5.38285 16.2478C5.99038 15.2507 5.45193 13.9508 4.31731 13.6754C2.5609 13.249 2.5609 10.751 4.31731 10.3246C5.45193 10.0492 5.99037 8.74926 5.38285 7.75218C4.44239 6.2087 6.2087 4.44239 7.75219 5.38285C8.74926 5.99037 10.0492 5.45193 10.3246 4.31731Z"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                <path
-                  d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-
-              <span class="mx-4 font-medium">تنطیمات</span>
-            </a> -->
+          
           </nav>
 
           <!-- <a href="#" class="flex items-center px-4 -mx-2">
@@ -225,36 +202,7 @@
             </a> -->
         </div>
       </aside>
-      <!-- <ul id="sidebar" class="desktop sidebar__right">
-        <div class="img__header">
-          <img id="logo__header" src="public/images/logo.png" alt="logo__header" loading="lazy" width="100px"
-            height="100px">
-        </div>
-        <div class="close">
-          <li onclick="closesidebar()"><a href="#">
-              <img class="close__img__sidebar" src="public/images/icons8-close-64 (1).png" alt="close" loading="lazy">
-            </a></li>
-        </div>
-        <li class="animate__animated animate__bounceInRight"><a class="active__link" href="pricingplan.html">  
-            قیمت ها</a></li>
-        <li class="animate__animated animate__bounceInRight"><a href="pricingplan.html"> قیمت ها</a></li>
-        <li class="animate__animated animate__bounceInRight"><a href="#">لوکیشن ها</a></li>
-        <li class="animate__animated animate__bounceInRight"><a href="#">نمونه کار های طوس</a></li>
-        <li class="animate__animated animate__bounceInRight"><a href="contactus.html">ارتباط با ما</a></li>
-        <li class="animate__animated animate__bounceInRight"><a href="#">مراحل عقد قرارداد</a></li>
-        <li class="animate__animated animate__bounceInRight"><a href="blog.html">مقالات</a></li>
-        <div class="wrapper__btn__header">
-          <a href="#">
-            <div class="btn__ header__btn">
-              <a class="animate__animated animate__bounceInRight" href="login.html">
-                <button id="responsive__mobile" class="bg__color color__txt sidebar__btn res__mobile">
-                  ورود</button>
-
-              </a>
-            </div>
-          </a>
-        </div>
-      </ul> -->
+      
     </nav>
   </header>
 
@@ -289,7 +237,7 @@
 
       </div>
       <div class="left__img">
-        <img class="animate__animated animate__backInLeft wal_hpicture_left" src="public/images/white_bg.jpg"
+        <img class="animate__slideInRight animate__delay-5s	5s wal_hpicture_left" src="public/images/white_bg.jpg"
           alt="wedding" loading="lazy">
       </div>
     </div>
@@ -297,7 +245,7 @@
 
     </div>
 
-    <div data-aos="fade-up-right" class="-mx-4 flex flex-wrap p-8">
+    <div  class="-mx-4 flex flex-wrap p-8">
 
       <div class="w-full px-4 md:w-1/2 lg:w-1/3">
         <div class="mb-9 rounded-xl py-8 px-7 shadow-md transition-all hover:shadow-lg sm:p-9 lg:px-6 xl:px-9">
@@ -308,7 +256,7 @@
                 d="M42.1119 5.91343C40.9499 4.62242 39.4875 3.95192 38.2383 4.04801C36.1465 4.20891 33.9414 5.92602 31.8695 8.63549C30.0459 11.0202 28.5417 13.8917 27.5307 16.2458C33.6951 16.5488 37.7115 15.7786 40.1926 14.5916C42.7088 13.3878 43.5948 11.7969 43.7449 10.3715C43.9049 8.85254 43.2637 7.19309 42.1119 5.91343ZM8.75274 16.6855C6.24093 15.1295 4.93328 12.9984 4.69026 10.691C4.42078 8.13252 5.49249 5.64717 7.08955 3.87282C8.6764 2.10982 10.9989 0.817106 13.4643 1.00675C16.9349 1.27372 19.8489 3.94064 22.0221 6.78264C23.4868 8.69803 24.7428 10.8606 25.7343 12.8643C26.7259 10.8606 27.9818 8.69803 29.4465 6.78264C31.6197 3.94064 34.5337 1.27372 38.0043 1.00675C40.4697 0.817106 42.7922 2.10982 44.3791 3.87282C45.9761 5.64717 47.0478 8.13252 46.7784 10.691C46.5353 12.9984 45.2277 15.1295 42.7159 16.6855H49.8822C51.286 16.6855 52.4241 17.8236 52.4241 19.2274V31.1348C52.4241 32.5386 51.286 33.6766 49.8822 33.6766H49.3122V58.6608C49.3122 59.9464 48.1845 60.9886 46.7933 60.9886H31.5363L31.5191 60.9887L31.502 60.9886H20.3521L20.3349 60.9887L20.3178 60.9886H5.0608C3.66963 60.9886 2.54187 59.9464 2.54187 58.6608L2.54187 33.6766C1.13804 33.6766 0 32.5386 0 31.1348V19.2274C0 17.8236 1.13803 16.6855 2.54187 16.6855H8.75274ZM33.0443 58.1952H46.2895V33.6766H33.0443V58.1952ZM33.0443 30.6264H49.3738V19.7358H33.0443V30.6264ZM29.994 19.7358V30.6264H21.8601V19.7358H29.994ZM29.994 33.6766V58.1952H21.8601V33.6766H29.994ZM18.8098 58.1952V33.6766H5.56459V58.1952H18.8098ZM18.8098 30.6264V19.7358H3.05024V30.6264H18.8098ZM13.2303 4.04801C11.9811 3.95192 10.5187 4.62242 9.35668 5.91343C8.20488 7.19309 7.56373 8.85254 7.72372 10.3715C7.87385 11.7969 8.7598 13.3878 11.276 14.5916C13.7571 15.7786 17.7735 16.5488 23.9379 16.2458C22.9269 13.8917 21.4227 11.0202 19.5991 8.63549C17.5272 5.92602 15.3221 4.20891 13.2303 4.04801Z"
                 fill="#6A64F1"></path>
             </svg></div>
-          <div>
+          <div ata-aos="fade-down-right">
             <h3 class="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">
               خدمات و پکیج ها
 
@@ -333,7 +281,7 @@
                 d="M46.7807 15.868C47.6859 15.868 48.6475 15.6441 49.0878 15.4202L48.7884 14.5452C48.4538 14.6692 47.6436 14.8965 46.8405 14.8965C44.5088 14.8965 43.2478 13.6633 43.2478 11.431C43.2478 9.35033 44.4524 7.90005 46.7525 7.90005C48.6299 7.90005 50.0283 8.9404 50.0247 10.8971C50.0283 12.3198 49.8028 12.9605 49.2393 12.9605C48.9399 12.9605 48.7637 12.7263 48.7602 12.3852V9.10575H47.7775V9.49157H47.7282C47.6155 9.18842 46.9392 8.90939 46.1748 9.01274C45.1921 9.1402 44.2481 9.92907 44.2481 11.4035C44.2481 12.9226 45.0935 13.8149 46.2417 13.8665C47.0413 13.9044 47.6612 13.5565 47.8268 13.1466H47.8691C47.9536 13.6633 48.4185 13.9458 49.1301 13.9079C50.6447 13.8527 51.0779 12.5299 51.0744 10.9556C51.0779 8.69237 49.521 6.94238 46.7771 6.94238C43.8536 6.94238 42.1523 8.7027 42.1488 11.4448C42.1523 14.2524 43.8254 15.868 46.7807 15.868ZM46.5341 12.8779C45.6148 12.8779 45.3048 12.1475 45.3013 11.3621C45.3048 10.5767 45.7521 10.0014 46.5411 10.0014C47.4182 10.0014 47.7423 10.4217 47.7458 11.3587C47.7564 12.3646 47.4253 12.8779 46.5341 12.8779Z"
                 fill="white"></path>
             </svg></div>
-          <div>
+          <div data-aos="fade-up-left">
             <h3 class="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">پکیج های عروسی
             </h3>
             <p class="text-base font-medium text-body-color">وجود نمونه کارهای موفق در برگزاری مراسم نامزدی
@@ -800,7 +748,7 @@
             </div>
 
             <div class="mt-1 p-2">
-              <h2 class="text-slate-700">The Hilton Hotel</h2>
+              <h2 class="text-slate-700">بازخورد ها</h2>
               <p class="text-slate-400 mt-1 text-sm">Lisbon, Portugal</p>
 
               <div class="mt-3 flex items-end justify-between">
@@ -835,7 +783,7 @@
             </div>
 
             <div class="mt-1 p-2">
-              <h2 class="text-slate-700">The Hilton Hotel</h2>
+              <h2 class="text-slate-700">بازخورد</h2>
               <p class="text-slate-400 mt-1 text-sm">Lisbon, Portugal</p>
 
               <div class="mt-3 flex items-end justify-between">
@@ -870,7 +818,7 @@
             </div>
 
             <div class="mt-1 p-2">
-              <h2 class="text-slate-700">The Hilton Hotel</h2>
+              <h2 class="text-slate-700">بازخورد</h2>
               <p class="text-slate-400 mt-1 text-sm">Lisbon, Portugal</p>
 
               <div class="mt-3 flex items-end justify-between">
