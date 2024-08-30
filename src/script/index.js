@@ -1,11 +1,9 @@
 "use strict";
+
+// const { dotDecimal } = require("validator/lib/alpha");
+
 //  hide the sidebar
-const sidebar3 = document.getElementById("menu_tailwind");
-sidebar3.style.display = "none"
-function show() {
-    const sidebar2 = document.getElementById("menu_tailwind")
-    sidebar2.style.display = 'flex';
-}
+
 
 // typewriter text 
 const words = ["خوش آمدید", "به سایت ما خوش آمدید", "به وب سایت ما خوش آمدید"];
@@ -69,11 +67,3 @@ setTimeout(() => {
   }
   
 }, 4000);
-//  close sidebar
-const close_sidebar = document.querySelector(".close_menu");
-let menu_tailwind = document.getElementById("menu_tailwind");
-
-function close_side(){
-  let menu_tailwind = document.getElementById("menu_tailwind");
- menu_tailwind.style.display = "none";
-}
