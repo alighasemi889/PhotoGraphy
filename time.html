@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>in the name of god</title>
+    <title>رزرو تایم</title>
     <link rel="stylesheet" href="src/styles/reservetime.css">
+    <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css">
 </head>
 <body>
     <header class="timing__content">
@@ -39,13 +40,13 @@
                   <div class="w-full sm:w-half formbold-px-3">
                     <div class="formbold-mb-5 w-full">
                       <label for="date" class="formbold-form-label"> تاریخ </label>
-                      <input required type="date" name="date" id="date" class="formbold-form-input" />
+                      <input data-jdp  required  name="date" id="date" class="formbold-form-input" placeholder="تاریخ" />
                     </div>
                   </div>
                   <div class="w-full sm:w-half formbold-px-3">
                     <div class="formbold-mb-5">
-                      <label for="time" class="formbold-form-label"> رمز </label>
-                      <input required type="time" name="time" id="time" class="formbold-form-input" />
+                      <label for="time" class="formbold-form-label"> ساعت </label>
+                      <input  data-jdp data-jdp-only-time required name="time" id="time" class="formbold-form-input" />
                     </div>
                   </div>
                 </div>
@@ -68,5 +69,11 @@
             </div>
           </div>
     </header>
+
+<script type="text/javascript" src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
+<script>
+  jalaliDatepicker.startWatch();
+
+</script>
 </body>
 </html>
