@@ -113,6 +113,9 @@ button.signup {
     header{
     // height: 300px;
     height: 24px;
-        max-width: 24px;
+//  max-width: 24px;
+ display: flex;
+ justify-content: space-between;
+ justify-content: center;
     }
 }

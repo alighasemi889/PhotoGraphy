@@ -105,6 +105,8 @@ button.signup {
 @media screen and (min-width: 858px) {
   header {
     height: 24px;
-    max-width: 24px;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
   }
 }/*# sourceMappingURL=wedding.css.map */
