@@ -49,7 +49,8 @@
   #body__signup{
     /* background: url(../../public/images/wal__resept__pass.jpg); */
     width: 100%;
-    background: #000;
+    background: #fff;
+    color:#000;
     object-fit: contain;
     background-repeat: no-repeat;
     background-size: cover;
