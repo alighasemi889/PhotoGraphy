@@ -47,8 +47,9 @@
     height: 100vh;
   }
   #body__signup{
-    background: url(../../public/images/wal__resept__pass.jpg);
+    /* background: url(../../public/images/wal__resept__pass.jpg); */
     width: 100%;
+    background: #000;
     object-fit: contain;
     background-repeat: no-repeat;
     background-size: cover;
@@ -162,4 +163,19 @@ img#logo_tatri {
   display: none;
   position: fixed;
   bottom: 0;
+}
+.slate__color{
+  color:#a3a3a3;
+}
+.tale__color{
+  color: #6b7280;
+}
+.location__txt{
+  color: #1e293b;
+}
+#change__position{
+  position: absolute;
+  top: 40px;
+  max-width: 100%;
+  width: 20rem;
 }

@@ -119,3 +119,9 @@ button.signup {
  justify-content: center;
     }
 }
+// big screens
+@media screen and (min-width:500px){
+    #menu{
+        display: none;
+    }
+}
