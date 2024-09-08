@@ -180,3 +180,15 @@ img#logo_tatri {
   max-width: 100%;
   width: 20rem;
 }
+.wrapper__cards {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+#end{
+  justify-content: center;
+}
+#end__txt{
+  display: flex;
+  justify-content: end;
+}
