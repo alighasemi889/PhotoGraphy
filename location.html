@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="src/styles/main.css">
     <link rel="stylesheet" href="src/styles/responsive.css">
     <link rel="stylesheet" href="src/styles/location.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 
 </head>
 <body>
@@ -49,7 +53,7 @@
             </div>
     
           </ul>
-         <aside id="menu" class="sidebar__mobile animate__animated animate__bounceInRight">
+         <aside id="menu" class="animate__fadeInRight sidebar__mobile animate__animated animate__bounceInRight">
           <ul class="mobile__list">
             <div class="close_icon">
               <img id="close_side_right" class="close_icon" src="public/images/close_icon.png" alt="close_icon">
@@ -463,6 +467,17 @@
         </div>
       </footer>
     <script src="./node_modules/preline/dist/preline.js"></script>
+    <script>
+        const show__sidebar = document.getElementById("menu");
+        const hamberger__menu = document.getElementById("hamberger__menu");
+        const close__icon = document.getElementById("close_side_right");
+        hamberger__menu.onclick = () => {
+            show__sidebar.style.display = "block"
+        }
+        close__icon.onclick  = () => {
+             show__sidebar.style.display = "none"
+        }
+    </script>
 
 </body>
 </html>
