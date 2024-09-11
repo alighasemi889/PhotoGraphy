@@ -150,11 +150,12 @@ img#logo_tatri {
     background: darkblue;
     color: rgb(156, 163, 175);
     padding: 10px;
-    /* color: #fff; */
     font-family: 1rem;
     position: fixed;
     border-radius: 10px;
     top: 500px;
     width: 200px;
     font-size: 1.2rem;
+    display: inline-flex;
+    left: 20px;
 }
