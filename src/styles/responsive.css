@@ -131,4 +131,9 @@
   .sidebar__mobile {
     display: none;
   }
+}
+@media screen and (min-width: 861px) {
+  header {
+    height: 100px;
+  }
 }/*# sourceMappingURL=responsive.css.map */
