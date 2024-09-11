@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background: #fff;
 }
@@ -5,4 +11,14 @@ body {
 html {
   scroll-behavior: smooth;
   line-height: 1.125;
+}
+
+.step {
+  max-width: 100%;
+  position: relative;
+  left: -27%;
+  width: 40%;
+  top: 60px;
+  height: auto;
+  font-size: 1.2rem;
 }/*# sourceMappingURL=signup.css.map */

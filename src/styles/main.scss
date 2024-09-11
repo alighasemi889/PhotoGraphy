@@ -232,7 +232,12 @@
   ul.desktop.sidebar {
     display: flex;
   }
-
+.direction{
+  direction: rtl;
+}
+.txt__black{
+  color :#000;
+}
   img.w__fix:hover {
     border-radius: 50%;
     transition: 1.2s ease-out;
