@@ -126,4 +126,9 @@
   #menu {
     display: none;
   }
+}
+@media screen and (max-width: 800px) {
+  .sidebar__mobile {
+    display: none;
+  }
 }/*# sourceMappingURL=responsive.css.map */
