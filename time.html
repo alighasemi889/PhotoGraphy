@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رزرو تایم</title>
+    <link rel="stylesheet" href="src/styles/reservetime.css">
+    <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css">
+</head>
+<body>
+    <header class="timing__content">
+        <div class="formbold-main-wrapper">
+            <!-- Author: FormBold Team -->
+            <!-- Learn More: https://formbold.com -->
+            <div class="formbold-form-wrapper">
+              <form action="https://formbold.com/s/FORM_ID" method="POST">
+                <div class="flex flex-wrap formbold--mx-3">
+                  <div class="w-full sm:w-half formbold-px-3">
+                    <div class="formbold-mb-5">
+                      <label for="fName" class="formbold-form-label"> نام کاربری </label>
+                      <input required type="text" name="fName" id="fName" placeholder="نام کاربری" class="formbold-form-input" />
+                    </div>
+                  </div>
+                  <div class="w-full sm:w-half formbold-px-3">
+                    <div class="formbold-mb-5">
+                      <label for="lName" class="formbold-form-label"> نام خانوادگی </label>
+                      <input required type="text" name="lName" id="lName" placeholder="نام خانوادگی" class="formbold-form-input" />
+                    </div>
+                  </div>
+                </div>
+          
+                <div class="formbold-mb-5">
+                  <label for="guest" class="formbold-form-label">
+                  برای چند نفر میخواید رزرو کنید؟
+                  </label>
+                  <input required type="number" name="guest" id="guest" placeholder="5" class="formbold-form-input" />
+                </div>
+          
+                <div class="flex flex-wrap formbold--mx-3">
+                  <div class="w-full sm:w-half formbold-px-3">
+                    <div class="formbold-mb-5 w-full">
+                      <label for="date" class="formbold-form-label"> تاریخ </label>
+                      <input data-jdp  required  name="date" id="date" class="formbold-form-input" placeholder="تاریخ" />
+                    </div>
+                  </div>
+                  <div class="w-full sm:w-half formbold-px-3">
+                    <div class="formbold-mb-5">
+                      <label for="time" class="formbold-form-label"> ساعت </label>
+                      <input placeholder="ساعت"  data-jdp data-jdp-only-time required name="time" id="time" class="formbold-form-input" />
+                    </div>
+                  </div>
+                </div>
+          
+                <div class="flex formbold-mb-5">
+                  <div class="flex">
+                    <input required type="radio" name="radio1" id="radioButton1" class="formbold-radio" />
+                    <label for="radioButton1" class="formbold-radio-label"> بله </label>
+                  </div>
+                  <div class="flex">
+                    <input required type="radio" name="radio1" id="radioButton2" class="formbold-radio" />
+                    <label for="radioButton2" class="formbold-radio-label"> خیر </label>
+                  </div>
+                </div>
+          
+                <div>
+                  <button class="formbold-btn">ثبت اطلاعات</button>
+                </div>
+              </form>
+            </div>
+          </div>
+    </header>
+
+<script type="text/javascript" src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
+<script>
+  jalaliDatepicker.startWatch();
+
+</script>
+</body>
+</html>

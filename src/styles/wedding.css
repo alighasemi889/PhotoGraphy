@@ -1,0 +1,117 @@
+body {
+  background: #fff;
+  line-height: 1.125;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#white {
+  --white: #fff;
+  color: var(--white);
+}
+
+#bg__wedding {
+  background: url(../../public/images/wedding__background.jpg);
+  background-repeat: no-repeat;
+  max-width: 100%;
+  --white--bg:#fff;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 100%;
+  margin-top: 40px;
+  aspect-ratio: 16/9;
+}
+
+#menu {
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  top: 0;
+  min-width: 240px;
+  max-width: 250px;
+  overflow: hidden;
+  overflow: hidden;
+  z-index: 9999;
+  background: #fff;
+}
+
+#logo_tatri {
+  position: absolute;
+  width: 300px;
+  height: 130px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -999999;
+  top: 30px;
+}
+
+img#close_side_right {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.links__wrapper {
+  margin-top: 60px;
+  padding-right: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+button.signup {
+  width: 100%;
+  background: blue;
+  color: #fff;
+  text-align: center;
+  line-height: 1.1;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+img.indicator_links {
+  position: relative;
+  top: 100px;
+  left: 5px;
+}
+
+button.signup {
+  width: 100%;
+  background: blue;
+  color: #fff;
+  text-align: center;
+  line-height: 1.1;
+  bottom: 10;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  position: fixed;
+  bottom: 30px;
+  display: inline-flex;
+  width: 200px;
+  text-align: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 858px) {
+  header {
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 500px) {
+  #menu {
+    display: none;
+  }
+}/*# sourceMappingURL=wedding.css.map */

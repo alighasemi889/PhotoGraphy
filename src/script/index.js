@@ -78,3 +78,4 @@ close_sidebar.onclick = () =>{
 hamberger.onclick = () =>{
   sidebar.style.display = "block";
 }
+

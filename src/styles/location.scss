@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    
+    scroll-behavior: smooth;
+}
+body{
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#bg__wedding{
+    background: url(../../public/images/wedding__background.jpg);
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px;
+}
+#white{
+    color: #fff;
+}
+@media screen and (max-width:1314px) {
+    header{
+        // height: 300px;
+        height: 100px;
+    }
+}
+  @media screen and (max-width:800px){
+    // display: grid;
+    // gap: 1rem;
+    // justify-content: space-between;
+    // grid-template-columns: 1fr 1fr;
+    .wrapper__cards{
+      display: grid;
+    gap: 1rem;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;   
+    }
+  }  
+  @media  screen and (max-width:588px){
+    .wrapper__cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // align-items: ce;
+        align-items: center;
+    
+      }  
+    }
+    .signup{
+        text-align: center;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: rgb(156, 163, 175);
+    position: fixed;
+    bottom: 0;
+    bottom: 0;
+    height: 40px;
+    font-size: 1.1rem;
+    /* left: 0; */
+    top: 680px;
+    }
+  

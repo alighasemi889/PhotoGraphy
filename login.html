@@ -1,123 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link
-  rel="stylesheet"
-  href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css"
-/>
-<style>
-  body{
-    background: url(public/images/bg.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-</style>
+  <title>ثبت نام</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="src/styles/tailwindbase.css">
+  <script src="//unpkg.com/alpinejs" defer></script>
+
+
+
 </head>
-<body>
-  
-  <section class="px-8">
-    <div
-      class="container mx-auto h-screen grid place-items-center"
-    >
-      <div
-        class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 md:px-24 md:py-14 py-8 border border-gray-300"
-      >
-        <div
-          class="relative bg-clip-border mt-4 mx-4 rounded-xl overflow-hidden bg-white text-gray-700 text-center"
-        >
-          <h1
-            class="block antialiased tracking-normal font-sans text-5xl font-semibold leading-tight text-blue-gray-900 mb-4 !text-3xl md:text-4xl"
-          >
-           خوش آمدید
-          </h1>
-          <p
-            class="block antialiased font-sans text-base font-light leading-relaxed text-inherit !text-gray-600 text-[18px] font-normal md:max-w-sm"
-          >
-          با ورود به سایت ما از امکانات آن لذت ببرید
-          </p>
-        </div>
-        <div class="p-6">
-          <form action="#" class="flex flex-col gap-4 md:mt-12">
-            <div>
-              <label for="email"
-                ><p style="text-align: center;"
-                  class="block t antialiased font-sans text-sm font-light leading-normal text-blue-gray-900 block font-medium mb-2"
-                >
-                 ادرس ایمیل شما
-                </p></label
-              >
-              <div class="relative w-full min-w-[200px] h-11">
-                <input
-                  id="email"
-                  type="email"
-                  name="email"
-                  placeholder="name@mail.com"
-                  class="peer w-full h-full bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-3 rounded-md border-blue-gray-200 focus:border-gray-900 w-full placeholder:opacity-100 focus:border-t-primary border-t-blue-gray-200"
-                /><label
-                  class="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[4.1] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900 hidden"
-                >
-                </label>
-              </div>
+<body id="body__signup">
+    <ol  id="change__position" class="flex w-full items-center gap-2" aria-label="registration progress">
+        <!-- completed step -->
+        <li class="text-sm">
+            <div class="flex items-center gap-2" aria-label="create an account">
+                <span class="flex size-6 items-center justify-center rounded-full border border-black bg-black text-neutral-100 dark:border-white dark:bg-white dark:text-black">
+                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/>
+                    </svg>
+                    <span class="sr-only text-white">completed</span>
+                </span>
             </div>
-            <button
-              class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-3.5 px-7 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none bg-gray-900 block w-full"
-              type="button"
-              data-ripple-light="true"
-            >
-              ثبت نام</button
-            ><button
-              class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-3.5 px-7 rounded-lg border border-gray-900 text-gray-900 hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] block w-full flex h-12 border-blue-gray-200 items-center justify-center gap-2"
-              type="button"
-              data-ripple-dark="true"
-            >
-              <img
-                src="https://www.material-tailwind.com/logos/logo-google.png"
-                alt="google"
-                class="h-6 w-6"
-              />
-              <!-- -->ورود با گوگل</button
-            ><button
-              class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-3.5 px-7 rounded-lg border border-gray-900 text-gray-900 hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] block w-full flex h-12 border-blue-gray-200 items-center justify-center gap-2"
-              type="button"
-              data-ripple-dark="true"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                aria-hidden="true"
-                data-slot="icon"
-                class="h-6 w-6"
-              >
-                <path d="M16.5 7.5h-9v9h9v-9Z"></path>
-                <path
-                  fill-rule="evenodd"
-                  d="M8.25 2.25A.75.75 0 0 1 9 3v.75h2.25V3a.75.75 0 0 1 1.5 0v.75H15V3a.75.75 0 0 1 1.5 0v.75h.75a3 3 0 0 1 3 3v.75H21A.75.75 0 0 1 21 9h-.75v2.25H21a.75.75 0 0 1 0 1.5h-.75V15H21a.75.75 0 0 1 0 1.5h-.75v.75a3 3 0 0 1-3 3h-.75V21a.75.75 0 0 1-1.5 0v-.75h-2.25V21a.75.75 0 0 1-1.5 0v-.75H9V21a.75.75 0 0 1-1.5 0v-.75h-.75a3 3 0 0 1-3-3v-.75H3A.75.75 0 0 1 3 15h.75v-2.25H3a.75.75 0 0 1 0-1.5h.75V9H3a.75.75 0 0 1 0-1.5h.75v-.75a3 3 0 0 1 3-3h.75V3a.75.75 0 0 1 .75-.75ZM6 6.75A.75.75 0 0 1 6.75 6h10.5a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75H6.75a.75.75 0 0 1-.75-.75V6.75Z"
-                  clip-rule="evenodd"
-                ></path></svg
-              >غیر فعال
-            </button>
-            <p
-              class="block antialiased font-sans text-sm font-light leading-normal text-inherit text-center mx-auto max-w-[19rem] !font-medium !text-gray-600"
-            >
-            با کامل کردن این فرم  
-              <a href="#" class="text-gray-900">قوانین و شرایط را پذیرا هستم</a>
-              <!-- -->&amp;<!-- -->
-              <a href="#" class="text-gray-900">شرایط امنیتی سایت</a>
-            </p>
-          </form>
-        </div>
+        </li>
+        <!-- current step -->
+        <li class="flex w-full items-center text-sm" aria-current="step" aria-label="choose a plan">
+            <span class="h-0.5 w-full bg-white dark:bg-white" aria-hidden="true"></span>
+            <div class="flex items-center gap-2 pl-2">
+                <span class="flex size-6 flex-shrink-0 items-center justify-center rounded-full border border-black bg-black font-bold text-neutral-100 outline outline-2 outline-offset-2 outline-black dark:border-white dark:bg-white dark:text-black dark:outline-white">2</span>
+            </div>
+        </li>
+        <li class="flex w-full items-center text-sm" aria-label="checkout">
+            <span class="h-0.5 w-full bg-neutral-300 dark:bg-neutral-700" aria-hidden="true"></span>
+            <div class="flex items-center gap-2 pl-2">
+                <span class="flex size-6 flex-shrink-0 items-center justify-center rounded-full border border-neutral-300 bg-neutral-50 font-medium text-neutral-600 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300">3</span>
+            </div>
+        </li>
+        <li aria-label="start trial" class="flex w-full items-center text-sm">
+            <span aria-hidden="true" class="h-0.5 w-full bg-neutral-300 dark:bg-neutral-700"></span>
+            <div class="flex items-center gap-2 pl-2">
+                <span class="flex size-6 flex-shrink-0 items-center justify-center rounded-full border border-neutral-300 bg-neutral-50 font-medium text-neutral-600 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300">4</span>
+            </div>
+        </li>
+    </ol>
+    
+    <main
+  class="w-full h-screen flex flex-col items-center justify-center px-4"
+>
+<!-- Stepper -->
+
+
+  <!-- End Stepper -->
+  <div class="max-w-sm w-full text-gray-600 space-y-5">
+    <div class="text-center pb-8">
+      <!-- <img src="https://floatui.com/logo.svg" width="150" class="mx-auto" /> -->
+      <div class="mt-5">
+        <h3 class="text-gray-800 text-dark text-2xl font-bold sm:text-3xl">
+          به اکانت خود ورود کنید
+        </h3>
       </div>
     </div>
-  </section> 
-    
-
-
-
-  <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/script-name.js"></script>
+    <form onSubmit="event.preventDefault()" class="space-y-5">
+      <div>
+        <label class="font-medium text-dark"> ایمیل </label>
+        <input
+          type="email"
+          required
+          class="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+        />
+      </div>
+      <div>
+        <label class="font-medium text-dark"> رمز ورود </label>
+        <input
+          type="password"
+          required
+          class="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+        />
+      </div>
+      <div class="flex items-center justify-between text-sm">
+        <div class="flex items-center gap-x-3">
+          <input
+            type="checkbox"
+            id="remember-me-checkbox"
+            class="checkbox-item peer hidden"
+          />
+          <label
+            for="remember-me-checkbox"
+            class="relative flex w-5 h-5 bg-white peer-checked:bg-indigo-600 rounded-md border ring-offset-2 ring-indigo-600 duration-150 peer-active:ring cursor-pointer after:absolute after:inset-x-0 after:top-[3px] after:m-auto after:w-1.5 after:h-2.5 after:border-r-2 after:border-b-2 after:border-white after:rotate-45"
+          ></label>
+          <span class="text-dark">من را به یاد بیاور</span>
+        </div>
+        <a
+          href="javascript:void(0)"
+          class="text-center text-dark hover:text-indigo-500"
+          >رمز را فراموش کرده ام?</a
+        >
+      </div>
+      <button
+        class="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
+      >
+       ورود
+      </button>
+    </form>
+    <button
+      class="w-full flex items-center justify-center gap-x-3 py-2.5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100"
+    >
+      <!-- SVG for Google Sign In -->
+      <img
+        src="https://raw.githubusercontent.com/sidiDev/remote-assets/7cd06bf1d8859c578c2efbfda2c68bd6bedc66d8/google-icon.svg"
+        alt="Google"
+        class="w-5 h-5"
+      />
+      <!-- Comment: Google Icon SVG here -->
+    ورود با اکان گوگل
+    </button>
+    <p class="text-center">
+      اکانت ندارم?
+      <a
+        href="signup.html"
+        class="font-medium text-indigo-600 hover:text-indigo-500"
+        >ثبت نام</a
+      >
+    </p>
+  </div>
+</main>  
 
 </body>
 </html>
