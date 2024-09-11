@@ -31,13 +31,9 @@ body{
     }
 }
   @media screen and (max-width:800px){
-    // display: grid;
-    // gap: 1rem;
-    // justify-content: space-between;
-    // grid-template-columns: 1fr 1fr;
     .wrapper__cards{
       display: grid;
-    gap: 1rem;
+        gap: 1rem;
     justify-content: space-between;
     grid-template-columns: 1fr 1fr;   
     }
@@ -66,3 +62,12 @@ body{
     top: 680px;
     }
   
+    .wrapper__cards {
+        display: flex;
+        display: flex;
+        grid-template-columns: 1fr 1fr;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        column-gap: 20px;
+    }

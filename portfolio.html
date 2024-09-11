@@ -60,9 +60,7 @@
             <li><a class="gray__link" href="location.html"> لوکیشن ها</a></li>
             <li><a class="gray__link" href="blog.html">بلاگ ما</a></li>
             <li><a class="gray__link" href="contactus.html">ارتباط با ما</a></li>
-            <!-- <li><a class="gray__link" href="time.html">رزرو وقت</a></li> -->
             <li><a class="gray__link" href="wedding.html">پکیج ها</a></li>
-            <!-- <li><a class="gray__link" href="team.html">تیم ما</a></li> -->
             <a href="login.html">  <button class="signup">ورود</button></a>
           </ul>
          </aside>
@@ -122,11 +120,11 @@
             port4.classList.toggle("default__hidden")
         })
         btnSecond.addEventListener('click' , () =>{
-            port12.classList.add("visible");
-            port11.classList.add("visible");
-            port10.classList.add("visible");
-            port9.classList.add("visible");
-            port8.classList.add("visible");
+            port12.classList.toggle("visible");
+            port11.classList.toggle("visible");
+            port10.classList.toggle("visible");
+            port9.classList.toggle("visible");
+            port8.classList.toggle("visible");
         })
         const close__icon = document.getElementById("close_side_right");
         const sidebar = document.getElementById("menu");
@@ -134,5 +132,6 @@
             sidebar.style.display = "none"
         }
     </script>
+    <script src="src/script/portfolio.js"></script>
 </body>
 </html>

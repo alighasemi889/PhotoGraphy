@@ -61,4 +61,15 @@ body {
   font-size: 1.1rem;
   /* left: 0; */
   top: 680px;
+}
+
+.wrapper__cards {
+  display: flex;
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }/*# sourceMappingURL=location.css.map */

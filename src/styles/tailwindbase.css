@@ -137,11 +137,11 @@ img.close_icon {
 }
 img#logo_tatri {
   position: absolute;
-  width: 200px;
-  /* height: auto; */
-  top: -40px;
-  z-index: -9999;
-  max-width: 100%;
+    width: 200px;
+    /* height: auto; */
+    top: 80px;
+    z-index: -9999;
+    max-width: 100%;
 }
 .signup {
   text-align: center;

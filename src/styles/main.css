@@ -686,8 +686,18 @@ ul {
 }
 
 .signup {
-  text-align: center;
   font-size: 0.75rem;
-  line-height: 1rem;
-  color: rgb(156, 163, 175);
+  background: blue;
+  color: #fff;
+  line-height: 1.2;
+  border-radius: 10px;
+  text-align: center;
+  position: absolute;
+  top: 450px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-right: 10px;
 }/*# sourceMappingURL=main.css.map */
