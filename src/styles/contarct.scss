@@ -10,13 +10,45 @@ html{
 }
 header{
     background: #fff;
+    height: 100px;
+    
 }
-#menu{
+
+#menu {
     display: none;
+    height: 100vh;
+    width: 240px;
+    // display: flex;
+    flex-direction: column;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 250px;
+    background: #fff;
+    z-index: 99999;
 }
-#logo_tatri{
-    display: none;
+ul.mobile__list {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    gap: 1rem;
 }
-#hamberger__menu{
-    display: none;
+img.indicator_links {
+    position: relative;
+    top: 64px;
+    right: -16px;
+}
+img#close_side_right {
+    position: absolute;
+    left: 40px;
+    top: 30px;
+}
+img#logo_tatri {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    width: 200px;
+    height: 12rem;
+    z-index: -999;
 }

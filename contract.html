@@ -422,5 +422,16 @@
           <p class="text-xs text-gray-500">&copy; 2025.آتلیه عکاسی توس. تمامی حق و حقوق متعلق به این سایت است.</p>
         </div>
       </footer>
+      <script>
+        const sidebar = document.getElementById("menu");
+        const hamberger__menu  = document.getElementById("hamberger__menu");
+        const close = document.getElementById("close_side_right");
+        hamberger__menu.onclick  = () =>{
+          sidebar.style.display = "flex";
+        }
+        close.onclick = () =>{
+          sidebar.style.display = "none"
+        }
+      </script>
 </body>
 </html>
