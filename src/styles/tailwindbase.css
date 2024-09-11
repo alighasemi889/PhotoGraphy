@@ -138,9 +138,10 @@ img.close_icon {
 img#logo_tatri {
   position: absolute;
   width: 200px;
-  height: auto;
+  /* height: auto; */
   top: -40px;
   z-index: -9999;
+  max-width: 100%;
 }
 .signup {
   text-align: center;
@@ -155,4 +156,5 @@ img#logo_tatri {
     border-radius: 10px;
     top: 500px;
     width: 200px;
+    font-size: 1.2rem;
 }
