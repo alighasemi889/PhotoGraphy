@@ -844,14 +844,8 @@
     padding: 10px;
     margin-right: 10px;
 }
-// sidebar right
-// .gray__link:is(:hover){
-//   background-image: url(../../src/styles/indicator.svg);
-//   width: 100px;
-//   height: 100px;
-//   max-width: 100%;
-//   position: absolute;
-//   background-repeat: no-repeat;
-//   right: -80px;
-//   display: block;
-// }
+@media sreen and (max-width:800px){
+  #aside{
+    display: none;
+  }
+}
