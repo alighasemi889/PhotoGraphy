@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  line-height: 1.125;
+}
+
+body {
+  font-weight: 600;
+  background: #fff;
+}/*# sourceMappingURL=blog.css.map */
