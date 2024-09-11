@@ -114,12 +114,11 @@
 }
 ul.mobile__list {
   display: flex;
-  flex-direction: column;
-  flex-direction: c;
-  padding: 10px;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 200px;
+    /* flex-direction: column; */
+    padding: 10px;
+    flex-direction: column;
+    gap: 0.80rem;
+    margin-top: 170px;
 }
 .gray__link{
   --gray:#555755;
@@ -128,7 +127,7 @@ ul.mobile__list {
 img.indicator_links {
   position: absolute;
   right: -4px;
-  top: 210px;
+  top: 170px;
 }
 img.close_icon {
   position: fixed;
