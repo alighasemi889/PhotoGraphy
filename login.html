@@ -60,7 +60,7 @@
           ></label>
           <span class="text-dark">من را به یاد بیاور</span>
         </div>
-        <a onclick="forgetPass()" id="forget__pass"
+        <a  id="forget__pass"
           href="javascript:void(0)"
           class="text-center text-dark hover:text-indigo-500"
           >رمز را فراموش کرده ام?</a
@@ -96,8 +96,8 @@
 </main>  
 <script>
  
-  const hidden__banner = document.getElementById("content")
-  hidden__banner.style.display = "none";
+  // const hidden__banner = document.getElementById("content")
+  // hidden__banner.style.display = "none";
   const passwd = document.getElementById("password").value;
   const passwd__Input = document.getElementById("password");
   const error__pass = document.querySelector(".error__pass");
@@ -105,14 +105,6 @@
   const email__Input = document.getElementById("email");
   const email__eror = document.querySelector(".email")
   // const form = document.getElementById("main__form");
-  function forgetPass() {
-    let forget__pass = document.getElementById("forget__pass");
-    const body = document.getElementById("body__signup");
-    forget__pass.onclick = () => {
-      hidden__banner.style.display = "block"
-      body.style.opacity = "30%"
-    }
-  }
 
     function validateform(){  
 var email=document.my__form.email.value;  
