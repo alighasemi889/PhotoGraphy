@@ -67,11 +67,7 @@
   }
 
   // darkmode part
-  .dark-mode {
-    background: var(--white);
-    color: var(--dark);
-  }
-
+ 
   // body section
   body {
     // overflow: hidden;
@@ -79,7 +75,7 @@
     overflow-x: hidden;
     font-weight: 700;
     font-size: 15px;
-    background: var(--dark);
+    background: var(--white);
   }
 
   @mixin ulDesktop {
@@ -845,3 +841,5 @@
     padding: 10px;
     margin-right: 10px;
 }
+// dark mode toggle
+/* From Uiverse.io by Creatlydev */ 

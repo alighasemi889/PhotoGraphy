@@ -79,3 +79,4 @@ hamberger.onclick = () =>{
   sidebar.style.display = "block";
 }
 
+// darkmode
