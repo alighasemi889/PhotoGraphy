@@ -61,11 +61,6 @@ html {
   --link--color: #686868;
 }
 
-.darkmode {
-  color: #fff;
-  background: #000;
-}
-
 body {
   font-family: "Vazir";
   overflow-x: hidden;
@@ -711,65 +706,4 @@ ul {
   margin-right: 10px;
 }
 
-/* From Uiverse.io by Creatlydev */
-.toggle {
-  background: #fff;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  left: 0;
-  z-index: 99999;
-  bottom: 0;
-}
-
-.input {
-  display: none;
-}
-
-[type=checkbox], [type=radio] {
-  --tw-shadow: 0 0 #0000;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: #fff;
-  background-origin: border-box;
-  /* display: inline-block; */
-  flex-shrink: 0;
-  /* height: 1rem; */
-  padding: 0;
-  -webkit-print-color-adjust: exact;
-  print-color-adjust: exact;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  /* vertical-align: middle; */
-  /* width: 1rem; */
-}
-
-.icon {
-  grid-column: 1/1;
-  grid-row: 1/1;
-  transition: transform 500ms;
-}
-
-.icon--moon {
-  transition-delay: 200ms;
-}
-
-.icon--sun {
-  transform: scale(0);
-}
-
-#switch:checked + .icon--moon {
-  transform: rotate(360deg) scale(0);
-}
-
-#switch:checked ~ .icon--sun {
-  transition-delay: 200ms;
-  transform: scale(1) rotate(360deg);
-}/*# sourceMappingURL=main.css.map */
+/* From Uiverse.io by Creatlydev *//*# sourceMappingURL=main.css.map */

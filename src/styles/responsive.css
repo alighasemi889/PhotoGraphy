@@ -103,17 +103,14 @@
     top: 10px;
     left: 4px;
   }
-  .hamberger__show {
-    visibility: hidden;
-  }
-  .hamberger__show .desktop {
+  .desktop {
     display: flex;
     justify-content: space-around;
   }
-  .hamberger__show #hide__link {
+  #hide__link {
     display: none;
   }
-  .hamberger__show .sidebar {
+  .sidebar {
     display: flex;
   }
 }

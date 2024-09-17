@@ -125,9 +125,9 @@
   // .hamberger__show{
   //   display: none;
   // }
-  .hamberger__show {
-    visibility: hidden;
-
+  // .hamberger__show {
+  //   visibility: hidden;
+  // }
     .desktop {
       display: flex;
       justify-content: space-around;
@@ -142,7 +142,7 @@
     }
   }
 
-}
+
 
 @media screen and (min-width:1313px) {
   .hamberger__show {

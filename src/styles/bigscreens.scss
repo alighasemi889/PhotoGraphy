@@ -1,0 +1,41 @@
+// these codes are for big screens 
+@media screen and (min-width:1100px){
+#menu{
+    display: none;
+}
+ul.desktop.sidebar{
+    display: flex;
+}
+
+}
+@media screen and (min-width: 862px) and (max-width: 1313px) {
+    .hamberger__show {
+        display: flex;
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        top: 10px;
+        height: auto;
+        max-width: 51px;
+        padding-right: 10px;
+        left: 10px;
+        right: 10px;
+        width: 50px;
+        top: 10px;
+        min-height: 49px;
+        top: 15px;
+}
+button.bg__color.color__txt {
+    width: 100px;
+    padding: 12px;
+    line-height: 1.2;
+    font-size: 16px;
+    position: absolute;
+    margin-left: 10px;
+}
+#logo__header {
+    position: absolute;
+    right: 6rem;
+    top: 1.5rem;
+}
+}
