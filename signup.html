@@ -23,7 +23,7 @@
         </h3>
       </div>
     </div>
-    <form name="myform" id="myform"  class="space-y-5">
+    <form  name="myform" id="myform"  class="space-y-5">
       <div>
         <label class="font-medium text-dark"> ایمیل </label>
         <input id="email"
@@ -32,6 +32,7 @@
           class="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
         />
       </div>
+        <div class="email__eror"></div>
       <div>
         <label class="font-medium text-dark"> رمز ورود </label>
         <input id="password"
@@ -48,6 +49,7 @@
           name="repassword"
           class="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
         />
+        <div class="repass__eror"></div>
       </div>
       <div class="flex items-center justify-between text-sm">
         <div class="flex items-center gap-x-3">
@@ -120,17 +122,23 @@ if (email==null || email==""){
 <script>
   
   let form = document.getElementById("myform");
-  form.addEventListener('submit', (event) =>{
+  form.addEventListener('submit'), (event) =>{
     event.preventDefault();
     //--------------- varraibels--------------
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
     let repass = document.getElementById("repassword").value;
+    // eror text
+    let passwordEror = document.querySelector(".error__pass");
+    let email__eror = document.querySelector(".email__eror")
+    let repass__eror = document.querySelector(".repass__eror");
     // ----------------input forms----------------
     let emailInput = document.getElementById("email");
     let passwordInput = document.getElementById("password");
     let repassInput = document.getElementById("repassword");
     if (email === "" || email === null) {
+      email__eror.textContent = "ایمیل خود را وارد کنید";
+      email__eror.style.color = "red";
       console.log('email is not valid');
       emailInput.style.border = "2px solid red"
     }else{
@@ -138,25 +146,33 @@ if (email==null || email==""){
     }  
     if(repass === null || repass === ""){
       console.log('repass is not valid');
-      repassInput.style.border = "2px solid red"
+      repassInput.style.border = "2px solid red";
+      repass__eror.textContent = "تکرار رمز خالی است";
+      repass__eror.style.color = "red"
     }
     if (password.length < 6) {
-      console.log('password is not vali');
+      passwordEror.textContent = "طول رمز باید بیشتر از 6 کاراکتر باشد";
+      passwordEror.style.color = "red"
+      console.log('password is not valid');
       passwordInput.style.border = "2px solid red"
 
+    }else if(password.length > 6){
+      passwordInput.style.border = "2px solid teal";
+      passwordEror.textContent = "آفرین😍";
+      passwordEror.style.color = "teal"
     }
     if (email !== "") {
-     emailInput.style.border = "2px solid teal"
+     emailInput.style.border = "2px solid teal";
+     email__eror.textContent = "آفرین😍";
+     email__eror.style.color = "teal"
     }
-    if (password !== "") {
-      alert('pass is good')
-      passwordInput.style.border = "2px solid teal"
-    }
+  }
    
-
-    // form.onsubmit();
   
-  })
+    form.onsubmit();
+  
+  // })
+    
  
 </script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

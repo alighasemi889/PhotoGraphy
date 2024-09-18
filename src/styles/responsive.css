@@ -133,4 +133,20 @@
   header {
     height: 100px;
   }
+}
+@media screen and (min-width: 862px) {
+  .hamberger__show {
+    right: 0;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+  }
+  #logo__header {
+    display: none;
+  }
+}
+@media screen and (min-width: 1300px) {
+  #logo__header {
+    display: flex;
+  }
 }/*# sourceMappingURL=responsive.css.map */
