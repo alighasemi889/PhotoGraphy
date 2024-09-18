@@ -72,4 +72,10 @@ body {
   align-items: center;
   -moz-column-gap: 20px;
        column-gap: 20px;
+}
+
+button#locatin__si {
+  position: absolute;
+  top: 440px;
+  left: 70px;
 }/*# sourceMappingURL=location.css.map */
