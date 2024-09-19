@@ -16,894 +16,907 @@
   <link rel="stylesheet" href="src/styles/responsive.css">
   <script src="https://unpkg.com/typeit@@{TYPEIT_VERSION}/dist/index.umd.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="src/styles/loader.css">
 </head>
 
 <body  id="body" >
-
-  <div id="hidden__offline" class="main__wrapper">
+  <div class="dot-spinner loader" id="loader">
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+  </div>
+  <div class="container" id="content">
+    <div id="hidden__offline" class="main__wrapper">
   
-    <button onclick="scroolTop()" id="top">بالا</button>
-    <!-- modal -->
-    <div id="modal" class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-     
-      <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
-    
-      <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
-        <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-        
-          <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-            <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-              <div class="sm:flex sm:items-start">
-                <div class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
-                  <svg class="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
-                  </svg>
+      <button onclick="scroolTop()" id="top">بالا</button>
+      <!-- modal -->
+      <div id="modal" class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+       
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+      
+        <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+          <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+          
+            <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+              <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                <div class="sm:flex sm:items-start">
+                  <div class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
+                    <svg class="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                    </svg>
+                  </div>
+                  <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                    <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">لطفا با دقت بخوانید</h3>
+                    <div class="mt-2">
+                      <p class="text-sm text-gray-500">لطفا برای دسترسی به سایر صفحات ورود کنید</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                  <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">لطفا با دقت بخوانید</h3>
-                  <div class="mt-2">
-                    <p class="text-sm text-gray-500">لطفا برای دسترسی به سایر صفحات ورود کنید</p>
+              </div>
+              <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                <a href="signup.html">            <button type="button" class="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto">ثبت نام</button>
+                </a>
+                <button id="close" type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">کنسل</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!---------------- Header section----------------- -->
+      <header>
+        <nav>
+          <ul class="animate__animated animate__fadeInDownBig desktop sidebar">
+            <div class="img__header">
+              <a href="index.html">
+                <img id="logo__header" src="public/images/logo.png" alt="logo__header" loading="lazy" width="100px">
+    
+              </a>
+    
+            </div>
+            <li ><a href="#"><img id="hamberger__menu" class="hamberger__show" loading="lazy" src="public/images/icon_hamberger.png"
+                  alt="hamberger__menu"></a></li>
+    
+            <li><a class="non__active" href="location.html">  لوکیشن ها </a></li>
+            <li><a class="non__active" href="reservetime.html">   رزرو وقت </a></li>
+            <li><a class="non__active" href="wedding.html"> پکیج ها</a></li>
+            <li><a class="non__active" href="portfolio.html">نمونه کار های ما</a></li>
+            <li><a class="non__active" href="contactus.html">ارتباط با ما</a></li>
+            <li><a class="non__active" href="contract.html">مراحل عقد قرارداد</a></li>
+            <li><a class="non__active" href="blog.html">مقالات</a></li>
+            <li><a class="non__active" href="team.html">تیم ما</a></li>
+            
+    
+            <div class="wrapper__btn__header">
+              <a href="#">
+                <div class="btn__ header__btn">
+                  <a href="login.html">
+                    <button id="show_modal" class="button is-dark bg__color color__txt left__position">ورود
+                    </button>
+                  </a>
+                </div>
+    
+              </a>
+            </div>
+    
+          </ul>
+         <aside id="menu" class="sidebar__mobile animate__animated animate__fadeInRight">
+          <ul class="mobile__list">
+            <div class="close_icon">
+              <img id="close_side_right" class="close_icon" src="public/images/close_icon.png" alt="close_icon">
+              <img id="logo_tatri" src="public/images/alireza tatari studio Logo (1).jpg" alt="logo__sidebar">
+              <img class="indicator_links" src="src/styles/indicator.svg" alt="indicator">
+            </div>
+            <li><a class="gray__link" href="team.html">تیم ما</a></li>
+            <li><a class="gray__link" href="location.html"> لوکیشن ها</a></li>
+            <!-- <li><a class="gray__link" href="reserve.html"></a></li> -->
+            <li><a class="gray__link" href="reservetime.html">رزرو وقت</a></li>
+            <li><a class="gray__link" href="contactus.html">ارتباط با ما</a></li>
+            <li><a class="gray__link" href="portfolio.html"> نمونه کار</a></li>
+            <li><a class="gray__link" href="wedding.html">پکیج ها</a></li>
+            <li><a class="gray__link" href="contract.html">قرارداد</a></li>
+            <!-- <li><a class="gray__link" href="contract.html">تیم ما</a></li> -->
+            <a href="login.html">  <button class="signup">ورود</button></a>
+          </ul>
+         </aside>
+              
+        </nav>
+      </header>
+    
+      <!---------------------------  main section--------------------- -->
+      <main>
+        <div class="first__Section">
+          <div class="wrapper__content">
+            <div class="img_right">
+              <img src="public/images/flex__header__image.png" alt="wedding" loading="lazy">
+              <img src="public/images/aroow.svg" alt="aroow" loading="lazy">
+            </div>
+            <div class="txt__art ">
+              <h3  class="art">آتلیه عکاسی و فیلمبرداری
+                <br>
+                <span class="yellow">عروس و داماد</span>
+              </h3>
+            </div>
+            <h3 class="header_title">
+              به استودیو عکاسی طوس خوش امدید!
+              <br>
+              بانهایت افتخار و سربلندی اعلام می‌ کنیم که تونستیم لحظات خوب و ماندگار زیادی رو برای عروس و دامادهای
+              سراسر ایران به تصویر بکشیم.
+              ما در آتلیه عکاسی طوس استودیو،تمام تلاشمون رو میکنیم که مثل یک خانواده مجموعه ی مارو کنار خودتون حس
+              کنید و به شما عروس داماد های عزیز اعلام می‌کنیم که آماده ارائه بهترین خدمات آتلیه‌ای، عکاسی و
+              تصویربرداری از مجالس عروسی، عقد، نامزدی و سایر جشن‌های شادی شما هستیم. پیشنهاد می‌کنیم نمونه‌کارهای
+              ما رو از دست ندید.
+            </h3>
+            <div class="wrapper__btn">
+              <a href="portfolio.html"><button class="wirefame">نمونه کارهای توس</button></a>
+              <!-- <button class="wirefame">نمونه کارهای توس</button> -->
+              <button class="package"> پکیج ها</button>
+            </div>
+    
+          </div>
+          <div class="left__img">
+            <img class="animate__slideInRight animate__delay-5s	5s wal_hpicture_left" src="public/images/white_bg.jpg"
+              alt="wedding" loading="lazy">
+          </div>
+        </div>
+        </h3>
+    
+        <div data-aos="fade-right"  class="-mx-4 flex flex-wrap p-8">
+    
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+            <div class="mb-9 rounded-xl py-8 px-7 shadow-md transition-all hover:shadow-lg sm:p-9 lg:px-6 xl:px-9">
+              <div class="mx-auto mb-7 inline-block"><svg width="53" height="61" viewBox="0 0 53 61" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <rect x="20.8433" y="19.3018" width="10.1675" height="12.201" fill="#ABA8F7"></rect>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M42.1119 5.91343C40.9499 4.62242 39.4875 3.95192 38.2383 4.04801C36.1465 4.20891 33.9414 5.92602 31.8695 8.63549C30.0459 11.0202 28.5417 13.8917 27.5307 16.2458C33.6951 16.5488 37.7115 15.7786 40.1926 14.5916C42.7088 13.3878 43.5948 11.7969 43.7449 10.3715C43.9049 8.85254 43.2637 7.19309 42.1119 5.91343ZM8.75274 16.6855C6.24093 15.1295 4.93328 12.9984 4.69026 10.691C4.42078 8.13252 5.49249 5.64717 7.08955 3.87282C8.6764 2.10982 10.9989 0.817106 13.4643 1.00675C16.9349 1.27372 19.8489 3.94064 22.0221 6.78264C23.4868 8.69803 24.7428 10.8606 25.7343 12.8643C26.7259 10.8606 27.9818 8.69803 29.4465 6.78264C31.6197 3.94064 34.5337 1.27372 38.0043 1.00675C40.4697 0.817106 42.7922 2.10982 44.3791 3.87282C45.9761 5.64717 47.0478 8.13252 46.7784 10.691C46.5353 12.9984 45.2277 15.1295 42.7159 16.6855H49.8822C51.286 16.6855 52.4241 17.8236 52.4241 19.2274V31.1348C52.4241 32.5386 51.286 33.6766 49.8822 33.6766H49.3122V58.6608C49.3122 59.9464 48.1845 60.9886 46.7933 60.9886H31.5363L31.5191 60.9887L31.502 60.9886H20.3521L20.3349 60.9887L20.3178 60.9886H5.0608C3.66963 60.9886 2.54187 59.9464 2.54187 58.6608L2.54187 33.6766C1.13804 33.6766 0 32.5386 0 31.1348V19.2274C0 17.8236 1.13803 16.6855 2.54187 16.6855H8.75274ZM33.0443 58.1952H46.2895V33.6766H33.0443V58.1952ZM33.0443 30.6264H49.3738V19.7358H33.0443V30.6264ZM29.994 19.7358V30.6264H21.8601V19.7358H29.994ZM29.994 33.6766V58.1952H21.8601V33.6766H29.994ZM18.8098 58.1952V33.6766H5.56459V58.1952H18.8098ZM18.8098 30.6264V19.7358H3.05024V30.6264H18.8098ZM13.2303 4.04801C11.9811 3.95192 10.5187 4.62242 9.35668 5.91343C8.20488 7.19309 7.56373 8.85254 7.72372 10.3715C7.87385 11.7969 8.7598 13.3878 11.276 14.5916C13.7571 15.7786 17.7735 16.5488 23.9379 16.2458C22.9269 13.8917 21.4227 11.0202 19.5991 8.63549C17.5272 5.92602 15.3221 4.20891 13.2303 4.04801Z"
+                    fill="#6A64F1"></path>
+                </svg></div>
+              <div ata-aos="fade-down-right">
+                <h3 class="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">
+                  خدمات و پکیج ها
+    
+                </h3>
+                <p class="text-base tale__color font-medium text-body-color">وجود نمونه کارهای موفق در برگزاری مراسم نامزدی
+                  تا عروسی، دلیلی قاطع هست تا زمینه ای رو برای رقم زدن روزهای شیرین زندگیتون فراهم کنیم.</p>
+              </div>
+            </div>
+          </div>
+    
+    
+    
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+            <div class="mb-9 rounded-xl py-8 px-7 shadow-md transition-all hover:shadow-lg sm:p-9 lg:px-6 xl:px-9">
+              <div class="mx-auto mb-7 inline-block"><svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M11.4049 2.9752H37.19C38.0116 2.9752 38.6776 2.30918 38.6776 1.4876C38.6776 0.666021 38.0116 0 37.19 0H10.9091C9.53977 0 8.42974 1.11003 8.42974 2.47933V17.5764L1.04954 22.7859C0.391399 23.2505 0 24.0059 0 24.8115V57.5207C0 58.89 1.11004 60 2.47933 60H57.5205C58.8898 60 59.9999 58.89 59.9999 57.5207V26.4868C59.9999 24.3552 57.488 23.2172 55.8856 24.6229L52.066 27.8242V22.8021C52.066 21.9805 51.4 21.3145 50.5784 21.3145C49.7568 21.3145 49.0908 21.9805 49.0908 22.8021V30.2401C49.0908 30.2656 49.0915 30.291 49.0927 30.3162L30.2843 46.0802L11.4049 29.0236V18.365C11.4051 18.3523 11.4051 18.3396 11.4049 18.3269V2.9752ZM8.42974 21.2181L5.24984 23.4628L8.42974 26.3357V21.2181ZM23.284 43.7729C23.2591 43.7943 23.2333 43.815 23.2066 43.835L5.62021 57.0248H54.8755L37.4608 43.9637L31.9071 48.6143C30.9458 49.4575 29.5009 49.4314 28.5708 48.5539L23.284 43.7729ZM39.8036 42.0019L57.0247 54.9177V27.5813L39.8036 42.0019ZM2.9752 55.2896L21.0384 41.7422L2.9752 25.4071V55.2896Z"
+                    fill="#6A64F1"></path>
+                  <circle cx="46.6115" cy="11.4049" r="9.42147" fill="#6A64F1"></circle>
+                  <path
+                    d="M46.7807 15.868C47.6859 15.868 48.6475 15.6441 49.0878 15.4202L48.7884 14.5452C48.4538 14.6692 47.6436 14.8965 46.8405 14.8965C44.5088 14.8965 43.2478 13.6633 43.2478 11.431C43.2478 9.35033 44.4524 7.90005 46.7525 7.90005C48.6299 7.90005 50.0283 8.9404 50.0247 10.8971C50.0283 12.3198 49.8028 12.9605 49.2393 12.9605C48.9399 12.9605 48.7637 12.7263 48.7602 12.3852V9.10575H47.7775V9.49157H47.7282C47.6155 9.18842 46.9392 8.90939 46.1748 9.01274C45.1921 9.1402 44.2481 9.92907 44.2481 11.4035C44.2481 12.9226 45.0935 13.8149 46.2417 13.8665C47.0413 13.9044 47.6612 13.5565 47.8268 13.1466H47.8691C47.9536 13.6633 48.4185 13.9458 49.1301 13.9079C50.6447 13.8527 51.0779 12.5299 51.0744 10.9556C51.0779 8.69237 49.521 6.94238 46.7771 6.94238C43.8536 6.94238 42.1523 8.7027 42.1488 11.4448C42.1523 14.2524 43.8254 15.868 46.7807 15.868ZM46.5341 12.8779C45.6148 12.8779 45.3048 12.1475 45.3013 11.3621C45.3048 10.5767 45.7521 10.0014 46.5411 10.0014C47.4182 10.0014 47.7423 10.4217 47.7458 11.3587C47.7564 12.3646 47.4253 12.8779 46.5341 12.8779Z"
+                    fill="white"></path>
+                </svg></div>
+              <div>
+                <h3 class="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">پکیج های عروسی
+                </h3>
+                <p class="text-base tale__color font-medium text-body-color">وجود نمونه کارهای موفق در برگزاری مراسم نامزدی
+                  تا عروسی، دلیلی قاطع هست تا زمینه ای رو برای رقم زدن روزهای شیرین زندگیتون فراهم کنیم.</p>
+              </div>
+            </div>
+          </div>
+    
+    
+    
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+            <div class="mb-9 rounded-xl py-8 px-7 shadow-md transition-all hover:shadow-lg sm:p-9 lg:px-6 xl:px-9">
+              <div class="mx-auto mb-7 inline-block"><svg width="67" height="60" viewBox="0 0 67 60" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M17.892 6.67578C17.892 6.1235 18.3397 5.67578 18.892 5.67578H24.226C26.4351 5.67578 28.226 7.46664 28.226 9.67578V32.789C28.226 33.3413 27.7783 33.789 27.226 33.789C26.6737 33.789 26.226 33.3413 26.226 32.789V9.67578C26.226 8.57121 25.3305 7.67578 24.226 7.67578H18.892C18.3397 7.67578 17.892 7.22807 17.892 6.67578Z"
+                    fill="#6A64F1"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M37.8959 38.7891C37.8959 38.2368 38.3436 37.7891 38.8959 37.7891H49.7859C51.995 37.7891 53.7859 39.5799 53.7859 41.7891V50.5679C53.7859 51.1202 53.3382 51.5679 52.7859 51.5679C52.2336 51.5679 51.7859 51.1202 51.7859 50.5679V41.7891C51.7859 40.6845 50.8905 39.7891 49.7859 39.7891H38.8959C38.3436 39.7891 37.8959 39.3413 37.8959 38.7891Z"
+                    fill="#ABA8F7"></path>
+                  <rect width="20.0016" height="13.3344" rx="2" fill="#6A64F1"></rect>
+                  <rect x="19" y="33" width="21" height="11" rx="2" fill="#ABA8F7"></rect>
+                  <rect x="39.8958" y="47.666" width="24.6688" height="11.3344" rx="2" fill="white" stroke="#6A64F1"
+                    stroke-width="2"></rect>
+                  <rect x="21" y="18" width="45" height="10" rx="2" fill="white" stroke="#6A64F1" stroke-width="2">
+                  </rect>
+                </svg></div>
+              <div>
+                <h3 class="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">پکیج های عقد و
+                  نامزدی
+                </h3>
+                <p class="text-base tale__color font-medium text-body-color">وجود نمونه کارهای موفق در برگزاری مراسم نامزدی
+                  تا عروسی، دلیلی قاطع هست تا زمینه ای رو برای رقم زدن روزهای شیرین زندگیتون فراهم کنیم.</p>
+              </div>
+            </div>
+          </div>
+    
+    
+    
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+            <div class="mb-9 rounded-xl py-8 px-7 shadow-md transition-all hover:shadow-lg sm:p-9 lg:px-6 xl:px-9">
+              <div class="mx-auto mb-7 inline-block"><svg width="58" height="60" viewBox="0 0 58 60" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <rect x="1" y="1" width="24" height="26" rx="2" stroke="#6A64F1" stroke-width="2"></rect>
+                  <path
+                    d="M14.6146 17.1967C14.8371 17.4191 14.8392 17.7843 14.5838 17.9678C13.9915 18.3933 13.2769 18.6264 12.5382 18.6264C11.6083 18.6264 10.7165 18.257 10.059 17.5994C9.40148 16.9419 9.03209 16.0501 9.03209 15.1203C9.03209 14.3816 9.26519 13.667 9.69065 13.0747C9.87417 12.8192 10.2393 12.8214 10.4617 13.0438L14.6146 17.1967Z"
+                    fill="#6A64F1"></path>
+                  <path
+                    d="M9.94096 17.0091L10.6493 17.7175L9.11456 19.2522C8.91896 19.4478 8.60183 19.4478 8.40622 19.2522C8.21062 19.0566 8.21062 18.7395 8.40622 18.5439L9.94096 17.0091Z"
+                    fill="#6A64F1"></path>
+                  <path
+                    d="M12.4851 11.0203C12.2627 10.7978 12.2605 10.4327 12.516 10.2492C13.1082 9.82372 13.8229 9.59062 14.5615 9.59062C15.4914 9.59062 16.3832 9.96001 17.0407 10.6175C17.6983 11.275 18.0676 12.1668 18.0676 13.0967C18.0676 13.8354 17.8345 14.55 17.4091 15.1423C17.2256 15.3977 16.8604 15.3956 16.638 15.1732L12.4851 11.0203Z"
+                    fill="#ABA8F7"></path>
+                  <path
+                    d="M17.1588 11.2077L16.4504 10.4994L17.6015 9.34833C17.7482 9.20163 18.0257 9.24127 18.2213 9.43688C18.4169 9.63248 18.4565 9.90997 18.3098 10.0567L17.1588 11.2077Z"
+                    fill="#ABA8F7"></path>
+                  <path
+                    d="M12.5383 12.7575C12.7339 12.5619 13.051 12.5619 13.2466 12.7575C13.4422 12.9531 13.4422 13.2702 13.2466 13.4658L12.0661 14.6464L11.3577 13.9381L12.5383 12.7575Z"
+                    fill="#ADAAFF"></path>
+                  <path
+                    d="M12.5382 12.758C12.7338 12.5624 13.051 12.5624 13.2466 12.758C13.4422 12.9536 13.4422 13.2708 13.2466 13.4664L12.066 14.6469L11.3577 13.9386L12.5382 12.758Z"
+                    fill="#6A64F1"></path>
+                  <path
+                    d="M14.309 14.5276C14.5046 14.332 14.8217 14.332 15.0173 14.5276C15.2129 14.7232 15.2129 15.0403 15.0173 15.2359L13.8368 16.4165L13.1284 15.7081L14.309 14.5276Z"
+                    fill="#6A64F1"></path>
+                  <rect x="31" y="23" width="27" height="37" rx="3" fill="#6A64F1"></rect>
+                  <path
+                    d="M44.7681 36C43.323 36 42.1462 37.1768 42.1462 38.6219C42.1462 39.4842 42.5743 40.2411 43.2196 40.7194L41.925 42.8578C41.9148 42.8548 41.9035 42.8527 41.8923 42.8496C41.6219 42.7769 41.3402 42.8169 41.0975 42.9561C40.5967 43.246 40.4236 43.8892 40.7124 44.39C40.906 44.7259 41.2593 44.9144 41.6219 44.9144C41.8001 44.9144 41.9814 44.8703 42.1462 44.7751C42.389 44.6348 42.5651 44.4064 42.6378 44.136C42.7106 43.8656 42.6716 43.584 42.5313 43.3412C42.4873 43.2654 42.4269 43.1979 42.3675 43.1364L43.7931 40.7931L43.9324 40.5637L43.703 40.4326C43.0854 40.068 42.6706 39.3931 42.6706 38.6219C42.6706 37.4605 43.6067 36.5244 44.7681 36.5244C45.9295 36.5244 46.8656 37.4605 46.8656 38.6219C46.8656 38.838 46.8359 39.0408 46.7755 39.2364L47.2753 39.392C47.3511 39.1473 47.39 38.8902 47.39 38.6219C47.39 37.1768 46.2132 36 44.7681 36ZM44.7681 37.5731C44.1895 37.5731 43.7194 38.0432 43.7194 38.6219C43.7194 39.2005 44.1895 39.6706 44.7681 39.6706C44.8552 39.6706 44.9412 39.6583 45.0221 39.6378L46.2839 41.9238L46.4068 42.1532L46.6444 42.0303C46.9445 41.8644 47.2845 41.7681 47.6522 41.7681C48.8136 41.7681 49.7497 42.7042 49.7497 43.8656C49.7497 45.027 48.8136 45.9631 47.6522 45.9631C47.0858 45.9631 46.5717 45.7368 46.1938 45.3732L45.8333 45.7501C46.3044 46.2038 46.9475 46.4875 47.6522 46.4875C49.0973 46.4875 50.274 45.3107 50.274 43.8656C50.274 42.4205 49.0973 41.2437 47.6522 41.2437C47.2886 41.2437 46.9516 41.339 46.6362 41.4732L45.4809 39.3839C45.6858 39.1923 45.8169 38.924 45.8169 38.6219C45.8169 38.0432 45.3468 37.5731 44.7681 37.5731ZM40.9828 41.3175C39.8408 41.6022 39 42.6397 39 43.8656C39 45.3107 40.1768 46.4875 41.6219 46.4875C42.9738 46.4875 44.0563 45.4439 44.1946 44.1278H46.6444C46.7611 44.5795 47.1647 44.9144 47.6522 44.9144C48.2308 44.9144 48.7009 44.4443 48.7009 43.8656C48.7009 43.287 48.2308 42.8169 47.6522 42.8169C47.1647 42.8169 46.7611 43.1518 46.6444 43.6034H43.7194V43.8656C43.7194 45.027 42.7833 45.9631 41.6219 45.9631C40.4605 45.9631 39.5244 45.027 39.5244 43.8656C39.5244 42.8804 40.2024 42.061 41.1139 41.8337L40.9828 41.3175Z"
+                    fill="white"></path>
+                  <rect x="32" y="1" width="25" height="16" rx="2" stroke="#6A64F1" stroke-width="2"></rect>
+                  <g clip-path="url(#clip0_971_7928)">
+                    <path
+                      d="M42.9 9.52246C42.3264 9.52246 41.8348 10.0141 41.8348 10.5876V13.2422C41.8348 13.8158 42.3264 14.3074 42.9 14.3074C43.4735 14.3074 43.9651 13.8158 43.9651 13.2422V10.5876C43.9651 9.98129 43.5063 9.52246 42.9 9.52246Z"
+                      fill="#6A64F1"></path>
+                    <path
+                      d="M39.1638 10.5876C39.1638 11.1611 39.6554 11.6527 40.229 11.6527C40.8025 11.6527 41.2941 11.1611 41.2941 10.5876V9.52246H40.2453C39.6554 9.52246 39.1638 9.98129 39.1638 10.5876Z"
+                      fill="#6A64F1"></path>
+                    <path
+                      d="M42.9 4.16406C42.3264 4.16406 41.8348 4.65566 41.8348 5.2292C41.8348 5.80273 42.3264 6.29433 42.9 6.29433H43.9651C43.9651 5.68802 43.9651 5.83551 43.9651 5.2292C43.9651 4.65566 43.5063 4.16406 42.9 4.16406Z"
+                      fill="#6A64F1"></path>
+                    <path
+                      d="M40.229 8.96523H42.9C43.4735 8.96523 43.9651 8.47363 43.9651 7.9001C43.9651 7.32656 43.4735 6.83496 42.9 6.83496H40.229C39.6554 6.83496 39.1638 7.32656 39.1638 7.9001C39.1638 8.47363 39.6226 8.96523 40.229 8.96523Z"
+                      fill="#6A64F1"></path>
+                    <path
+                      d="M48.242 6.83496C47.6685 6.83496 47.1769 7.32656 47.1769 7.9001V8.96523H48.242C48.8156 8.96523 49.3072 8.47363 49.3072 7.9001C49.3072 7.32656 48.8319 6.83496 48.242 6.83496Z"
+                      fill="#6A64F1"></path>
+                    <path
+                      d="M44.5222 5.2292V7.90023C44.5222 8.47376 45.0138 8.96536 45.5874 8.96536C46.1609 8.96536 46.6525 8.47376 46.6525 7.90023V5.2292C46.6525 4.65566 46.1609 4.16406 45.5874 4.16406C44.981 4.16406 44.5222 4.65566 44.5222 5.2292Z"
+                      fill="#6A64F1"></path>
+                    <path
+                      d="M46.6525 13.2585C46.6525 12.685 46.1609 12.1934 45.5874 12.1934H44.5222V13.2585C44.5222 13.832 45.0138 14.3236 45.5874 14.3236C46.1609 14.3236 46.6525 13.832 46.6525 13.2585Z"
+                      fill="#6A64F1"></path>
+                    <path
+                      d="M48.2584 9.52246H45.5874C45.0138 9.52246 44.5222 10.0141 44.5222 10.5876C44.5222 11.1611 45.0138 11.6527 45.5874 11.6527H48.2584C48.8319 11.6527 49.3235 11.1611 49.3235 10.5876C49.3235 9.98129 48.8319 9.52246 48.2584 9.52246Z"
+                      fill="#6A64F1"></path>
+                  </g>
+                  <rect x="1" y="34" width="24" height="25" rx="2" stroke="#6A64F1" stroke-width="2"></rect>
+                  <g clip-path="url(#clip1_971_7928)">
+                    <path
+                      d="M17.6477 43.6591L16.2036 50.4186C16.0961 50.8949 15.8195 51.0024 15.4201 50.7873L13.254 49.1896L12.194 50.2036C12.0864 50.3111 11.9789 50.4186 11.7331 50.4186L11.9021 48.1911L15.9424 44.5194C16.1114 44.3504 15.8963 44.289 15.6813 44.4273L10.6577 47.5919L8.49161 46.9313C8.01537 46.7777 8.01537 46.4551 8.59915 46.24L17.0178 42.9678C17.4326 42.8449 17.7859 43.06 17.6477 43.6591Z"
+                      fill="#6A64F1"></path>
+                  </g>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M31 10.5H26V8.5H31V10.5Z" fill="#6A64F1">
+                  </path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M31 47H26V45H31V47Z" fill="#ABA8F7"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M14 28L14 33L12 33L12 28L14 28Z" fill="#6A64F1">
+                  </path>
+                  <defs>
+                    <clipPath id="clip0_971_7928">
+                      <rect width="10.4875" height="10.4875" fill="white" transform="translate(39 4)">
+                      </rect>
+                    </clipPath>
+                    <clipPath id="clip1_971_7928">
+                      <rect width="9.83201" height="9.83201" fill="white" transform="translate(8 42)">
+                      </rect>
+                    </clipPath>
+                  </defs>
+                </svg></div>
+              <div>
+                <h3 class="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">پکیج های
+                  فرمالیته</h3>
+                <p class="text-base tale__color font-medium text-body-color">
+                  وجود نمونه کارهای موفق در برگزاری مراسم نامزدی تا عروسی، دلیلی قاطع هست تا زمینه ای رو برای
+                  رقم زدن روزهای شیرین زندگیتون فراهم کنیم.
+                </p>
+              </div>
+            </div>
+          </div>
+    
+    
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+            <div class="mb-9 rounded-xl py-8 px-7 shadow-md transition-all hover:shadow-lg sm:p-9 lg:px-6 xl:px-9">
+              <div class="mx-auto mb-7 inline-block"><svg width="51" height="60" viewBox="0 0 51 60" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M33.1015 4.53152C28.1688 2.60657 22.6927 2.60657 17.76 4.53152L3.08781 10.2572V31.4086C3.08781 36.1366 5.05872 40.6505 8.52635 43.8644L24.3812 56.5006C24.9733 57.0494 25.8882 57.0494 26.4802 56.5006L42.3351 43.8644C45.8027 40.6505 47.7736 36.1366 47.7736 31.4086V10.2572L33.1015 4.53152ZM16.6374 1.65499C22.292 -0.551664 28.5695 -0.551662 34.224 1.65499L49.2237 7.50853C50.2113 7.89393 50.8615 8.84554 50.8615 9.90564V31.4086C50.8615 36.9962 48.5322 42.3309 44.4341 46.1291L28.5792 58.7653C26.803 60.4116 24.0585 60.4116 22.2823 58.7653L6.42737 46.1291C2.32926 42.3309 0 36.9962 0 31.4086V9.90564C0 8.84554 0.650144 7.89393 1.63772 7.50853L16.6374 1.65499Z"
+                    fill="#ABA8F7"></path>
+                  <path
+                    d="M25.217 50.5233V8.42143C25.217 7.75383 24.5754 7.27369 23.9349 7.46207L9.15513 11.8091C8.30396 12.0594 7.71946 12.8406 7.71946 13.7278V32.0977C7.71946 34.5312 8.70493 36.861 10.4512 38.5559L23.5206 51.2409C24.1547 51.8564 25.217 51.407 25.217 50.5233Z"
+                    fill="#6A64F1"></path>
+                </svg></div>
+              <div>
+                <h3 class="mb-4 text-xl  font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">پکیج های تور
+                </h3>
+                <p class="text-base tale__color font-medium text-body-color">وجود نمونه کارهای موفق در برگزاری مراسم نامزدی
+                  تا عروسی، دلیلی قاطع هست تا زمینه ای رو برای رقم زدن روزهای شیرین زندگیتون فراهم کنیم.</p>
+              </div>
+            </div>
+          </div>
+    
+    
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+            <div class="mb-9 rounded-xl py-8 px-7 shadow-md transition-all hover:shadow-lg sm:p-9 lg:px-6 xl:px-9">
+              <div class="mx-auto mb-7 inline-block"><svg width="52" height="60" viewBox="0 0 52 60" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13.2787 7.3766C12.4639 7.3766 11.8033 8.03716 11.8033 8.85201V15.2455H8.85248V8.85201C8.85248 6.40747 10.8342 4.42578 13.2787 4.42578H46.7213C49.1659 4.42578 51.1476 6.40747 51.1476 8.85201V51.1471C51.1476 53.5916 49.1659 55.5733 46.7213 55.5733H37.8689V52.6225H46.7213C47.5362 52.6225 48.1967 51.9619 48.1967 51.1471V8.85201C48.1967 8.03716 47.5362 7.3766 46.7213 7.3766H13.2787Z"
+                    fill="#6A64F1"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.8689 22.6223C7.8689 22.079 8.30927 21.6387 8.8525 21.6387L30.4918 21.6387C31.0351 21.6387 31.4755 22.079 31.4755 22.6223C31.4755 23.1655 31.0351 23.6059 30.4918 23.6059L8.8525 23.6059C8.30927 23.6059 7.8689 23.1655 7.8689 22.6223Z"
+                    fill="#ABA8F7"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.8689 29.507C7.8689 28.9638 8.30927 28.5234 8.8525 28.5234L30.4918 28.5234C31.0351 28.5234 31.4755 28.9638 31.4755 29.507C31.4755 30.0503 31.0351 30.4907 30.4918 30.4907L8.8525 30.4907C8.30927 30.4907 7.8689 30.0503 7.8689 29.507Z"
+                    fill="#ABA8F7"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.8689 36.3928C7.8689 35.8496 8.30927 35.4092 8.8525 35.4092L30.4918 35.4092C31.0351 35.4092 31.4755 35.8496 31.4755 36.3928C31.4755 36.936 31.0351 37.3764 30.4918 37.3764L8.8525 37.3764C8.30927 37.3764 7.8689 36.936 7.8689 36.3928Z"
+                    fill="#ABA8F7"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.8689 43.2776C7.8689 42.7343 8.30927 42.2939 8.8525 42.2939L30.4918 42.2939C31.0351 42.2939 31.4755 42.7343 31.4755 43.2776C31.4755 43.8208 31.0351 44.2612 30.4918 44.2612L8.8525 44.2612C8.30927 44.2612 7.8689 43.8208 7.8689 43.2776Z"
+                    fill="#ABA8F7"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M15.7377 2.95082C15.7377 1.32113 17.0589 0 18.6886 0H23.6066C25.2363 0 26.5574 1.32113 26.5574 2.95082V5.74152C26.5574 6.28475 26.117 6.72512 25.5738 6.72512C25.0306 6.72512 24.5902 6.28475 24.5902 5.74152V2.95082C24.5902 2.40759 24.1498 1.96721 23.6066 1.96721H18.6886C18.1453 1.96721 17.7049 2.40759 17.7049 2.95082V24.5902C17.7049 25.1334 18.1453 25.5738 18.6886 25.5738H20.6558C21.199 25.5738 21.6394 25.1334 21.6394 24.5902V10.7016C21.6394 10.1584 22.0797 9.71803 22.623 9.71803C23.1662 9.71803 23.6066 10.1584 23.6066 10.7016V24.5902C23.6066 26.2199 22.2855 27.541 20.6558 27.541H18.6886C17.0589 27.541 15.7377 26.2199 15.7377 24.5902V2.95082Z"
+                    fill="#6A64F1"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M36.3934 16.7213H2.95082V48.9L11.181 57.0492H36.3934V16.7213ZM2.95082 13.7705H36.3934C38.0231 13.7705 39.3443 15.0916 39.3443 16.7213V57.0492C39.3443 58.6789 38.0231 60 36.3934 60H11.181C10.4034 60 9.65727 59.6931 9.10474 59.146L0.874608 50.9968C0.314904 50.4426 0 49.6876 0 48.9V16.7213C0 15.0916 1.32113 13.7705 2.95082 13.7705Z"
+                    fill="#6A64F1"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M10.3279 50.6558H1.96721V47.7049H10.8197C12.1777 47.7049 13.2787 48.8059 13.2787 50.1639V58.0328H10.3279V50.6558Z"
+                    fill="#6A64F1"></path>
+                </svg></div>
+              <div>
+                <h3 class="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">پکیج های
+                  خانواده و کودک
+                </h3>
+                <p class="text-base tale__color font-medium text-body-color">وجود نمونه کارهای موفق در برگزاری مراسم نامزدی
+                  تا عروسی، دلیلی قاطع هست تا زمینه ای رو برای رقم زدن روزهای شیرین زندگیتون فراهم کنیم.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section data-aos="fade-down-left" class="wedding__wireframe">
+          <h2 class="title__wireframe">
+            نمونه کار های فیلمبرداری عروس و داماد
+          </h2>
+          <h3 class="wire__txt">
+            در این بخش می‌توانید به نمونه‌کارهای بی‌نظیر فیلمبرداری و عکاسی عروس و داماد از آتلیه طوس استودیو دسترسی
+            سریع داشته باشید.
+          </h3>
+           <div class="wireframe__Section">
+            <img class="w__fix" src="public/images/wedding1.jpg" alt="wedding" loading="lazy">
+            <img class="w__fix" src="public/images/wedding2.jpg" alt="wedding" loading="lazy">
+            <img class="w__fix" src="public/images/wedding3.jpg" alt="wedding" loading="lazy">
+            <img class="w__fix" src="public/images/wedding4.jpg" alt="wedding" loading="lazy">
+          </div> 
+      <!--------------------- Users comment---------------------- -->
+      <section data-aos="flip-down" class="py-20">
+        <h1 class="mb-12 text-center font-sans text-5xl font-bold text-gray-900">بازخورد های مشتریان<span
+            class="text-blue-600">.</span></h1>
+        <div class="mx-auto grid max-w-screen-xl grid-cols-1 gap-6 p-6 md:grid-cols-2 lg:grid-cols-3">
+          <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl">
+            <a href="#">
+              <div class="relative flex items-end overflow-hidden rounded-xl">
+                <img src="public/images/location__second.jpg" alt="Hotel Photo" />
+                <div class="absolute bottom-3 left-3 inline-flex items-center rounded-lg bg-white p-2 shadow-md">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <span class="text-slate-400 ml-1 text-sm">4.9</span>
+                </div>
+              </div>
+  
+              <div class="mt-1 p-2">
+                <h2 class="text-slate-700">بازخورد ها</h2>
+                <p class="text-slate-400 mt-1 text-sm">Lisbon, Portugal</p>
+  
+                <div class="mt-3 flex items-end justify-between">
+                  <p>
+                    <span class="text-lg font-bold text-blue-500">$850</span>
+                    <span class="text-slate-400 text-sm">/night</span>
+                  </p>
+  
+                  <div class="group inline-flex rounded-xl bg-blue-100 p-2 hover:bg-blue-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="group-hover:text-blue-500 h-4 w-4 text-blue-400"
+                      viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+  
+          <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl">
+            <a href="#">
+              <div class="relative flex items-end overflow-hidden rounded-xl">
+                <img src="public/images/location__one.jpg" alt="Hotel Photo" />
+                <div class="absolute bottom-3 left-3 inline-flex items-center rounded-lg bg-white p-2 shadow-md">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <span class="text-slate-400 ml-1 text-sm">4.9</span>
+                </div>
+              </div>
+  
+              <div class="mt-1 p-2">
+                <h2 class="text-slate-700">بازخورد</h2>
+                <p class="text-slate-400 mt-1 text-sm">Lisbon, Portugal</p>
+  
+                <div class="mt-3 flex items-end justify-between">
+                  <p>
+                    <span class="text-lg font-bold text-blue-500">$450</span>
+                    <span class="text-slate-400 text-sm">/night</span>
+                  </p>
+  
+                  <div class="group inline-flex rounded-xl bg-blue-100 p-2 hover:bg-blue-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="group-hover:text-blue-500 h-4 w-4 text-blue-400"
+                      viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+  
+          <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl">
+            <a href="#">
+              <div class="relative flex items-end overflow-hidden rounded-xl">
+                <img src="public/images/mans.jpg" alt="Hotel Photo" />
+                <div class="absolute bottom-3 left-3 inline-flex items-center rounded-lg bg-white p-2 shadow-md">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <span class="text-slate-400 ml-1 text-sm">4.9</span>
+                </div>
+              </div>
+  
+              <div class="mt-1 p-2">
+                <h2 class="text-slate-700">بازخورد</h2>
+                <p class="text-slate-400 mt-1 text-sm">Lisbon, Portugal</p>
+  
+                <div class="mt-3 flex items-end justify-between">
+                  <p>
+                    <span class="text-lg font-bold text-blue-500">$1,450</span>
+                    <span class="text-slate-400 text-sm">/night</span>
+                  </p>
+  
+                  <div class="group inline-flex rounded-xl bg-blue-100 p-2 hover:bg-blue-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="group-hover:text-blue-500 h-4 w-4 text-blue-400"
+                      viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+  
+      <section>
+        <div class="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-16 max-w-7xl lg:py-24">
+          <div class="flex w-full mx-auto text-left">
+            <div class="relative inline-flex items-center mx-auto align-middle">
+              <div class="text-center">
+                <h1
+                  class="max-w-5xl text-2xl font-bold leading-none tracking-tighter text-neutral-600 md:text-5xl lg:text-6xl lg:max-w-7xl">
+                  در این ماجراجویی همراه ما باش <br class="hidden lg:block">
+                  و در این مسیر لذت ببر
+                </h1>
+                <p class="max-w-xl mx-auto mt-8 text-base leading-relaxed text-gray-500">با بهترین آتلیه
+                  عکاسی همراه ما باش و لذت ببر</p>
+                <div class="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
+                  <div class="mt-3 rounded-lg sm:mt-0">
+                   <a href="signup.html">
+                    <button
+                    class="px-5 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 lg:px-10 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">ثبت
+                    نام</button>
+                   </a>
+                  </div>
+                  <div class="mt-3 rounded-lg sm:mt-0 sm:ml-3">
+                    <button
+                      class="items-center block px-5 lg:px-10 py-3.5 text-base font-medium text-center text-blue-600 transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">امکانات</button>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-              <a href="signup.html">            <button type="button" class="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto">ثبت نام</button>
-              </a>
-              <button id="close" type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">کنسل</button>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-700 body-font">
+        <div class="flex justify-center mt-10 text-4xl font-regular">
+          چرا آتلیه ما؟
+        </div>
+        <div class="container px-5 py-12 mx-auto">
+          <div class="flex flex-wrap text-center justify-center">
+            <div class="p-4 md:w-1/4 sm:w-1/2">
+              <div class="px-4 py-6 transform transition duration-500 hover:scale-110">
+                <div class="flex justify-center">
+                  <img
+                    src="https://image3.jdomni.in/banner/13062021/58/97/7C/E53960D1295621EFCB5B13F335_1623567851299.png?output-format=webp"
+                    class="w-32 mb-3">
+                </div>
+                <h2 class="title-font font-regular text-2xl text-gray-900">افراد مجرب</h2>
+              </div>
             </div>
+  
+            <div class="p-4 md:w-1/4 sm:w-1/2">
+              <div class="px-4 py-6 transform transition duration-500 hover:scale-110">
+                <div class="flex justify-center">
+                  <img
+                    src="https://image2.jdomni.in/banner/13062021/3E/57/E8/1D6E23DD7E12571705CAC761E7_1623567977295.png?output-format=webp"
+                    class="w-32 mb-3">
+                </div>
+                <h2 class="title-font font-regular text-2xl text-gray-900">رتبه بالا</h2>
+              </div>
+            </div>
+  
+            <div class="p-4 md:w-1/4 sm:w-1/2">
+              <div class="px-4 py-6 transform transition duration-500 hover:scale-110">
+                <div class="flex justify-center">
+                  <img
+                    src="https://image3.jdomni.in/banner/13062021/16/7E/7E/5A9920439E52EF309F27B43EEB_1623568010437.png?output-format=webp"
+                    class="w-32 mb-3">
+                </div>
+                <h2 class="title-font font-regular text-2xl text-gray-900">سریع و چابک</h2>
+              </div>
+            </div>
+  
+            <div class="p-4 md:w-1/4 sm:w-1/2">
+              <div class="px-4 py-6 transform transition duration-500 hover:scale-110">
+                <div class="flex justify-center">
+                  <img
+                    src="https://image3.jdomni.in/banner/13062021/EB/99/EE/8B46027500E987A5142ECC1CE1_1623567959360.png?output-format=webp"
+                    class="w-32 mb-3">
+                </div>
+                <h2 class="title-font font-regular text-2xl text-gray-900">تجربه موفق</h2>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </section>
+      <!-- CTA section -->
+      <!--
+    Heads up! 👋
+  
+    This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
+  
+    Plugins:
+      - @tailwindcss/forms
+  -->
+  
+      <section  data-aos="zoom-out-left" class="bg-gray-50">
+        <div class="p-8 md:p-12 lg:px-16 lg:py-24">
+          <div class="mx-auto max-w-lg text-center">
+            <h2 class="text-2xl font-bold text-gray-900 md:text-3xl">
+              لذت یعنی ,عکس گرفتن در آتلیه طوس
+            </h2>
+  
+            <p class="hidden text-gray-500 sm:mt-4 sm:block">
+              اگر میخواهید از آخرین اخبار و اعلان ها همراه ما باشید و دنبال کنید ,لطفا ادرس ایمیل خود را وارد کنید
+            </p>
+          </div>
+  
+          <div class="mx-auto mt-8 max-w-xl">
+            <form action="#" class="sm:flex sm:gap-4">
+              <div class="sm:flex-1">
+                <label for="email" class="sr-only">ایمیل</label>
+  
+                <input type="email" placeholder="ایمیل خود را وارد کنید" required
+                  class="w-full rounded-md border-gray-200 bg-white p-3 text-gray-700 shadow-sm transition focus:border-white focus:outline-none focus:ring focus:ring-yellow-400" />
+              </div>
+  
+              <button type="submit"
+                class="group mt-4 flex w-full items-center justify-center gap-2 rounded-md bg-rose-600 px-5 py-3 text-white transition focus:outline-none focus:ring focus:ring-yellow-400 sm:mt-0 sm:w-auto">
+               
+                  <span class="text-sm font-medium"> ثبت نام </span>
+                
+  
+                <svg class="size-5 rtl:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- finish Cta section -->
+  
+  
+      <div data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-delay="300"
+      data-aos-offset="0" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="grid gap-4">
+          <div>
+            <img class="h-auto max-w-full rounded-lg" src="public/images/marrage.jpg" alt="photography" loading="lazy">
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg" src="public/images/location__one.jpg" alt="photography"
+              loading="lazy">
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg" src="public/images/marrage.jpg" alt="photography">
+          </div>
+        </div>
+        <div class="grid gap-4">
+          <div>
+            <img class="h-auto max-w-full rounded-lg" src="public/images/location__second.jpg" alt="photography">
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg" src="public/images/location__second.jpg" alt="photography">
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg" src="public/images/camera.jpg" alt="photography">
+          </div>
+        </div>
+        <div class="grid gap-4">
+          <div>
+            <img class="h-auto max-w-full rounded-lg" src="public/images/location__second.jpg" alt="photography">
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg" src="public/images/location__one.jpg" alt="photography">
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg" src="public/images/location__second.jpg" alt="photography" loading="lazy">
+          </div>
+        </div>
+        <div class="grid gap-4">
+          <div>
+            <img class="h-auto max-w-full rounded-lg" src="public/images/marraige_location.jpg" alt="photography" loading="lazy">
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg" src="public/images/location__one.jpg" alt="photography" loading="lazy">
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg" src="public/images/location__one.jpg" alt="photography" loading="lazy">
           </div>
         </div>
       </div>
-    </div>
-    
-    <!---------------- Header section----------------- -->
-    <header>
-      <nav>
-        <ul class="animate__animated animate__fadeInDownBig desktop sidebar">
-          <div class="img__header">
-            <a href="index.html">
-              <img id="logo__header" src="public/images/logo.png" alt="logo__header" loading="lazy" width="100px">
   
+  
+  
+  
+  
+  
+  
+  
+    </main>
+    <!------------------------ finish main section---------------- -->
+  </body>
+  </main>
+  
+  <!-- footer part -->
+  <footer data-aos="fade-up"
+  data-aos-duration="3000" class="bg-white">
+    <div class="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <div class="text-teal-600">
+          <svg class="h-8" viewBox="0 0 118 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M37.83 19.2047C37.2352 19.237 36.6469 19.0679 36.16 18.7247C35.9566 18.5739 35.7929 18.3758 35.6831 18.1476C35.5733 17.9193 35.5208 17.6678 35.53 17.4147V8.1447C35.5252 8.1055 35.5293 8.0656 35.5422 8.0282C35.555 7.9908 35.5762 7.9569 35.6042 7.9289C35.6322 7.9009 35.6661 7.8797 35.7035 7.8669C35.7409 7.854 35.7808 7.8499 35.82 7.8547H37.5C37.69 7.8547 37.78 7.9547 37.78 8.1447V16.6947C37.78 17.0747 37.95 17.2647 38.3 17.2647C38.4484 17.2708 38.5968 17.254 38.74 17.2147C38.94 17.2147 39.05 17.2747 39.06 17.4547L39.21 18.7047C39.2172 18.7412 39.2165 18.7787 39.208 18.8149C39.1995 18.851 39.1833 18.885 39.1605 18.9143C39.1378 18.9437 39.109 18.9679 39.0762 18.9852C39.0433 19.0025 39.0071 19.0126 38.97 19.0147C38.602 19.1363 38.2175 19.2004 37.83 19.2047Z"
+              fill="currentColor" />
+            <path
+              d="M47.28 18.1347C46.4359 18.8322 45.375 19.2137 44.28 19.2137C43.185 19.2137 42.1242 18.8322 41.28 18.1347C40.5381 17.3857 40.1218 16.374 40.1218 15.3197C40.1218 14.2654 40.5381 13.2537 41.28 12.5047C42.1258 11.8108 43.186 11.4316 44.28 11.4316C45.374 11.4316 46.4342 11.8108 47.28 12.5047C48.0049 13.2606 48.4096 14.2674 48.4096 15.3147C48.4096 16.362 48.0049 17.3688 47.28 18.1247V18.1347ZM42.86 16.8147C43.2518 17.1696 43.7614 17.3661 44.29 17.3661C44.8186 17.3661 45.3283 17.1696 45.72 16.8147C46.0746 16.4071 46.2698 15.885 46.2698 15.3447C46.2698 14.8045 46.0746 14.2824 45.72 13.8747C45.3283 13.5199 44.8186 13.3233 44.29 13.3233C43.7614 13.3233 43.2518 13.5199 42.86 13.8747C42.5055 14.2824 42.3102 14.8045 42.3102 15.3447C42.3102 15.885 42.5055 16.4071 42.86 16.8147Z"
+              fill="currentColor" />
+            <path
+              d="M57.66 11.6847C57.85 11.6847 57.94 11.7847 57.94 11.9747V19.1447C57.9575 19.6287 57.8669 20.1104 57.6749 20.5549C57.4829 20.9995 57.1943 21.3957 56.83 21.7147C56.0214 22.4042 54.9816 22.7615 53.92 22.7147C52.9612 22.7484 52.0151 22.4866 51.21 21.9647C50.8662 21.739 50.5725 21.4449 50.3472 21.1009C50.1218 20.7568 49.9696 20.3701 49.9 19.9647C49.9 19.7647 49.9 19.6747 50.17 19.6747H51.85C51.9213 19.6771 51.9905 19.7002 52.049 19.741C52.1076 19.7818 52.1531 19.8386 52.18 19.9047C52.289 20.2084 52.5062 20.4613 52.79 20.6147C53.1359 20.7932 53.5209 20.8826 53.91 20.8747C54.1448 20.8876 54.3798 20.8535 54.6013 20.7745C54.8228 20.6956 55.0263 20.5732 55.2 20.4147C55.3587 20.2489 55.4821 20.0526 55.5629 19.8378C55.6437 19.623 55.6801 19.394 55.67 19.1647V18.5347C55.0685 18.9771 54.3364 19.2059 53.59 19.1847C53.0676 19.2037 52.5468 19.117 52.0587 18.9297C51.5707 18.7423 51.1256 18.4584 50.75 18.0947C50.0291 17.3489 49.6261 16.3521 49.6261 15.3147C49.6261 14.2774 50.0291 13.2806 50.75 12.5347C51.1274 12.1743 51.5731 11.8931 52.0608 11.7076C52.5486 11.5221 53.0685 11.4361 53.59 11.4547C54.358 11.4344 55.1098 11.678 55.72 12.1447V11.9847C55.7154 11.9464 55.7194 11.9075 55.7317 11.8709C55.744 11.8344 55.7643 11.801 55.7911 11.7732C55.8179 11.7454 55.8506 11.724 55.8867 11.7104C55.9229 11.6968 55.9616 11.6915 56 11.6947L57.66 11.6847ZM53.78 17.4047C54.0376 17.4127 54.2939 17.364 54.5306 17.262C54.7673 17.1601 54.9788 17.0074 55.15 16.8147C55.4825 16.3854 55.6629 15.8577 55.6629 15.3147C55.6629 14.7717 55.4825 14.2441 55.15 13.8147C54.9794 13.6247 54.7692 13.4742 54.5343 13.374C54.2993 13.2738 54.0453 13.2263 53.79 13.2347C53.5294 13.2265 53.2702 13.275 53.0302 13.3769C52.7902 13.4788 52.5752 13.6316 52.4 13.8247C52.0317 14.2354 51.838 14.7735 51.86 15.3247C51.842 15.8705 52.0314 16.4029 52.39 16.8147C52.5656 17.0073 52.7807 17.1598 53.0206 17.2616C53.2605 17.3634 53.5195 17.4122 53.78 17.4047Z"
+              fill="currentColor" />
+            <path
+              d="M66.57 18.1347C65.7242 18.8286 64.664 19.2078 63.57 19.2078C62.476 19.2078 61.4158 18.8286 60.57 18.1347C59.8445 17.3771 59.4395 16.3687 59.4395 15.3197C59.4395 14.2708 59.8445 13.2623 60.57 12.5047C61.4166 11.8126 62.4765 11.4345 63.57 11.4345C64.6635 11.4345 65.7234 11.8126 66.57 12.5047C67.2949 13.2606 67.6996 14.2674 67.6996 15.3147C67.6996 16.362 67.2949 17.3688 66.57 18.1247V18.1347ZM62.14 16.8147C62.3317 16.9971 62.5577 17.1396 62.8049 17.234C63.0521 17.3284 63.3155 17.3729 63.58 17.3647C63.8428 17.3715 64.1044 17.3265 64.3498 17.2321C64.5952 17.1377 64.8195 16.9959 65.01 16.8147C65.3588 16.4043 65.5503 15.8833 65.5503 15.3447C65.5503 14.8061 65.3588 14.2851 65.01 13.8747C64.8195 13.6936 64.5952 13.5517 64.3498 13.4574C64.1044 13.363 63.8428 13.3179 63.58 13.3247C63.3155 13.3166 63.0521 13.361 62.8049 13.4554C62.5577 13.5498 62.3317 13.6924 62.14 13.8747C61.7913 14.2851 61.5998 14.8061 61.5998 15.3447C61.5998 15.8833 61.7913 16.4043 62.14 16.8147Z"
+              fill="currentColor" />
+            <path
+              d="M71.31 9.9847C71.0457 10.2161 70.7063 10.3436 70.355 10.3436C70.0037 10.3436 69.6644 10.2161 69.4 9.9847C69.2802 9.8716 69.1847 9.7352 69.1194 9.5839C69.0542 9.4326 69.0205 9.2695 69.0205 9.1047C69.0205 8.9399 69.0542 8.7769 69.1194 8.6255C69.1847 8.4742 69.2802 8.3378 69.4 8.2247C69.6671 7.9991 70.0054 7.8754 70.355 7.8754C70.7046 7.8754 71.0429 7.9991 71.31 8.2247C71.4299 8.3378 71.5254 8.4742 71.5906 8.6255C71.6559 8.7769 71.6895 8.9399 71.6895 9.1047C71.6895 9.2695 71.6559 9.4326 71.5906 9.5839C71.5254 9.7352 71.4299 9.8716 71.31 9.9847ZM71.52 19.2047C70.9256 19.2339 70.3383 19.0651 69.85 18.7247C69.6497 18.5717 69.4888 18.3729 69.381 18.145C69.2731 17.9171 69.2213 17.6667 69.23 17.4147V11.9747C69.2252 11.9355 69.2293 11.8956 69.2422 11.8582C69.255 11.8208 69.2762 11.7869 69.3042 11.7589C69.3322 11.7309 69.3661 11.7097 69.4035 11.6969C69.4409 11.684 69.4808 11.6799 69.52 11.6847H71.2C71.39 11.6847 71.48 11.7847 71.48 11.9747V16.6947C71.48 17.0747 71.65 17.2647 71.99 17.2647C72.1417 17.2702 72.2933 17.2533 72.44 17.2147C72.64 17.2147 72.75 17.2747 72.76 17.4547L72.91 18.7047C72.9172 18.7412 72.9165 18.7787 72.908 18.8149C72.8995 18.851 72.8833 18.885 72.8605 18.9143C72.8378 18.9437 72.809 18.9679 72.7762 18.9852C72.7433 19.0025 72.7071 19.0126 72.67 19.0147C72.2988 19.137 71.9109 19.2011 71.52 19.2047Z"
+              fill="currentColor" />
+            <path
+              d="M79.09 11.4447C79.6148 11.424 80.1383 11.5089 80.6296 11.6944C81.1209 11.88 81.57 12.1623 81.95 12.5247C82.6572 13.2837 83.0504 14.2824 83.0504 15.3197C83.0504 16.357 82.6572 17.3558 81.95 18.1147C81.5718 18.4804 81.1233 18.7655 80.6317 18.9528C80.1401 19.1402 79.6157 19.2259 79.09 19.2047C78.3412 19.2214 77.6073 18.9932 77 18.5547V22.1647C77 22.3547 76.9 22.4447 76.71 22.4447H75.03C74.9917 22.4519 74.9522 22.4496 74.9149 22.4381C74.8777 22.4265 74.8438 22.4061 74.8162 22.3785C74.7887 22.3509 74.7682 22.3171 74.7567 22.2798C74.7451 22.2426 74.7429 22.2031 74.75 22.1647V13.9647C74.7618 13.8845 74.7546 13.8027 74.7292 13.7257C74.7037 13.6488 74.6605 13.5788 74.6032 13.5215C74.5459 13.4642 74.476 13.4211 74.399 13.3956C74.3221 13.3701 74.2402 13.363 74.16 13.3747H73.83C73.61 13.3747 73.5 13.2947 73.5 13.1347V11.9547C73.4948 11.8817 73.5148 11.8091 73.5567 11.7491C73.5985 11.689 73.6597 11.6451 73.73 11.6247C74.0759 11.499 74.442 11.438 74.81 11.4447C75.177 11.4122 75.5453 11.4901 75.8678 11.6682C76.1902 11.8464 76.4522 12.1168 76.62 12.4447C76.9421 12.1189 77.3273 11.8622 77.752 11.6902C78.1767 11.5183 78.632 11.4347 79.09 11.4447ZM77.53 16.8147C77.7083 17.0011 77.9225 17.1494 78.1597 17.2507C78.3969 17.352 78.6521 17.4042 78.91 17.4042C79.1679 17.4042 79.4232 17.352 79.6603 17.2507C79.8975 17.1494 80.1117 17.0011 80.29 16.8147C80.6656 16.3958 80.8629 15.8469 80.84 15.2847C80.8662 14.7221 80.6684 14.1719 80.29 13.7547C80.1117 13.5684 79.8975 13.4201 79.6603 13.3188C79.4232 13.2174 79.1679 13.1652 78.91 13.1652C78.6521 13.1652 78.3969 13.2174 78.1597 13.3188C77.9225 13.4201 77.7083 13.5684 77.53 13.7547C77.1662 14.1793 76.9768 14.726 77 15.2847C76.9797 15.843 77.1688 16.3887 77.53 16.8147Z"
+              fill="currentColor" />
+            <path
+              d="M87.77 19.2047C86.8723 19.2416 85.9822 19.0269 85.2 18.5847C84.8862 18.3957 84.619 18.1384 84.4181 17.832C84.2173 17.5256 84.0881 17.1779 84.04 16.8147C84.04 16.6147 84.11 16.5147 84.33 16.5147H85.8C85.8699 16.5175 85.9378 16.5394 85.996 16.5783C86.0542 16.6171 86.1006 16.6712 86.13 16.7347C86.34 17.2747 86.89 17.5447 87.77 17.5447C88.077 17.5588 88.3826 17.4969 88.66 17.3647C88.7558 17.3215 88.8379 17.2531 88.8978 17.1668C88.9577 17.0805 88.993 16.9795 89 16.8747C89 16.6147 88.84 16.4347 88.52 16.3147C88.1405 16.1884 87.7481 16.1045 87.35 16.0647C86.8785 16.0113 86.4109 15.9278 85.95 15.8147C85.5018 15.7133 85.0943 15.4799 84.78 15.1447C84.5949 14.9169 84.4587 14.6534 84.3797 14.3707C84.3008 14.088 84.2809 13.792 84.3212 13.5013C84.3616 13.2105 84.4613 12.9311 84.6142 12.6806C84.7671 12.43 84.9699 12.2136 85.21 12.0447C85.9308 11.5856 86.7765 11.3619 87.63 11.4047C88.4564 11.3768 89.274 11.5812 89.99 11.9947C90.2786 12.1582 90.527 12.3839 90.7173 12.6555C90.9076 12.9271 91.0349 13.2377 91.09 13.5647C91.09 13.7647 91 13.8647 90.82 13.8647H89.34C89.2777 13.8684 89.2157 13.8532 89.1622 13.8211C89.1087 13.789 89.0661 13.7414 89.04 13.6847C88.9411 13.4479 88.7549 13.2581 88.52 13.1547C88.255 13.0161 87.959 12.9472 87.66 12.9547C87.3669 12.9388 87.0745 12.9973 86.81 13.1247C86.7168 13.1607 86.6366 13.2237 86.5795 13.3057C86.5225 13.3877 86.4913 13.4849 86.49 13.5847C86.4964 13.7215 86.5465 13.8526 86.6329 13.9588C86.7193 14.065 86.8374 14.1406 86.97 14.1747C87.354 14.3195 87.7533 14.4201 88.16 14.4747C88.6277 14.5363 89.0917 14.6231 89.55 14.7347C89.9982 14.8362 90.4057 15.0695 90.72 15.4047C90.8882 15.5894 91.018 15.8055 91.1021 16.0407C91.1862 16.2758 91.2229 16.5253 91.21 16.7747C91.2186 17.1204 91.1375 17.4624 90.9745 17.7674C90.8115 18.0723 90.5722 18.3298 90.28 18.5147C89.5329 18.9944 88.6574 19.235 87.77 19.2047Z"
+              fill="currentColor" />
+            <path
+              d="M101.78 18.7047C101.786 18.7402 101.784 18.7765 101.776 18.8114C101.767 18.8464 101.752 18.8792 101.73 18.9081C101.709 18.937 101.682 18.9613 101.651 18.9796C101.62 18.9979 101.586 19.0098 101.55 19.0147C101.185 19.1339 100.804 19.198 100.42 19.2047C100.04 19.2441 99.656 19.1847 99.306 19.0323C98.955 18.8799 98.65 18.6396 98.42 18.3347C97.714 18.942 96.8 19.2536 95.87 19.2047C95.438 19.2246 95.007 19.1539 94.604 18.9972C94.201 18.8405 93.835 18.6012 93.53 18.2947C93.227 17.9736 92.9922 17.5946 92.8392 17.1805C92.6863 16.7664 92.6186 16.3257 92.64 15.8847V11.9747C92.64 11.7847 92.73 11.6847 92.92 11.6847H94.6C94.79 11.6847 94.88 11.7847 94.88 11.9747V15.5847C94.862 16.0345 95.015 16.4743 95.31 16.8147C95.457 16.9707 95.636 17.0933 95.834 17.1744C96.032 17.2555 96.246 17.2931 96.46 17.2847C96.679 17.2943 96.898 17.2604 97.104 17.1848C97.31 17.1093 97.499 16.9937 97.66 16.8447C97.812 16.6877 97.931 16.5011 98.008 16.2964C98.086 16.0917 98.12 15.8733 98.11 15.6547V11.9747C98.11 11.7847 98.2 11.6847 98.39 11.6847H100.09C100.28 11.6847 100.37 11.7847 100.37 11.9747V16.6847C100.37 17.0747 100.54 17.2647 100.87 17.2647C101.025 17.2707 101.18 17.2539 101.33 17.2147C101.368 17.2041 101.408 17.2022 101.446 17.2092C101.485 17.2161 101.521 17.2317 101.553 17.2548C101.585 17.2779 101.611 17.3079 101.63 17.3425C101.648 17.3771 101.658 17.4155 101.66 17.4547L101.78 18.7047Z"
+              fill="currentColor" />
+            <path
+              d="M117.67 18.7047C117.679 18.7405 117.68 18.7779 117.673 18.8141C117.665 18.8502 117.65 18.8844 117.628 18.914C117.606 18.9436 117.578 18.968 117.545 18.9854C117.513 19.0029 117.477 19.0129 117.44 19.0147C117.068 19.1356 116.681 19.1997 116.29 19.2047C115.695 19.2354 115.108 19.0665 114.62 18.7247C114.409 18.5783 114.238 18.3822 114.121 18.1537C114.004 17.9252 113.945 17.6713 113.95 17.4147V15.0647C113.971 14.6163 113.821 14.1766 113.53 13.8347C113.39 13.6784 113.216 13.5552 113.023 13.4739C112.829 13.3927 112.62 13.3554 112.41 13.3647C112.221 13.3576 112.033 13.3935 111.859 13.4697C111.686 13.5459 111.533 13.6605 111.41 13.8047C111.146 14.1398 111.011 14.5586 111.03 14.9847V18.6747C111.03 18.8647 110.94 18.9647 110.75 18.9647H109.06C109.021 18.9696 108.981 18.9654 108.944 18.9526C108.906 18.9397 108.872 18.9185 108.844 18.8905C108.816 18.8626 108.795 18.8286 108.782 18.7912C108.769 18.7538 108.765 18.714 108.77 18.6747V15.0647C108.792 14.6212 108.653 14.1846 108.38 13.8347C108.258 13.6877 108.105 13.5694 107.932 13.4882C107.76 13.407 107.571 13.3648 107.38 13.3647C107.176 13.3565 106.973 13.3914 106.783 13.4673C106.593 13.5431 106.422 13.6581 106.28 13.8047C105.994 14.1291 105.847 14.5529 105.87 14.9847V18.6747C105.875 18.714 105.871 18.7538 105.858 18.7912C105.845 18.8286 105.824 18.8626 105.796 18.8905C105.768 18.9185 105.734 18.9397 105.697 18.9526C105.659 18.9654 105.619 18.9696 105.58 18.9647H103.95C103.76 18.9647 103.67 18.8647 103.67 18.6747V13.9647C103.682 13.8845 103.675 13.8027 103.649 13.7257C103.624 13.6488 103.581 13.5788 103.523 13.5215C103.466 13.4642 103.396 13.4211 103.319 13.3956C103.242 13.3701 103.16 13.363 103.08 13.3747H102.75C102.53 13.3747 102.42 13.2947 102.42 13.1347V11.9547C102.415 11.8817 102.435 11.8091 102.477 11.7491C102.519 11.689 102.58 11.6451 102.65 11.6247C102.996 11.499 103.362 11.438 103.73 11.4447C104.083 11.4146 104.438 11.485 104.753 11.6478C105.068 11.8106 105.33 12.0591 105.51 12.3647C105.847 12.045 106.247 11.7982 106.684 11.6399C107.121 11.4816 107.586 11.4152 108.05 11.4447C108.501 11.4227 108.95 11.5072 109.362 11.6914C109.774 11.8756 110.136 12.1542 110.42 12.5047C110.751 12.145 111.158 11.8634 111.611 11.68C112.064 11.4967 112.552 11.4164 113.04 11.4447C113.476 11.4243 113.912 11.4946 114.32 11.6513C114.728 11.8079 115.099 12.0474 115.41 12.3547C115.714 12.6752 115.949 13.0541 116.102 13.4684C116.255 13.8826 116.323 14.3237 116.3 14.7647V16.6947C116.3 17.0747 116.47 17.2647 116.79 17.2647C116.945 17.2719 117.1 17.2551 117.25 17.2147C117.457 17.2147 117.567 17.2947 117.58 17.4547L117.67 18.7047Z"
+              fill="currentColor" />
+            <path
+              d="M0.41 10.3847C1.14777 7.4194 2.85643 4.7861 5.2639 2.90424C7.6714 1.02234 10.6393 0 13.695 0C16.7507 0 19.7186 1.02234 22.1261 2.90424C24.5336 4.7861 26.2422 7.4194 26.98 10.3847H25.78C23.7557 10.3549 21.7729 10.9599 20.11 12.1147C20.014 12.1842 19.9138 12.2477 19.81 12.3047H19.67C19.5662 12.2477 19.466 12.1842 19.37 12.1147C17.6924 10.9866 15.7166 10.3841 13.695 10.3841C11.6734 10.3841 9.6976 10.9866 8.02 12.1147C7.924 12.1842 7.8238 12.2477 7.72 12.3047H7.58C7.4762 12.2477 7.376 12.1842 7.28 12.1147C5.6171 10.9599 3.6343 10.3549 1.61 10.3847H0.41ZM23.62 16.6547C24.236 16.175 24.9995 15.924 25.78 15.9447H27.39V12.7347H25.78C24.4052 12.7181 23.0619 13.146 21.95 13.9547C21.3243 14.416 20.5674 14.6649 19.79 14.6649C19.0126 14.6649 18.2557 14.416 17.63 13.9547C16.4899 13.1611 15.1341 12.7356 13.745 12.7356C12.3559 12.7356 11.0001 13.1611 9.86 13.9547C9.2343 14.416 8.4774 14.6649 7.7 14.6649C6.9226 14.6649 6.1657 14.416 5.54 13.9547C4.4144 13.1356 3.0518 12.7072 1.66 12.7347H0V15.9447H1.61C2.39051 15.924 3.154 16.175 3.77 16.6547C4.908 17.4489 6.2623 17.8747 7.65 17.8747C9.0377 17.8747 10.392 17.4489 11.53 16.6547C12.1468 16.1765 12.9097 15.9257 13.69 15.9447C14.4708 15.9223 15.2348 16.1735 15.85 16.6547C16.9901 17.4484 18.3459 17.8738 19.735 17.8738C21.1241 17.8738 22.4799 17.4484 23.62 16.6547ZM23.62 22.3947C24.236 21.915 24.9995 21.664 25.78 21.6847H27.39V18.4747H25.78C24.4052 18.4581 23.0619 18.886 21.95 19.6947C21.3243 20.156 20.5674 20.4049 19.79 20.4049C19.0126 20.4049 18.2557 20.156 17.63 19.6947C16.4899 18.9011 15.1341 18.4757 13.745 18.4757C12.3559 18.4757 11.0001 18.9011 9.86 19.6947C9.2343 20.156 8.4774 20.4049 7.7 20.4049C6.9226 20.4049 6.1657 20.156 5.54 19.6947C4.4144 18.8757 3.0518 18.4472 1.66 18.4747H0V21.6847H1.61C2.39051 21.664 3.154 21.915 3.77 22.3947C4.908 23.1889 6.2623 23.6147 7.65 23.6147C9.0377 23.6147 10.392 23.1889 11.53 22.3947C12.1468 21.9165 12.9097 21.6657 13.69 21.6847C14.4708 21.6623 15.2348 21.9135 15.85 22.3947C16.9901 23.1884 18.3459 23.6138 19.735 23.6138C21.1241 23.6138 22.4799 23.1884 23.62 22.3947Z"
+              fill="currentColor" />
+          </svg>
+        </div>
+  
+        <ul class="mt-8 flex justify-start gap-6 sm:mt-0 sm:justify-end">
+          <li>
+            <a href="#" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:opacity-75">
+              <span class="sr-only">فیسبوک</span>
+  
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  clip-rule="evenodd" />
+              </svg>
             </a>
+          </li>
   
-          </div>
-          <li ><a href="#"><img id="hamberger__menu" class="hamberger__show" loading="lazy" src="public/images/icon_hamberger.png"
-                alt="hamberger__menu"></a></li>
+          <li>
+            <a href="#" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:opacity-75">
+              <span class="sr-only">اینیستاگرام</span>
   
-          <li><a class="non__active" href="location.html">  لوکیشن ها </a></li>
-          <li><a class="non__active" href="reservetime.html">   رزرو وقت </a></li>
-          <li><a class="non__active" href="wedding.html"> پکیج ها</a></li>
-          <li><a class="non__active" href="portfolio.html">نمونه کار های ما</a></li>
-          <li><a class="non__active" href="contactus.html">ارتباط با ما</a></li>
-          <li><a class="non__active" href="contract.html">مراحل عقد قرارداد</a></li>
-          <li><a class="non__active" href="blog.html">مقالات</a></li>
-          <li><a class="non__active" href="team.html">تیم ما</a></li>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+          </li>
+  
+          <li>
+            <a href="#" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:opacity-75">
+              <span class="sr-only">تویتر</span>
+  
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+              </svg>
+            </a>
+          </li>
+  
+          <li>
+            <a href="#" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:opacity-75">
+              <span class="sr-only">گیت هاب</span>
+  
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+          </li>
+  
+          <li>
+            <a href="#" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:opacity-75">
+              <span class="sr-only">Dribbble</span>
+  
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+      <div class="grid grid-cols-1 gap-8 border-t border-gray-100 pt-8 sm:grid-cols-2 lg:grid-cols-4 lg:pt-16">
+        <div>
+          <p class="font-medium text-gray-900">سرویس های ما</p>
+  
+          <ul class="mt-6 space-y-4 text-sm">
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75"> آپدیت </a>
+            </li>
+  
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75"> آپدیت </a>
+            </li>
+  
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75">آپدیت</a>
+            </li>
+  
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75">آپدیت</a>
+            </li>
+  
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75">آپدیت</a>
+            </li>
+          </ul>
+        </div>
+  
+        <div>
+          <p class="font-medium text-gray-900">لینک‌های سریع
+          </p>
           
   
-          <div class="wrapper__btn__header">
-            <a href="#">
-              <div class="btn__ header__btn">
-                <a href="login.html">
-                  <button id="show_modal" class="button is-dark bg__color color__txt left__position">ورود
-                  </button>
-                </a>
-              </div>
+          <ul class="mt-6 space-y-4 text-sm">
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75"> پکیج های عرسی </a>
+            </li>
   
-            </a>
-          </div>
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75"> پکیج عقد </a>
+            </li>
   
-        </ul>
-       <aside id="menu" class="sidebar__mobile animate__animated animate__fadeInRight">
-        <ul class="mobile__list">
-          <div class="close_icon">
-            <img id="close_side_right" class="close_icon" src="public/images/close_icon.png" alt="close_icon">
-            <img id="logo_tatri" src="public/images/alireza tatari studio Logo (1).jpg" alt="logo__sidebar">
-            <img class="indicator_links" src="src/styles/indicator.svg" alt="indicator">
-          </div>
-          <li><a class="gray__link" href="team.html">تیم ما</a></li>
-          <li><a class="gray__link" href="location.html"> لوکیشن ها</a></li>
-          <!-- <li><a class="gray__link" href="reserve.html"></a></li> -->
-          <li><a class="gray__link" href="reservetime.html">رزرو وقت</a></li>
-          <li><a class="gray__link" href="contactus.html">ارتباط با ما</a></li>
-          <li><a class="gray__link" href="portfolio.html"> نمونه کار</a></li>
-          <li><a class="gray__link" href="wedding.html">پکیج ها</a></li>
-          <li><a class="gray__link" href="contract.html">قرارداد</a></li>
-          <!-- <li><a class="gray__link" href="contract.html">تیم ما</a></li> -->
-          <a href="login.html">  <button class="signup">ورود</button></a>
-        </ul>
-       </aside>
-            
-      </nav>
-    </header>
-  
-    <!---------------------------  main section--------------------- -->
-    <main>
-      <div class="first__Section">
-        <div class="wrapper__content">
-          <div class="img_right">
-            <img src="public/images/flex__header__image.png" alt="wedding" loading="lazy">
-            <img src="public/images/aroow.svg" alt="aroow" loading="lazy">
-          </div>
-          <div class="txt__art ">
-            <h3  class="art">آتلیه عکاسی و فیلمبرداری
-              <br>
-              <span class="yellow">عروس و داماد</span>
-            </h3>
-          </div>
-          <h3 class="header_title">
-            به استودیو عکاسی طوس خوش امدید!
-            <br>
-            بانهایت افتخار و سربلندی اعلام می‌ کنیم که تونستیم لحظات خوب و ماندگار زیادی رو برای عروس و دامادهای
-            سراسر ایران به تصویر بکشیم.
-            ما در آتلیه عکاسی طوس استودیو،تمام تلاشمون رو میکنیم که مثل یک خانواده مجموعه ی مارو کنار خودتون حس
-            کنید و به شما عروس داماد های عزیز اعلام می‌کنیم که آماده ارائه بهترین خدمات آتلیه‌ای، عکاسی و
-            تصویربرداری از مجالس عروسی، عقد، نامزدی و سایر جشن‌های شادی شما هستیم. پیشنهاد می‌کنیم نمونه‌کارهای
-            ما رو از دست ندید.
-          </h3>
-          <div class="wrapper__btn">
-            <a href="portfolio.html"><button class="wirefame">نمونه کارهای توس</button></a>
-            <!-- <button class="wirefame">نمونه کارهای توس</button> -->
-            <button class="package"> پکیج ها</button>
-          </div>
-  
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75"> بلاگ </a>
+            </li>
+          </ul>
         </div>
-        <div class="left__img">
-          <img class="animate__slideInRight animate__delay-5s	5s wal_hpicture_left" src="public/images/white_bg.jpg"
-            alt="wedding" loading="lazy">
+  
+        <div>
+          <p class="font-medium text-gray-900">لینک های مفید</p>
+  
+          <ul class="mt-6 space-y-4 text-sm">
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75"> لوکیشن ها </a>
+            </li>
+  
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75"> مراحل عقد قرارداد </a>
+            </li>
+  
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75"> تماس با ما </a>
+            </li>
+          </ul>
+        </div>
+  
+        <div>
+          <p class="font-medium text-gray-900">همکاری با ما</p>
+  
+          <ul class="mt-6 space-y-4 text-sm">
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75"> تلگرام </a>
+            </li>
+  
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75"> اینیستاگرام </a>
+            </li>
+  
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75"> فیسبوک </a>
+            </li>
+  
+            <li>
+              <a href="#" class="text-gray-700 transition hover:opacity-75">تویتر</a>
+            </li>
+          </ul>
         </div>
       </div>
-      </h3>
   
-      <div data-aos="fade-right"  class="-mx-4 flex flex-wrap p-8">
-  
-        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-          <div class="mb-9 rounded-xl py-8 px-7 shadow-md transition-all hover:shadow-lg sm:p-9 lg:px-6 xl:px-9">
-            <div class="mx-auto mb-7 inline-block"><svg width="53" height="61" viewBox="0 0 53 61" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <rect x="20.8433" y="19.3018" width="10.1675" height="12.201" fill="#ABA8F7"></rect>
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M42.1119 5.91343C40.9499 4.62242 39.4875 3.95192 38.2383 4.04801C36.1465 4.20891 33.9414 5.92602 31.8695 8.63549C30.0459 11.0202 28.5417 13.8917 27.5307 16.2458C33.6951 16.5488 37.7115 15.7786 40.1926 14.5916C42.7088 13.3878 43.5948 11.7969 43.7449 10.3715C43.9049 8.85254 43.2637 7.19309 42.1119 5.91343ZM8.75274 16.6855C6.24093 15.1295 4.93328 12.9984 4.69026 10.691C4.42078 8.13252 5.49249 5.64717 7.08955 3.87282C8.6764 2.10982 10.9989 0.817106 13.4643 1.00675C16.9349 1.27372 19.8489 3.94064 22.0221 6.78264C23.4868 8.69803 24.7428 10.8606 25.7343 12.8643C26.7259 10.8606 27.9818 8.69803 29.4465 6.78264C31.6197 3.94064 34.5337 1.27372 38.0043 1.00675C40.4697 0.817106 42.7922 2.10982 44.3791 3.87282C45.9761 5.64717 47.0478 8.13252 46.7784 10.691C46.5353 12.9984 45.2277 15.1295 42.7159 16.6855H49.8822C51.286 16.6855 52.4241 17.8236 52.4241 19.2274V31.1348C52.4241 32.5386 51.286 33.6766 49.8822 33.6766H49.3122V58.6608C49.3122 59.9464 48.1845 60.9886 46.7933 60.9886H31.5363L31.5191 60.9887L31.502 60.9886H20.3521L20.3349 60.9887L20.3178 60.9886H5.0608C3.66963 60.9886 2.54187 59.9464 2.54187 58.6608L2.54187 33.6766C1.13804 33.6766 0 32.5386 0 31.1348V19.2274C0 17.8236 1.13803 16.6855 2.54187 16.6855H8.75274ZM33.0443 58.1952H46.2895V33.6766H33.0443V58.1952ZM33.0443 30.6264H49.3738V19.7358H33.0443V30.6264ZM29.994 19.7358V30.6264H21.8601V19.7358H29.994ZM29.994 33.6766V58.1952H21.8601V33.6766H29.994ZM18.8098 58.1952V33.6766H5.56459V58.1952H18.8098ZM18.8098 30.6264V19.7358H3.05024V30.6264H18.8098ZM13.2303 4.04801C11.9811 3.95192 10.5187 4.62242 9.35668 5.91343C8.20488 7.19309 7.56373 8.85254 7.72372 10.3715C7.87385 11.7969 8.7598 13.3878 11.276 14.5916C13.7571 15.7786 17.7735 16.5488 23.9379 16.2458C22.9269 13.8917 21.4227 11.0202 19.5991 8.63549C17.5272 5.92602 15.3221 4.20891 13.2303 4.04801Z"
-                  fill="#6A64F1"></path>
-              </svg></div>
-            <div ata-aos="fade-down-right">
-              <h3 class="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">
-                خدمات و پکیج ها
-  
-              </h3>
-              <p class="text-base tale__color font-medium text-body-color">وجود نمونه کارهای موفق در برگزاری مراسم نامزدی
-                تا عروسی، دلیلی قاطع هست تا زمینه ای رو برای رقم زدن روزهای شیرین زندگیتون فراهم کنیم.</p>
-            </div>
-          </div>
-        </div>
-  
-  
-  
-        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-          <div class="mb-9 rounded-xl py-8 px-7 shadow-md transition-all hover:shadow-lg sm:p-9 lg:px-6 xl:px-9">
-            <div class="mx-auto mb-7 inline-block"><svg width="60" height="60" viewBox="0 0 60 60" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M11.4049 2.9752H37.19C38.0116 2.9752 38.6776 2.30918 38.6776 1.4876C38.6776 0.666021 38.0116 0 37.19 0H10.9091C9.53977 0 8.42974 1.11003 8.42974 2.47933V17.5764L1.04954 22.7859C0.391399 23.2505 0 24.0059 0 24.8115V57.5207C0 58.89 1.11004 60 2.47933 60H57.5205C58.8898 60 59.9999 58.89 59.9999 57.5207V26.4868C59.9999 24.3552 57.488 23.2172 55.8856 24.6229L52.066 27.8242V22.8021C52.066 21.9805 51.4 21.3145 50.5784 21.3145C49.7568 21.3145 49.0908 21.9805 49.0908 22.8021V30.2401C49.0908 30.2656 49.0915 30.291 49.0927 30.3162L30.2843 46.0802L11.4049 29.0236V18.365C11.4051 18.3523 11.4051 18.3396 11.4049 18.3269V2.9752ZM8.42974 21.2181L5.24984 23.4628L8.42974 26.3357V21.2181ZM23.284 43.7729C23.2591 43.7943 23.2333 43.815 23.2066 43.835L5.62021 57.0248H54.8755L37.4608 43.9637L31.9071 48.6143C30.9458 49.4575 29.5009 49.4314 28.5708 48.5539L23.284 43.7729ZM39.8036 42.0019L57.0247 54.9177V27.5813L39.8036 42.0019ZM2.9752 55.2896L21.0384 41.7422L2.9752 25.4071V55.2896Z"
-                  fill="#6A64F1"></path>
-                <circle cx="46.6115" cy="11.4049" r="9.42147" fill="#6A64F1"></circle>
-                <path
-                  d="M46.7807 15.868C47.6859 15.868 48.6475 15.6441 49.0878 15.4202L48.7884 14.5452C48.4538 14.6692 47.6436 14.8965 46.8405 14.8965C44.5088 14.8965 43.2478 13.6633 43.2478 11.431C43.2478 9.35033 44.4524 7.90005 46.7525 7.90005C48.6299 7.90005 50.0283 8.9404 50.0247 10.8971C50.0283 12.3198 49.8028 12.9605 49.2393 12.9605C48.9399 12.9605 48.7637 12.7263 48.7602 12.3852V9.10575H47.7775V9.49157H47.7282C47.6155 9.18842 46.9392 8.90939 46.1748 9.01274C45.1921 9.1402 44.2481 9.92907 44.2481 11.4035C44.2481 12.9226 45.0935 13.8149 46.2417 13.8665C47.0413 13.9044 47.6612 13.5565 47.8268 13.1466H47.8691C47.9536 13.6633 48.4185 13.9458 49.1301 13.9079C50.6447 13.8527 51.0779 12.5299 51.0744 10.9556C51.0779 8.69237 49.521 6.94238 46.7771 6.94238C43.8536 6.94238 42.1523 8.7027 42.1488 11.4448C42.1523 14.2524 43.8254 15.868 46.7807 15.868ZM46.5341 12.8779C45.6148 12.8779 45.3048 12.1475 45.3013 11.3621C45.3048 10.5767 45.7521 10.0014 46.5411 10.0014C47.4182 10.0014 47.7423 10.4217 47.7458 11.3587C47.7564 12.3646 47.4253 12.8779 46.5341 12.8779Z"
-                  fill="white"></path>
-              </svg></div>
-            <div>
-              <h3 class="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">پکیج های عروسی
-              </h3>
-              <p class="text-base tale__color font-medium text-body-color">وجود نمونه کارهای موفق در برگزاری مراسم نامزدی
-                تا عروسی، دلیلی قاطع هست تا زمینه ای رو برای رقم زدن روزهای شیرین زندگیتون فراهم کنیم.</p>
-            </div>
-          </div>
-        </div>
-  
-  
-  
-        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-          <div class="mb-9 rounded-xl py-8 px-7 shadow-md transition-all hover:shadow-lg sm:p-9 lg:px-6 xl:px-9">
-            <div class="mx-auto mb-7 inline-block"><svg width="67" height="60" viewBox="0 0 67 60" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M17.892 6.67578C17.892 6.1235 18.3397 5.67578 18.892 5.67578H24.226C26.4351 5.67578 28.226 7.46664 28.226 9.67578V32.789C28.226 33.3413 27.7783 33.789 27.226 33.789C26.6737 33.789 26.226 33.3413 26.226 32.789V9.67578C26.226 8.57121 25.3305 7.67578 24.226 7.67578H18.892C18.3397 7.67578 17.892 7.22807 17.892 6.67578Z"
-                  fill="#6A64F1"></path>
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M37.8959 38.7891C37.8959 38.2368 38.3436 37.7891 38.8959 37.7891H49.7859C51.995 37.7891 53.7859 39.5799 53.7859 41.7891V50.5679C53.7859 51.1202 53.3382 51.5679 52.7859 51.5679C52.2336 51.5679 51.7859 51.1202 51.7859 50.5679V41.7891C51.7859 40.6845 50.8905 39.7891 49.7859 39.7891H38.8959C38.3436 39.7891 37.8959 39.3413 37.8959 38.7891Z"
-                  fill="#ABA8F7"></path>
-                <rect width="20.0016" height="13.3344" rx="2" fill="#6A64F1"></rect>
-                <rect x="19" y="33" width="21" height="11" rx="2" fill="#ABA8F7"></rect>
-                <rect x="39.8958" y="47.666" width="24.6688" height="11.3344" rx="2" fill="white" stroke="#6A64F1"
-                  stroke-width="2"></rect>
-                <rect x="21" y="18" width="45" height="10" rx="2" fill="white" stroke="#6A64F1" stroke-width="2">
-                </rect>
-              </svg></div>
-            <div>
-              <h3 class="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">پکیج های عقد و
-                نامزدی
-              </h3>
-              <p class="text-base tale__color font-medium text-body-color">وجود نمونه کارهای موفق در برگزاری مراسم نامزدی
-                تا عروسی، دلیلی قاطع هست تا زمینه ای رو برای رقم زدن روزهای شیرین زندگیتون فراهم کنیم.</p>
-            </div>
-          </div>
-        </div>
-  
-  
-  
-        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-          <div class="mb-9 rounded-xl py-8 px-7 shadow-md transition-all hover:shadow-lg sm:p-9 lg:px-6 xl:px-9">
-            <div class="mx-auto mb-7 inline-block"><svg width="58" height="60" viewBox="0 0 58 60" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <rect x="1" y="1" width="24" height="26" rx="2" stroke="#6A64F1" stroke-width="2"></rect>
-                <path
-                  d="M14.6146 17.1967C14.8371 17.4191 14.8392 17.7843 14.5838 17.9678C13.9915 18.3933 13.2769 18.6264 12.5382 18.6264C11.6083 18.6264 10.7165 18.257 10.059 17.5994C9.40148 16.9419 9.03209 16.0501 9.03209 15.1203C9.03209 14.3816 9.26519 13.667 9.69065 13.0747C9.87417 12.8192 10.2393 12.8214 10.4617 13.0438L14.6146 17.1967Z"
-                  fill="#6A64F1"></path>
-                <path
-                  d="M9.94096 17.0091L10.6493 17.7175L9.11456 19.2522C8.91896 19.4478 8.60183 19.4478 8.40622 19.2522C8.21062 19.0566 8.21062 18.7395 8.40622 18.5439L9.94096 17.0091Z"
-                  fill="#6A64F1"></path>
-                <path
-                  d="M12.4851 11.0203C12.2627 10.7978 12.2605 10.4327 12.516 10.2492C13.1082 9.82372 13.8229 9.59062 14.5615 9.59062C15.4914 9.59062 16.3832 9.96001 17.0407 10.6175C17.6983 11.275 18.0676 12.1668 18.0676 13.0967C18.0676 13.8354 17.8345 14.55 17.4091 15.1423C17.2256 15.3977 16.8604 15.3956 16.638 15.1732L12.4851 11.0203Z"
-                  fill="#ABA8F7"></path>
-                <path
-                  d="M17.1588 11.2077L16.4504 10.4994L17.6015 9.34833C17.7482 9.20163 18.0257 9.24127 18.2213 9.43688C18.4169 9.63248 18.4565 9.90997 18.3098 10.0567L17.1588 11.2077Z"
-                  fill="#ABA8F7"></path>
-                <path
-                  d="M12.5383 12.7575C12.7339 12.5619 13.051 12.5619 13.2466 12.7575C13.4422 12.9531 13.4422 13.2702 13.2466 13.4658L12.0661 14.6464L11.3577 13.9381L12.5383 12.7575Z"
-                  fill="#ADAAFF"></path>
-                <path
-                  d="M12.5382 12.758C12.7338 12.5624 13.051 12.5624 13.2466 12.758C13.4422 12.9536 13.4422 13.2708 13.2466 13.4664L12.066 14.6469L11.3577 13.9386L12.5382 12.758Z"
-                  fill="#6A64F1"></path>
-                <path
-                  d="M14.309 14.5276C14.5046 14.332 14.8217 14.332 15.0173 14.5276C15.2129 14.7232 15.2129 15.0403 15.0173 15.2359L13.8368 16.4165L13.1284 15.7081L14.309 14.5276Z"
-                  fill="#6A64F1"></path>
-                <rect x="31" y="23" width="27" height="37" rx="3" fill="#6A64F1"></rect>
-                <path
-                  d="M44.7681 36C43.323 36 42.1462 37.1768 42.1462 38.6219C42.1462 39.4842 42.5743 40.2411 43.2196 40.7194L41.925 42.8578C41.9148 42.8548 41.9035 42.8527 41.8923 42.8496C41.6219 42.7769 41.3402 42.8169 41.0975 42.9561C40.5967 43.246 40.4236 43.8892 40.7124 44.39C40.906 44.7259 41.2593 44.9144 41.6219 44.9144C41.8001 44.9144 41.9814 44.8703 42.1462 44.7751C42.389 44.6348 42.5651 44.4064 42.6378 44.136C42.7106 43.8656 42.6716 43.584 42.5313 43.3412C42.4873 43.2654 42.4269 43.1979 42.3675 43.1364L43.7931 40.7931L43.9324 40.5637L43.703 40.4326C43.0854 40.068 42.6706 39.3931 42.6706 38.6219C42.6706 37.4605 43.6067 36.5244 44.7681 36.5244C45.9295 36.5244 46.8656 37.4605 46.8656 38.6219C46.8656 38.838 46.8359 39.0408 46.7755 39.2364L47.2753 39.392C47.3511 39.1473 47.39 38.8902 47.39 38.6219C47.39 37.1768 46.2132 36 44.7681 36ZM44.7681 37.5731C44.1895 37.5731 43.7194 38.0432 43.7194 38.6219C43.7194 39.2005 44.1895 39.6706 44.7681 39.6706C44.8552 39.6706 44.9412 39.6583 45.0221 39.6378L46.2839 41.9238L46.4068 42.1532L46.6444 42.0303C46.9445 41.8644 47.2845 41.7681 47.6522 41.7681C48.8136 41.7681 49.7497 42.7042 49.7497 43.8656C49.7497 45.027 48.8136 45.9631 47.6522 45.9631C47.0858 45.9631 46.5717 45.7368 46.1938 45.3732L45.8333 45.7501C46.3044 46.2038 46.9475 46.4875 47.6522 46.4875C49.0973 46.4875 50.274 45.3107 50.274 43.8656C50.274 42.4205 49.0973 41.2437 47.6522 41.2437C47.2886 41.2437 46.9516 41.339 46.6362 41.4732L45.4809 39.3839C45.6858 39.1923 45.8169 38.924 45.8169 38.6219C45.8169 38.0432 45.3468 37.5731 44.7681 37.5731ZM40.9828 41.3175C39.8408 41.6022 39 42.6397 39 43.8656C39 45.3107 40.1768 46.4875 41.6219 46.4875C42.9738 46.4875 44.0563 45.4439 44.1946 44.1278H46.6444C46.7611 44.5795 47.1647 44.9144 47.6522 44.9144C48.2308 44.9144 48.7009 44.4443 48.7009 43.8656C48.7009 43.287 48.2308 42.8169 47.6522 42.8169C47.1647 42.8169 46.7611 43.1518 46.6444 43.6034H43.7194V43.8656C43.7194 45.027 42.7833 45.9631 41.6219 45.9631C40.4605 45.9631 39.5244 45.027 39.5244 43.8656C39.5244 42.8804 40.2024 42.061 41.1139 41.8337L40.9828 41.3175Z"
-                  fill="white"></path>
-                <rect x="32" y="1" width="25" height="16" rx="2" stroke="#6A64F1" stroke-width="2"></rect>
-                <g clip-path="url(#clip0_971_7928)">
-                  <path
-                    d="M42.9 9.52246C42.3264 9.52246 41.8348 10.0141 41.8348 10.5876V13.2422C41.8348 13.8158 42.3264 14.3074 42.9 14.3074C43.4735 14.3074 43.9651 13.8158 43.9651 13.2422V10.5876C43.9651 9.98129 43.5063 9.52246 42.9 9.52246Z"
-                    fill="#6A64F1"></path>
-                  <path
-                    d="M39.1638 10.5876C39.1638 11.1611 39.6554 11.6527 40.229 11.6527C40.8025 11.6527 41.2941 11.1611 41.2941 10.5876V9.52246H40.2453C39.6554 9.52246 39.1638 9.98129 39.1638 10.5876Z"
-                    fill="#6A64F1"></path>
-                  <path
-                    d="M42.9 4.16406C42.3264 4.16406 41.8348 4.65566 41.8348 5.2292C41.8348 5.80273 42.3264 6.29433 42.9 6.29433H43.9651C43.9651 5.68802 43.9651 5.83551 43.9651 5.2292C43.9651 4.65566 43.5063 4.16406 42.9 4.16406Z"
-                    fill="#6A64F1"></path>
-                  <path
-                    d="M40.229 8.96523H42.9C43.4735 8.96523 43.9651 8.47363 43.9651 7.9001C43.9651 7.32656 43.4735 6.83496 42.9 6.83496H40.229C39.6554 6.83496 39.1638 7.32656 39.1638 7.9001C39.1638 8.47363 39.6226 8.96523 40.229 8.96523Z"
-                    fill="#6A64F1"></path>
-                  <path
-                    d="M48.242 6.83496C47.6685 6.83496 47.1769 7.32656 47.1769 7.9001V8.96523H48.242C48.8156 8.96523 49.3072 8.47363 49.3072 7.9001C49.3072 7.32656 48.8319 6.83496 48.242 6.83496Z"
-                    fill="#6A64F1"></path>
-                  <path
-                    d="M44.5222 5.2292V7.90023C44.5222 8.47376 45.0138 8.96536 45.5874 8.96536C46.1609 8.96536 46.6525 8.47376 46.6525 7.90023V5.2292C46.6525 4.65566 46.1609 4.16406 45.5874 4.16406C44.981 4.16406 44.5222 4.65566 44.5222 5.2292Z"
-                    fill="#6A64F1"></path>
-                  <path
-                    d="M46.6525 13.2585C46.6525 12.685 46.1609 12.1934 45.5874 12.1934H44.5222V13.2585C44.5222 13.832 45.0138 14.3236 45.5874 14.3236C46.1609 14.3236 46.6525 13.832 46.6525 13.2585Z"
-                    fill="#6A64F1"></path>
-                  <path
-                    d="M48.2584 9.52246H45.5874C45.0138 9.52246 44.5222 10.0141 44.5222 10.5876C44.5222 11.1611 45.0138 11.6527 45.5874 11.6527H48.2584C48.8319 11.6527 49.3235 11.1611 49.3235 10.5876C49.3235 9.98129 48.8319 9.52246 48.2584 9.52246Z"
-                    fill="#6A64F1"></path>
-                </g>
-                <rect x="1" y="34" width="24" height="25" rx="2" stroke="#6A64F1" stroke-width="2"></rect>
-                <g clip-path="url(#clip1_971_7928)">
-                  <path
-                    d="M17.6477 43.6591L16.2036 50.4186C16.0961 50.8949 15.8195 51.0024 15.4201 50.7873L13.254 49.1896L12.194 50.2036C12.0864 50.3111 11.9789 50.4186 11.7331 50.4186L11.9021 48.1911L15.9424 44.5194C16.1114 44.3504 15.8963 44.289 15.6813 44.4273L10.6577 47.5919L8.49161 46.9313C8.01537 46.7777 8.01537 46.4551 8.59915 46.24L17.0178 42.9678C17.4326 42.8449 17.7859 43.06 17.6477 43.6591Z"
-                    fill="#6A64F1"></path>
-                </g>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M31 10.5H26V8.5H31V10.5Z" fill="#6A64F1">
-                </path>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M31 47H26V45H31V47Z" fill="#ABA8F7"></path>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M14 28L14 33L12 33L12 28L14 28Z" fill="#6A64F1">
-                </path>
-                <defs>
-                  <clipPath id="clip0_971_7928">
-                    <rect width="10.4875" height="10.4875" fill="white" transform="translate(39 4)">
-                    </rect>
-                  </clipPath>
-                  <clipPath id="clip1_971_7928">
-                    <rect width="9.83201" height="9.83201" fill="white" transform="translate(8 42)">
-                    </rect>
-                  </clipPath>
-                </defs>
-              </svg></div>
-            <div>
-              <h3 class="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">پکیج های
-                فرمالیته</h3>
-              <p class="text-base tale__color font-medium text-body-color">
-                وجود نمونه کارهای موفق در برگزاری مراسم نامزدی تا عروسی، دلیلی قاطع هست تا زمینه ای رو برای
-                رقم زدن روزهای شیرین زندگیتون فراهم کنیم.
-              </p>
-            </div>
-          </div>
-        </div>
-  
-  
-        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-          <div class="mb-9 rounded-xl py-8 px-7 shadow-md transition-all hover:shadow-lg sm:p-9 lg:px-6 xl:px-9">
-            <div class="mx-auto mb-7 inline-block"><svg width="51" height="60" viewBox="0 0 51 60" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M33.1015 4.53152C28.1688 2.60657 22.6927 2.60657 17.76 4.53152L3.08781 10.2572V31.4086C3.08781 36.1366 5.05872 40.6505 8.52635 43.8644L24.3812 56.5006C24.9733 57.0494 25.8882 57.0494 26.4802 56.5006L42.3351 43.8644C45.8027 40.6505 47.7736 36.1366 47.7736 31.4086V10.2572L33.1015 4.53152ZM16.6374 1.65499C22.292 -0.551664 28.5695 -0.551662 34.224 1.65499L49.2237 7.50853C50.2113 7.89393 50.8615 8.84554 50.8615 9.90564V31.4086C50.8615 36.9962 48.5322 42.3309 44.4341 46.1291L28.5792 58.7653C26.803 60.4116 24.0585 60.4116 22.2823 58.7653L6.42737 46.1291C2.32926 42.3309 0 36.9962 0 31.4086V9.90564C0 8.84554 0.650144 7.89393 1.63772 7.50853L16.6374 1.65499Z"
-                  fill="#ABA8F7"></path>
-                <path
-                  d="M25.217 50.5233V8.42143C25.217 7.75383 24.5754 7.27369 23.9349 7.46207L9.15513 11.8091C8.30396 12.0594 7.71946 12.8406 7.71946 13.7278V32.0977C7.71946 34.5312 8.70493 36.861 10.4512 38.5559L23.5206 51.2409C24.1547 51.8564 25.217 51.407 25.217 50.5233Z"
-                  fill="#6A64F1"></path>
-              </svg></div>
-            <div>
-              <h3 class="mb-4 text-xl  font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">پکیج های تور
-              </h3>
-              <p class="text-base tale__color font-medium text-body-color">وجود نمونه کارهای موفق در برگزاری مراسم نامزدی
-                تا عروسی، دلیلی قاطع هست تا زمینه ای رو برای رقم زدن روزهای شیرین زندگیتون فراهم کنیم.</p>
-            </div>
-          </div>
-        </div>
-  
-  
-        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-          <div class="mb-9 rounded-xl py-8 px-7 shadow-md transition-all hover:shadow-lg sm:p-9 lg:px-6 xl:px-9">
-            <div class="mx-auto mb-7 inline-block"><svg width="52" height="60" viewBox="0 0 52 60" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M13.2787 7.3766C12.4639 7.3766 11.8033 8.03716 11.8033 8.85201V15.2455H8.85248V8.85201C8.85248 6.40747 10.8342 4.42578 13.2787 4.42578H46.7213C49.1659 4.42578 51.1476 6.40747 51.1476 8.85201V51.1471C51.1476 53.5916 49.1659 55.5733 46.7213 55.5733H37.8689V52.6225H46.7213C47.5362 52.6225 48.1967 51.9619 48.1967 51.1471V8.85201C48.1967 8.03716 47.5362 7.3766 46.7213 7.3766H13.2787Z"
-                  fill="#6A64F1"></path>
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M7.8689 22.6223C7.8689 22.079 8.30927 21.6387 8.8525 21.6387L30.4918 21.6387C31.0351 21.6387 31.4755 22.079 31.4755 22.6223C31.4755 23.1655 31.0351 23.6059 30.4918 23.6059L8.8525 23.6059C8.30927 23.6059 7.8689 23.1655 7.8689 22.6223Z"
-                  fill="#ABA8F7"></path>
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M7.8689 29.507C7.8689 28.9638 8.30927 28.5234 8.8525 28.5234L30.4918 28.5234C31.0351 28.5234 31.4755 28.9638 31.4755 29.507C31.4755 30.0503 31.0351 30.4907 30.4918 30.4907L8.8525 30.4907C8.30927 30.4907 7.8689 30.0503 7.8689 29.507Z"
-                  fill="#ABA8F7"></path>
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M7.8689 36.3928C7.8689 35.8496 8.30927 35.4092 8.8525 35.4092L30.4918 35.4092C31.0351 35.4092 31.4755 35.8496 31.4755 36.3928C31.4755 36.936 31.0351 37.3764 30.4918 37.3764L8.8525 37.3764C8.30927 37.3764 7.8689 36.936 7.8689 36.3928Z"
-                  fill="#ABA8F7"></path>
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M7.8689 43.2776C7.8689 42.7343 8.30927 42.2939 8.8525 42.2939L30.4918 42.2939C31.0351 42.2939 31.4755 42.7343 31.4755 43.2776C31.4755 43.8208 31.0351 44.2612 30.4918 44.2612L8.8525 44.2612C8.30927 44.2612 7.8689 43.8208 7.8689 43.2776Z"
-                  fill="#ABA8F7"></path>
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M15.7377 2.95082C15.7377 1.32113 17.0589 0 18.6886 0H23.6066C25.2363 0 26.5574 1.32113 26.5574 2.95082V5.74152C26.5574 6.28475 26.117 6.72512 25.5738 6.72512C25.0306 6.72512 24.5902 6.28475 24.5902 5.74152V2.95082C24.5902 2.40759 24.1498 1.96721 23.6066 1.96721H18.6886C18.1453 1.96721 17.7049 2.40759 17.7049 2.95082V24.5902C17.7049 25.1334 18.1453 25.5738 18.6886 25.5738H20.6558C21.199 25.5738 21.6394 25.1334 21.6394 24.5902V10.7016C21.6394 10.1584 22.0797 9.71803 22.623 9.71803C23.1662 9.71803 23.6066 10.1584 23.6066 10.7016V24.5902C23.6066 26.2199 22.2855 27.541 20.6558 27.541H18.6886C17.0589 27.541 15.7377 26.2199 15.7377 24.5902V2.95082Z"
-                  fill="#6A64F1"></path>
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M36.3934 16.7213H2.95082V48.9L11.181 57.0492H36.3934V16.7213ZM2.95082 13.7705H36.3934C38.0231 13.7705 39.3443 15.0916 39.3443 16.7213V57.0492C39.3443 58.6789 38.0231 60 36.3934 60H11.181C10.4034 60 9.65727 59.6931 9.10474 59.146L0.874608 50.9968C0.314904 50.4426 0 49.6876 0 48.9V16.7213C0 15.0916 1.32113 13.7705 2.95082 13.7705Z"
-                  fill="#6A64F1"></path>
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M10.3279 50.6558H1.96721V47.7049H10.8197C12.1777 47.7049 13.2787 48.8059 13.2787 50.1639V58.0328H10.3279V50.6558Z"
-                  fill="#6A64F1"></path>
-              </svg></div>
-            <div>
-              <h3 class="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">پکیج های
-                خانواده و کودک
-              </h3>
-              <p class="text-base tale__color font-medium text-body-color">وجود نمونه کارهای موفق در برگزاری مراسم نامزدی
-                تا عروسی، دلیلی قاطع هست تا زمینه ای رو برای رقم زدن روزهای شیرین زندگیتون فراهم کنیم.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <section data-aos="fade-down-left" class="wedding__wireframe">
-        <h2 class="title__wireframe">
-          نمونه کار های فیلمبرداری عروس و داماد
-        </h2>
-        <h3 class="wire__txt">
-          در این بخش می‌توانید به نمونه‌کارهای بی‌نظیر فیلمبرداری و عکاسی عروس و داماد از آتلیه طوس استودیو دسترسی
-          سریع داشته باشید.
-        </h3>
-         <div class="wireframe__Section">
-          <img class="w__fix" src="public/images/wedding1.jpg" alt="wedding" loading="lazy">
-          <img class="w__fix" src="public/images/wedding2.jpg" alt="wedding" loading="lazy">
-          <img class="w__fix" src="public/images/wedding3.jpg" alt="wedding" loading="lazy">
-          <img class="w__fix" src="public/images/wedding4.jpg" alt="wedding" loading="lazy">
-        </div> 
-    <!--------------------- Users comment---------------------- -->
-    <section data-aos="flip-down" class="py-20">
-      <h1 class="mb-12 text-center font-sans text-5xl font-bold text-gray-900">بازخورد های مشتریان<span
-          class="text-blue-600">.</span></h1>
-      <div class="mx-auto grid max-w-screen-xl grid-cols-1 gap-6 p-6 md:grid-cols-2 lg:grid-cols-3">
-        <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl">
-          <a href="#">
-            <div class="relative flex items-end overflow-hidden rounded-xl">
-              <img src="public/images/location__second.jpg" alt="Hotel Photo" />
-              <div class="absolute bottom-3 left-3 inline-flex items-center rounded-lg bg-white p-2 shadow-md">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20"
-                  fill="currentColor">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-                <span class="text-slate-400 ml-1 text-sm">4.9</span>
-              </div>
-            </div>
-
-            <div class="mt-1 p-2">
-              <h2 class="text-slate-700">بازخورد ها</h2>
-              <p class="text-slate-400 mt-1 text-sm">Lisbon, Portugal</p>
-
-              <div class="mt-3 flex items-end justify-between">
-                <p>
-                  <span class="text-lg font-bold text-blue-500">$850</span>
-                  <span class="text-slate-400 text-sm">/night</span>
-                </p>
-
-                <div class="group inline-flex rounded-xl bg-blue-100 p-2 hover:bg-blue-200">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="group-hover:text-blue-500 h-4 w-4 text-blue-400"
-                    viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </a>
-        </article>
-
-        <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl">
-          <a href="#">
-            <div class="relative flex items-end overflow-hidden rounded-xl">
-              <img src="public/images/location__one.jpg" alt="Hotel Photo" />
-              <div class="absolute bottom-3 left-3 inline-flex items-center rounded-lg bg-white p-2 shadow-md">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20"
-                  fill="currentColor">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-                <span class="text-slate-400 ml-1 text-sm">4.9</span>
-              </div>
-            </div>
-
-            <div class="mt-1 p-2">
-              <h2 class="text-slate-700">بازخورد</h2>
-              <p class="text-slate-400 mt-1 text-sm">Lisbon, Portugal</p>
-
-              <div class="mt-3 flex items-end justify-between">
-                <p>
-                  <span class="text-lg font-bold text-blue-500">$450</span>
-                  <span class="text-slate-400 text-sm">/night</span>
-                </p>
-
-                <div class="group inline-flex rounded-xl bg-blue-100 p-2 hover:bg-blue-200">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="group-hover:text-blue-500 h-4 w-4 text-blue-400"
-                    viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </a>
-        </article>
-
-        <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl">
-          <a href="#">
-            <div class="relative flex items-end overflow-hidden rounded-xl">
-              <img src="public/images/mans.jpg" alt="Hotel Photo" />
-              <div class="absolute bottom-3 left-3 inline-flex items-center rounded-lg bg-white p-2 shadow-md">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20"
-                  fill="currentColor">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-                <span class="text-slate-400 ml-1 text-sm">4.9</span>
-              </div>
-            </div>
-
-            <div class="mt-1 p-2">
-              <h2 class="text-slate-700">بازخورد</h2>
-              <p class="text-slate-400 mt-1 text-sm">Lisbon, Portugal</p>
-
-              <div class="mt-3 flex items-end justify-between">
-                <p>
-                  <span class="text-lg font-bold text-blue-500">$1,450</span>
-                  <span class="text-slate-400 text-sm">/night</span>
-                </p>
-
-                <div class="group inline-flex rounded-xl bg-blue-100 p-2 hover:bg-blue-200">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="group-hover:text-blue-500 h-4 w-4 text-blue-400"
-                    viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </a>
-        </article>
-      </div>
-    </section>
-
-    <section>
-      <div class="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-16 max-w-7xl lg:py-24">
-        <div class="flex w-full mx-auto text-left">
-          <div class="relative inline-flex items-center mx-auto align-middle">
-            <div class="text-center">
-              <h1
-                class="max-w-5xl text-2xl font-bold leading-none tracking-tighter text-neutral-600 md:text-5xl lg:text-6xl lg:max-w-7xl">
-                در این ماجراجویی همراه ما باش <br class="hidden lg:block">
-                و در این مسیر لذت ببر
-              </h1>
-              <p class="max-w-xl mx-auto mt-8 text-base leading-relaxed text-gray-500">با بهترین آتلیه
-                عکاسی همراه ما باش و لذت ببر</p>
-              <div class="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
-                <div class="mt-3 rounded-lg sm:mt-0">
-                 <a href="signup.html">
-                  <button
-                  class="px-5 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 lg:px-10 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">ثبت
-                  نام</button>
-                 </a>
-                </div>
-                <div class="mt-3 rounded-lg sm:mt-0 sm:ml-3">
-                  <button
-                    class="items-center block px-5 lg:px-10 py-3.5 text-base font-medium text-center text-blue-600 transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">امکانات</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="text-gray-700 body-font">
-      <div class="flex justify-center mt-10 text-4xl font-regular">
-        چرا آتلیه ما؟
-      </div>
-      <div class="container px-5 py-12 mx-auto">
-        <div class="flex flex-wrap text-center justify-center">
-          <div class="p-4 md:w-1/4 sm:w-1/2">
-            <div class="px-4 py-6 transform transition duration-500 hover:scale-110">
-              <div class="flex justify-center">
-                <img
-                  src="https://image3.jdomni.in/banner/13062021/58/97/7C/E53960D1295621EFCB5B13F335_1623567851299.png?output-format=webp"
-                  class="w-32 mb-3">
-              </div>
-              <h2 class="title-font font-regular text-2xl text-gray-900">افراد مجرب</h2>
-            </div>
-          </div>
-
-          <div class="p-4 md:w-1/4 sm:w-1/2">
-            <div class="px-4 py-6 transform transition duration-500 hover:scale-110">
-              <div class="flex justify-center">
-                <img
-                  src="https://image2.jdomni.in/banner/13062021/3E/57/E8/1D6E23DD7E12571705CAC761E7_1623567977295.png?output-format=webp"
-                  class="w-32 mb-3">
-              </div>
-              <h2 class="title-font font-regular text-2xl text-gray-900">رتبه بالا</h2>
-            </div>
-          </div>
-
-          <div class="p-4 md:w-1/4 sm:w-1/2">
-            <div class="px-4 py-6 transform transition duration-500 hover:scale-110">
-              <div class="flex justify-center">
-                <img
-                  src="https://image3.jdomni.in/banner/13062021/16/7E/7E/5A9920439E52EF309F27B43EEB_1623568010437.png?output-format=webp"
-                  class="w-32 mb-3">
-              </div>
-              <h2 class="title-font font-regular text-2xl text-gray-900">سریع و چابک</h2>
-            </div>
-          </div>
-
-          <div class="p-4 md:w-1/4 sm:w-1/2">
-            <div class="px-4 py-6 transform transition duration-500 hover:scale-110">
-              <div class="flex justify-center">
-                <img
-                  src="https://image3.jdomni.in/banner/13062021/EB/99/EE/8B46027500E987A5142ECC1CE1_1623567959360.png?output-format=webp"
-                  class="w-32 mb-3">
-              </div>
-              <h2 class="title-font font-regular text-2xl text-gray-900">تجربه موفق</h2>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-    <!-- CTA section -->
-    <!--
-  Heads up! 👋
-
-  This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
-
-  Plugins:
-    - @tailwindcss/forms
--->
-
-    <section  data-aos="zoom-out-left" class="bg-gray-50">
-      <div class="p-8 md:p-12 lg:px-16 lg:py-24">
-        <div class="mx-auto max-w-lg text-center">
-          <h2 class="text-2xl font-bold text-gray-900 md:text-3xl">
-            لذت یعنی ,عکس گرفتن در آتلیه طوس
-          </h2>
-
-          <p class="hidden text-gray-500 sm:mt-4 sm:block">
-            اگر میخواهید از آخرین اخبار و اعلان ها همراه ما باشید و دنبال کنید ,لطفا ادرس ایمیل خود را وارد کنید
-          </p>
-        </div>
-
-        <div class="mx-auto mt-8 max-w-xl">
-          <form action="#" class="sm:flex sm:gap-4">
-            <div class="sm:flex-1">
-              <label for="email" class="sr-only">ایمیل</label>
-
-              <input type="email" placeholder="ایمیل خود را وارد کنید" required
-                class="w-full rounded-md border-gray-200 bg-white p-3 text-gray-700 shadow-sm transition focus:border-white focus:outline-none focus:ring focus:ring-yellow-400" />
-            </div>
-
-            <button type="submit"
-              class="group mt-4 flex w-full items-center justify-center gap-2 rounded-md bg-rose-600 px-5 py-3 text-white transition focus:outline-none focus:ring focus:ring-yellow-400 sm:mt-0 sm:w-auto">
-             
-                <span class="text-sm font-medium"> ثبت نام </span>
-              
-
-              <svg class="size-5 rtl:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-    <!-- finish Cta section -->
-
-
-    <div data-aos="fade-zoom-in"
-    data-aos-easing="ease-in-back"
-    data-aos-delay="300"
-    data-aos-offset="0" class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <div class="grid gap-4">
-        <div>
-          <img class="h-auto max-w-full rounded-lg" src="public/images/marrage.jpg" alt="photography" loading="lazy">
-        </div>
-        <div>
-          <img class="h-auto max-w-full rounded-lg" src="public/images/location__one.jpg" alt="photography"
-            loading="lazy">
-        </div>
-        <div>
-          <img class="h-auto max-w-full rounded-lg" src="public/images/marrage.jpg" alt="photography">
-        </div>
-      </div>
-      <div class="grid gap-4">
-        <div>
-          <img class="h-auto max-w-full rounded-lg" src="public/images/location__second.jpg" alt="photography">
-        </div>
-        <div>
-          <img class="h-auto max-w-full rounded-lg" src="public/images/location__second.jpg" alt="photography">
-        </div>
-        <div>
-          <img class="h-auto max-w-full rounded-lg" src="public/images/camera.jpg" alt="photography">
-        </div>
-      </div>
-      <div class="grid gap-4">
-        <div>
-          <img class="h-auto max-w-full rounded-lg" src="public/images/location__second.jpg" alt="photography">
-        </div>
-        <div>
-          <img class="h-auto max-w-full rounded-lg" src="public/images/location__one.jpg" alt="photography">
-        </div>
-        <div>
-          <img class="h-auto max-w-full rounded-lg" src="public/images/location__second.jpg" alt="photography" loading="lazy">
-        </div>
-      </div>
-      <div class="grid gap-4">
-        <div>
-          <img class="h-auto max-w-full rounded-lg" src="public/images/marraige_location.jpg" alt="photography" loading="lazy">
-        </div>
-        <div>
-          <img class="h-auto max-w-full rounded-lg" src="public/images/location__one.jpg" alt="photography" loading="lazy">
-        </div>
-        <div>
-          <img class="h-auto max-w-full rounded-lg" src="public/images/location__one.jpg" alt="photography" loading="lazy">
-        </div>
-      </div>
+      <p class="text-xs text-gray-500">&copy; 2025.آتلیه عکاسی توس. تمامی حق و حقوق متعلق به این سایت است.</p>
     </div>
-
-
-
-
-
-
-
-
-  </main>
-  <!------------------------ finish main section---------------- -->
-</body>
-</main>
-
-<!-- footer part -->
-<footer data-aos="fade-up"
-data-aos-duration="3000" class="bg-white">
-  <div class="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
-    <div class="sm:flex sm:items-center sm:justify-between">
-      <div class="text-teal-600">
-        <svg class="h-8" viewBox="0 0 118 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M37.83 19.2047C37.2352 19.237 36.6469 19.0679 36.16 18.7247C35.9566 18.5739 35.7929 18.3758 35.6831 18.1476C35.5733 17.9193 35.5208 17.6678 35.53 17.4147V8.1447C35.5252 8.1055 35.5293 8.0656 35.5422 8.0282C35.555 7.9908 35.5762 7.9569 35.6042 7.9289C35.6322 7.9009 35.6661 7.8797 35.7035 7.8669C35.7409 7.854 35.7808 7.8499 35.82 7.8547H37.5C37.69 7.8547 37.78 7.9547 37.78 8.1447V16.6947C37.78 17.0747 37.95 17.2647 38.3 17.2647C38.4484 17.2708 38.5968 17.254 38.74 17.2147C38.94 17.2147 39.05 17.2747 39.06 17.4547L39.21 18.7047C39.2172 18.7412 39.2165 18.7787 39.208 18.8149C39.1995 18.851 39.1833 18.885 39.1605 18.9143C39.1378 18.9437 39.109 18.9679 39.0762 18.9852C39.0433 19.0025 39.0071 19.0126 38.97 19.0147C38.602 19.1363 38.2175 19.2004 37.83 19.2047Z"
-            fill="currentColor" />
-          <path
-            d="M47.28 18.1347C46.4359 18.8322 45.375 19.2137 44.28 19.2137C43.185 19.2137 42.1242 18.8322 41.28 18.1347C40.5381 17.3857 40.1218 16.374 40.1218 15.3197C40.1218 14.2654 40.5381 13.2537 41.28 12.5047C42.1258 11.8108 43.186 11.4316 44.28 11.4316C45.374 11.4316 46.4342 11.8108 47.28 12.5047C48.0049 13.2606 48.4096 14.2674 48.4096 15.3147C48.4096 16.362 48.0049 17.3688 47.28 18.1247V18.1347ZM42.86 16.8147C43.2518 17.1696 43.7614 17.3661 44.29 17.3661C44.8186 17.3661 45.3283 17.1696 45.72 16.8147C46.0746 16.4071 46.2698 15.885 46.2698 15.3447C46.2698 14.8045 46.0746 14.2824 45.72 13.8747C45.3283 13.5199 44.8186 13.3233 44.29 13.3233C43.7614 13.3233 43.2518 13.5199 42.86 13.8747C42.5055 14.2824 42.3102 14.8045 42.3102 15.3447C42.3102 15.885 42.5055 16.4071 42.86 16.8147Z"
-            fill="currentColor" />
-          <path
-            d="M57.66 11.6847C57.85 11.6847 57.94 11.7847 57.94 11.9747V19.1447C57.9575 19.6287 57.8669 20.1104 57.6749 20.5549C57.4829 20.9995 57.1943 21.3957 56.83 21.7147C56.0214 22.4042 54.9816 22.7615 53.92 22.7147C52.9612 22.7484 52.0151 22.4866 51.21 21.9647C50.8662 21.739 50.5725 21.4449 50.3472 21.1009C50.1218 20.7568 49.9696 20.3701 49.9 19.9647C49.9 19.7647 49.9 19.6747 50.17 19.6747H51.85C51.9213 19.6771 51.9905 19.7002 52.049 19.741C52.1076 19.7818 52.1531 19.8386 52.18 19.9047C52.289 20.2084 52.5062 20.4613 52.79 20.6147C53.1359 20.7932 53.5209 20.8826 53.91 20.8747C54.1448 20.8876 54.3798 20.8535 54.6013 20.7745C54.8228 20.6956 55.0263 20.5732 55.2 20.4147C55.3587 20.2489 55.4821 20.0526 55.5629 19.8378C55.6437 19.623 55.6801 19.394 55.67 19.1647V18.5347C55.0685 18.9771 54.3364 19.2059 53.59 19.1847C53.0676 19.2037 52.5468 19.117 52.0587 18.9297C51.5707 18.7423 51.1256 18.4584 50.75 18.0947C50.0291 17.3489 49.6261 16.3521 49.6261 15.3147C49.6261 14.2774 50.0291 13.2806 50.75 12.5347C51.1274 12.1743 51.5731 11.8931 52.0608 11.7076C52.5486 11.5221 53.0685 11.4361 53.59 11.4547C54.358 11.4344 55.1098 11.678 55.72 12.1447V11.9847C55.7154 11.9464 55.7194 11.9075 55.7317 11.8709C55.744 11.8344 55.7643 11.801 55.7911 11.7732C55.8179 11.7454 55.8506 11.724 55.8867 11.7104C55.9229 11.6968 55.9616 11.6915 56 11.6947L57.66 11.6847ZM53.78 17.4047C54.0376 17.4127 54.2939 17.364 54.5306 17.262C54.7673 17.1601 54.9788 17.0074 55.15 16.8147C55.4825 16.3854 55.6629 15.8577 55.6629 15.3147C55.6629 14.7717 55.4825 14.2441 55.15 13.8147C54.9794 13.6247 54.7692 13.4742 54.5343 13.374C54.2993 13.2738 54.0453 13.2263 53.79 13.2347C53.5294 13.2265 53.2702 13.275 53.0302 13.3769C52.7902 13.4788 52.5752 13.6316 52.4 13.8247C52.0317 14.2354 51.838 14.7735 51.86 15.3247C51.842 15.8705 52.0314 16.4029 52.39 16.8147C52.5656 17.0073 52.7807 17.1598 53.0206 17.2616C53.2605 17.3634 53.5195 17.4122 53.78 17.4047Z"
-            fill="currentColor" />
-          <path
-            d="M66.57 18.1347C65.7242 18.8286 64.664 19.2078 63.57 19.2078C62.476 19.2078 61.4158 18.8286 60.57 18.1347C59.8445 17.3771 59.4395 16.3687 59.4395 15.3197C59.4395 14.2708 59.8445 13.2623 60.57 12.5047C61.4166 11.8126 62.4765 11.4345 63.57 11.4345C64.6635 11.4345 65.7234 11.8126 66.57 12.5047C67.2949 13.2606 67.6996 14.2674 67.6996 15.3147C67.6996 16.362 67.2949 17.3688 66.57 18.1247V18.1347ZM62.14 16.8147C62.3317 16.9971 62.5577 17.1396 62.8049 17.234C63.0521 17.3284 63.3155 17.3729 63.58 17.3647C63.8428 17.3715 64.1044 17.3265 64.3498 17.2321C64.5952 17.1377 64.8195 16.9959 65.01 16.8147C65.3588 16.4043 65.5503 15.8833 65.5503 15.3447C65.5503 14.8061 65.3588 14.2851 65.01 13.8747C64.8195 13.6936 64.5952 13.5517 64.3498 13.4574C64.1044 13.363 63.8428 13.3179 63.58 13.3247C63.3155 13.3166 63.0521 13.361 62.8049 13.4554C62.5577 13.5498 62.3317 13.6924 62.14 13.8747C61.7913 14.2851 61.5998 14.8061 61.5998 15.3447C61.5998 15.8833 61.7913 16.4043 62.14 16.8147Z"
-            fill="currentColor" />
-          <path
-            d="M71.31 9.9847C71.0457 10.2161 70.7063 10.3436 70.355 10.3436C70.0037 10.3436 69.6644 10.2161 69.4 9.9847C69.2802 9.8716 69.1847 9.7352 69.1194 9.5839C69.0542 9.4326 69.0205 9.2695 69.0205 9.1047C69.0205 8.9399 69.0542 8.7769 69.1194 8.6255C69.1847 8.4742 69.2802 8.3378 69.4 8.2247C69.6671 7.9991 70.0054 7.8754 70.355 7.8754C70.7046 7.8754 71.0429 7.9991 71.31 8.2247C71.4299 8.3378 71.5254 8.4742 71.5906 8.6255C71.6559 8.7769 71.6895 8.9399 71.6895 9.1047C71.6895 9.2695 71.6559 9.4326 71.5906 9.5839C71.5254 9.7352 71.4299 9.8716 71.31 9.9847ZM71.52 19.2047C70.9256 19.2339 70.3383 19.0651 69.85 18.7247C69.6497 18.5717 69.4888 18.3729 69.381 18.145C69.2731 17.9171 69.2213 17.6667 69.23 17.4147V11.9747C69.2252 11.9355 69.2293 11.8956 69.2422 11.8582C69.255 11.8208 69.2762 11.7869 69.3042 11.7589C69.3322 11.7309 69.3661 11.7097 69.4035 11.6969C69.4409 11.684 69.4808 11.6799 69.52 11.6847H71.2C71.39 11.6847 71.48 11.7847 71.48 11.9747V16.6947C71.48 17.0747 71.65 17.2647 71.99 17.2647C72.1417 17.2702 72.2933 17.2533 72.44 17.2147C72.64 17.2147 72.75 17.2747 72.76 17.4547L72.91 18.7047C72.9172 18.7412 72.9165 18.7787 72.908 18.8149C72.8995 18.851 72.8833 18.885 72.8605 18.9143C72.8378 18.9437 72.809 18.9679 72.7762 18.9852C72.7433 19.0025 72.7071 19.0126 72.67 19.0147C72.2988 19.137 71.9109 19.2011 71.52 19.2047Z"
-            fill="currentColor" />
-          <path
-            d="M79.09 11.4447C79.6148 11.424 80.1383 11.5089 80.6296 11.6944C81.1209 11.88 81.57 12.1623 81.95 12.5247C82.6572 13.2837 83.0504 14.2824 83.0504 15.3197C83.0504 16.357 82.6572 17.3558 81.95 18.1147C81.5718 18.4804 81.1233 18.7655 80.6317 18.9528C80.1401 19.1402 79.6157 19.2259 79.09 19.2047C78.3412 19.2214 77.6073 18.9932 77 18.5547V22.1647C77 22.3547 76.9 22.4447 76.71 22.4447H75.03C74.9917 22.4519 74.9522 22.4496 74.9149 22.4381C74.8777 22.4265 74.8438 22.4061 74.8162 22.3785C74.7887 22.3509 74.7682 22.3171 74.7567 22.2798C74.7451 22.2426 74.7429 22.2031 74.75 22.1647V13.9647C74.7618 13.8845 74.7546 13.8027 74.7292 13.7257C74.7037 13.6488 74.6605 13.5788 74.6032 13.5215C74.5459 13.4642 74.476 13.4211 74.399 13.3956C74.3221 13.3701 74.2402 13.363 74.16 13.3747H73.83C73.61 13.3747 73.5 13.2947 73.5 13.1347V11.9547C73.4948 11.8817 73.5148 11.8091 73.5567 11.7491C73.5985 11.689 73.6597 11.6451 73.73 11.6247C74.0759 11.499 74.442 11.438 74.81 11.4447C75.177 11.4122 75.5453 11.4901 75.8678 11.6682C76.1902 11.8464 76.4522 12.1168 76.62 12.4447C76.9421 12.1189 77.3273 11.8622 77.752 11.6902C78.1767 11.5183 78.632 11.4347 79.09 11.4447ZM77.53 16.8147C77.7083 17.0011 77.9225 17.1494 78.1597 17.2507C78.3969 17.352 78.6521 17.4042 78.91 17.4042C79.1679 17.4042 79.4232 17.352 79.6603 17.2507C79.8975 17.1494 80.1117 17.0011 80.29 16.8147C80.6656 16.3958 80.8629 15.8469 80.84 15.2847C80.8662 14.7221 80.6684 14.1719 80.29 13.7547C80.1117 13.5684 79.8975 13.4201 79.6603 13.3188C79.4232 13.2174 79.1679 13.1652 78.91 13.1652C78.6521 13.1652 78.3969 13.2174 78.1597 13.3188C77.9225 13.4201 77.7083 13.5684 77.53 13.7547C77.1662 14.1793 76.9768 14.726 77 15.2847C76.9797 15.843 77.1688 16.3887 77.53 16.8147Z"
-            fill="currentColor" />
-          <path
-            d="M87.77 19.2047C86.8723 19.2416 85.9822 19.0269 85.2 18.5847C84.8862 18.3957 84.619 18.1384 84.4181 17.832C84.2173 17.5256 84.0881 17.1779 84.04 16.8147C84.04 16.6147 84.11 16.5147 84.33 16.5147H85.8C85.8699 16.5175 85.9378 16.5394 85.996 16.5783C86.0542 16.6171 86.1006 16.6712 86.13 16.7347C86.34 17.2747 86.89 17.5447 87.77 17.5447C88.077 17.5588 88.3826 17.4969 88.66 17.3647C88.7558 17.3215 88.8379 17.2531 88.8978 17.1668C88.9577 17.0805 88.993 16.9795 89 16.8747C89 16.6147 88.84 16.4347 88.52 16.3147C88.1405 16.1884 87.7481 16.1045 87.35 16.0647C86.8785 16.0113 86.4109 15.9278 85.95 15.8147C85.5018 15.7133 85.0943 15.4799 84.78 15.1447C84.5949 14.9169 84.4587 14.6534 84.3797 14.3707C84.3008 14.088 84.2809 13.792 84.3212 13.5013C84.3616 13.2105 84.4613 12.9311 84.6142 12.6806C84.7671 12.43 84.9699 12.2136 85.21 12.0447C85.9308 11.5856 86.7765 11.3619 87.63 11.4047C88.4564 11.3768 89.274 11.5812 89.99 11.9947C90.2786 12.1582 90.527 12.3839 90.7173 12.6555C90.9076 12.9271 91.0349 13.2377 91.09 13.5647C91.09 13.7647 91 13.8647 90.82 13.8647H89.34C89.2777 13.8684 89.2157 13.8532 89.1622 13.8211C89.1087 13.789 89.0661 13.7414 89.04 13.6847C88.9411 13.4479 88.7549 13.2581 88.52 13.1547C88.255 13.0161 87.959 12.9472 87.66 12.9547C87.3669 12.9388 87.0745 12.9973 86.81 13.1247C86.7168 13.1607 86.6366 13.2237 86.5795 13.3057C86.5225 13.3877 86.4913 13.4849 86.49 13.5847C86.4964 13.7215 86.5465 13.8526 86.6329 13.9588C86.7193 14.065 86.8374 14.1406 86.97 14.1747C87.354 14.3195 87.7533 14.4201 88.16 14.4747C88.6277 14.5363 89.0917 14.6231 89.55 14.7347C89.9982 14.8362 90.4057 15.0695 90.72 15.4047C90.8882 15.5894 91.018 15.8055 91.1021 16.0407C91.1862 16.2758 91.2229 16.5253 91.21 16.7747C91.2186 17.1204 91.1375 17.4624 90.9745 17.7674C90.8115 18.0723 90.5722 18.3298 90.28 18.5147C89.5329 18.9944 88.6574 19.235 87.77 19.2047Z"
-            fill="currentColor" />
-          <path
-            d="M101.78 18.7047C101.786 18.7402 101.784 18.7765 101.776 18.8114C101.767 18.8464 101.752 18.8792 101.73 18.9081C101.709 18.937 101.682 18.9613 101.651 18.9796C101.62 18.9979 101.586 19.0098 101.55 19.0147C101.185 19.1339 100.804 19.198 100.42 19.2047C100.04 19.2441 99.656 19.1847 99.306 19.0323C98.955 18.8799 98.65 18.6396 98.42 18.3347C97.714 18.942 96.8 19.2536 95.87 19.2047C95.438 19.2246 95.007 19.1539 94.604 18.9972C94.201 18.8405 93.835 18.6012 93.53 18.2947C93.227 17.9736 92.9922 17.5946 92.8392 17.1805C92.6863 16.7664 92.6186 16.3257 92.64 15.8847V11.9747C92.64 11.7847 92.73 11.6847 92.92 11.6847H94.6C94.79 11.6847 94.88 11.7847 94.88 11.9747V15.5847C94.862 16.0345 95.015 16.4743 95.31 16.8147C95.457 16.9707 95.636 17.0933 95.834 17.1744C96.032 17.2555 96.246 17.2931 96.46 17.2847C96.679 17.2943 96.898 17.2604 97.104 17.1848C97.31 17.1093 97.499 16.9937 97.66 16.8447C97.812 16.6877 97.931 16.5011 98.008 16.2964C98.086 16.0917 98.12 15.8733 98.11 15.6547V11.9747C98.11 11.7847 98.2 11.6847 98.39 11.6847H100.09C100.28 11.6847 100.37 11.7847 100.37 11.9747V16.6847C100.37 17.0747 100.54 17.2647 100.87 17.2647C101.025 17.2707 101.18 17.2539 101.33 17.2147C101.368 17.2041 101.408 17.2022 101.446 17.2092C101.485 17.2161 101.521 17.2317 101.553 17.2548C101.585 17.2779 101.611 17.3079 101.63 17.3425C101.648 17.3771 101.658 17.4155 101.66 17.4547L101.78 18.7047Z"
-            fill="currentColor" />
-          <path
-            d="M117.67 18.7047C117.679 18.7405 117.68 18.7779 117.673 18.8141C117.665 18.8502 117.65 18.8844 117.628 18.914C117.606 18.9436 117.578 18.968 117.545 18.9854C117.513 19.0029 117.477 19.0129 117.44 19.0147C117.068 19.1356 116.681 19.1997 116.29 19.2047C115.695 19.2354 115.108 19.0665 114.62 18.7247C114.409 18.5783 114.238 18.3822 114.121 18.1537C114.004 17.9252 113.945 17.6713 113.95 17.4147V15.0647C113.971 14.6163 113.821 14.1766 113.53 13.8347C113.39 13.6784 113.216 13.5552 113.023 13.4739C112.829 13.3927 112.62 13.3554 112.41 13.3647C112.221 13.3576 112.033 13.3935 111.859 13.4697C111.686 13.5459 111.533 13.6605 111.41 13.8047C111.146 14.1398 111.011 14.5586 111.03 14.9847V18.6747C111.03 18.8647 110.94 18.9647 110.75 18.9647H109.06C109.021 18.9696 108.981 18.9654 108.944 18.9526C108.906 18.9397 108.872 18.9185 108.844 18.8905C108.816 18.8626 108.795 18.8286 108.782 18.7912C108.769 18.7538 108.765 18.714 108.77 18.6747V15.0647C108.792 14.6212 108.653 14.1846 108.38 13.8347C108.258 13.6877 108.105 13.5694 107.932 13.4882C107.76 13.407 107.571 13.3648 107.38 13.3647C107.176 13.3565 106.973 13.3914 106.783 13.4673C106.593 13.5431 106.422 13.6581 106.28 13.8047C105.994 14.1291 105.847 14.5529 105.87 14.9847V18.6747C105.875 18.714 105.871 18.7538 105.858 18.7912C105.845 18.8286 105.824 18.8626 105.796 18.8905C105.768 18.9185 105.734 18.9397 105.697 18.9526C105.659 18.9654 105.619 18.9696 105.58 18.9647H103.95C103.76 18.9647 103.67 18.8647 103.67 18.6747V13.9647C103.682 13.8845 103.675 13.8027 103.649 13.7257C103.624 13.6488 103.581 13.5788 103.523 13.5215C103.466 13.4642 103.396 13.4211 103.319 13.3956C103.242 13.3701 103.16 13.363 103.08 13.3747H102.75C102.53 13.3747 102.42 13.2947 102.42 13.1347V11.9547C102.415 11.8817 102.435 11.8091 102.477 11.7491C102.519 11.689 102.58 11.6451 102.65 11.6247C102.996 11.499 103.362 11.438 103.73 11.4447C104.083 11.4146 104.438 11.485 104.753 11.6478C105.068 11.8106 105.33 12.0591 105.51 12.3647C105.847 12.045 106.247 11.7982 106.684 11.6399C107.121 11.4816 107.586 11.4152 108.05 11.4447C108.501 11.4227 108.95 11.5072 109.362 11.6914C109.774 11.8756 110.136 12.1542 110.42 12.5047C110.751 12.145 111.158 11.8634 111.611 11.68C112.064 11.4967 112.552 11.4164 113.04 11.4447C113.476 11.4243 113.912 11.4946 114.32 11.6513C114.728 11.8079 115.099 12.0474 115.41 12.3547C115.714 12.6752 115.949 13.0541 116.102 13.4684C116.255 13.8826 116.323 14.3237 116.3 14.7647V16.6947C116.3 17.0747 116.47 17.2647 116.79 17.2647C116.945 17.2719 117.1 17.2551 117.25 17.2147C117.457 17.2147 117.567 17.2947 117.58 17.4547L117.67 18.7047Z"
-            fill="currentColor" />
-          <path
-            d="M0.41 10.3847C1.14777 7.4194 2.85643 4.7861 5.2639 2.90424C7.6714 1.02234 10.6393 0 13.695 0C16.7507 0 19.7186 1.02234 22.1261 2.90424C24.5336 4.7861 26.2422 7.4194 26.98 10.3847H25.78C23.7557 10.3549 21.7729 10.9599 20.11 12.1147C20.014 12.1842 19.9138 12.2477 19.81 12.3047H19.67C19.5662 12.2477 19.466 12.1842 19.37 12.1147C17.6924 10.9866 15.7166 10.3841 13.695 10.3841C11.6734 10.3841 9.6976 10.9866 8.02 12.1147C7.924 12.1842 7.8238 12.2477 7.72 12.3047H7.58C7.4762 12.2477 7.376 12.1842 7.28 12.1147C5.6171 10.9599 3.6343 10.3549 1.61 10.3847H0.41ZM23.62 16.6547C24.236 16.175 24.9995 15.924 25.78 15.9447H27.39V12.7347H25.78C24.4052 12.7181 23.0619 13.146 21.95 13.9547C21.3243 14.416 20.5674 14.6649 19.79 14.6649C19.0126 14.6649 18.2557 14.416 17.63 13.9547C16.4899 13.1611 15.1341 12.7356 13.745 12.7356C12.3559 12.7356 11.0001 13.1611 9.86 13.9547C9.2343 14.416 8.4774 14.6649 7.7 14.6649C6.9226 14.6649 6.1657 14.416 5.54 13.9547C4.4144 13.1356 3.0518 12.7072 1.66 12.7347H0V15.9447H1.61C2.39051 15.924 3.154 16.175 3.77 16.6547C4.908 17.4489 6.2623 17.8747 7.65 17.8747C9.0377 17.8747 10.392 17.4489 11.53 16.6547C12.1468 16.1765 12.9097 15.9257 13.69 15.9447C14.4708 15.9223 15.2348 16.1735 15.85 16.6547C16.9901 17.4484 18.3459 17.8738 19.735 17.8738C21.1241 17.8738 22.4799 17.4484 23.62 16.6547ZM23.62 22.3947C24.236 21.915 24.9995 21.664 25.78 21.6847H27.39V18.4747H25.78C24.4052 18.4581 23.0619 18.886 21.95 19.6947C21.3243 20.156 20.5674 20.4049 19.79 20.4049C19.0126 20.4049 18.2557 20.156 17.63 19.6947C16.4899 18.9011 15.1341 18.4757 13.745 18.4757C12.3559 18.4757 11.0001 18.9011 9.86 19.6947C9.2343 20.156 8.4774 20.4049 7.7 20.4049C6.9226 20.4049 6.1657 20.156 5.54 19.6947C4.4144 18.8757 3.0518 18.4472 1.66 18.4747H0V21.6847H1.61C2.39051 21.664 3.154 21.915 3.77 22.3947C4.908 23.1889 6.2623 23.6147 7.65 23.6147C9.0377 23.6147 10.392 23.1889 11.53 22.3947C12.1468 21.9165 12.9097 21.6657 13.69 21.6847C14.4708 21.6623 15.2348 21.9135 15.85 22.3947C16.9901 23.1884 18.3459 23.6138 19.735 23.6138C21.1241 23.6138 22.4799 23.1884 23.62 22.3947Z"
-            fill="currentColor" />
-        </svg>
-      </div>
-
-      <ul class="mt-8 flex justify-start gap-6 sm:mt-0 sm:justify-end">
-        <li>
-          <a href="#" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:opacity-75">
-            <span class="sr-only">فیسبوک</span>
-
-            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill-rule="evenodd"
-                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                clip-rule="evenodd" />
-            </svg>
-          </a>
-        </li>
-
-        <li>
-          <a href="#" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:opacity-75">
-            <span class="sr-only">اینیستاگرام</span>
-
-            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill-rule="evenodd"
-                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
-                clip-rule="evenodd" />
-            </svg>
-          </a>
-        </li>
-
-        <li>
-          <a href="#" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:opacity-75">
-            <span class="sr-only">تویتر</span>
-
-            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-            </svg>
-          </a>
-        </li>
-
-        <li>
-          <a href="#" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:opacity-75">
-            <span class="sr-only">گیت هاب</span>
-
-            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill-rule="evenodd"
-                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                clip-rule="evenodd" />
-            </svg>
-          </a>
-        </li>
-
-        <li>
-          <a href="#" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:opacity-75">
-            <span class="sr-only">Dribbble</span>
-
-            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill-rule="evenodd"
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
-                clip-rule="evenodd" />
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="grid grid-cols-1 gap-8 border-t border-gray-100 pt-8 sm:grid-cols-2 lg:grid-cols-4 lg:pt-16">
-      <div>
-        <p class="font-medium text-gray-900">سرویس های ما</p>
-
-        <ul class="mt-6 space-y-4 text-sm">
-          <li>
-            <a href="#" class="text-gray-700 transition hover:opacity-75"> آپدیت </a>
-          </li>
-
-          <li>
-            <a href="#" class="text-gray-700 transition hover:opacity-75"> آپدیت </a>
-          </li>
-
-          <li>
-            <a href="#" class="text-gray-700 transition hover:opacity-75">آپدیت</a>
-          </li>
-
-          <li>
-            <a href="#" class="text-gray-700 transition hover:opacity-75">آپدیت</a>
-          </li>
-
-          <li>
-            <a href="#" class="text-gray-700 transition hover:opacity-75">آپدیت</a>
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <p class="font-medium text-gray-900">لینک‌های سریع
-        </p>
-        
-
-        <ul class="mt-6 space-y-4 text-sm">
-          <li>
-            <a href="#" class="text-gray-700 transition hover:opacity-75"> پکیج های عرسی </a>
-          </li>
-
-          <li>
-            <a href="#" class="text-gray-700 transition hover:opacity-75"> پکیج عقد </a>
-          </li>
-
-          <li>
-            <a href="#" class="text-gray-700 transition hover:opacity-75"> بلاگ </a>
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <p class="font-medium text-gray-900">لینک های مفید</p>
-
-        <ul class="mt-6 space-y-4 text-sm">
-          <li>
-            <a href="#" class="text-gray-700 transition hover:opacity-75"> لوکیشن ها </a>
-          </li>
-
-          <li>
-            <a href="#" class="text-gray-700 transition hover:opacity-75"> مراحل عقد قرارداد </a>
-          </li>
-
-          <li>
-            <a href="#" class="text-gray-700 transition hover:opacity-75"> تماس با ما </a>
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <p class="font-medium text-gray-900">همکاری با ما</p>
-
-        <ul class="mt-6 space-y-4 text-sm">
-          <li>
-            <a href="#" class="text-gray-700 transition hover:opacity-75"> تلگرام </a>
-          </li>
-
-          <li>
-            <a href="#" class="text-gray-700 transition hover:opacity-75"> اینیستاگرام </a>
-          </li>
-
-          <li>
-            <a href="#" class="text-gray-700 transition hover:opacity-75"> فیسبوک </a>
-          </li>
-
-          <li>
-            <a href="#" class="text-gray-700 transition hover:opacity-75">تویتر</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <p class="text-xs text-gray-500">&copy; 2025.آتلیه عکاسی توس. تمامی حق و حقوق متعلق به این سایت است.</p>
+  </footer>
   </div>
-</footer>
+  
 
 
-<!----------------------- javascript cdns ---------------- -->
+
 <script src="src/script/index.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
 <script src="./node_modules/preline/dist/preline.js"></script>
+<script src="src/script/loader.js"></script>
 
-<!---------------------- Aos for animation base on scrool--------------- -->
 <script>
   AOS.init();
 </script>

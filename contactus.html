@@ -7,6 +7,7 @@
   <title>درباره با ما</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="src/styles/style.css">
+  <link rel="stylesheet" href="src/styles/loader.css">
   <style>
     .map {
       /* position: relative; */
@@ -19,8 +20,17 @@
 </head>
 
 <body>
-
-  <section class="text-gray-600 body-font relative">
+  <div class="dot-spinner loader" id="loader">
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+  </div>
+  <section id="content" class="text-gray-600 body-font relative">
     <iframe class="map" width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
       id="gmap_canvas"
       src="https://maps.google.com/maps?width=100%&amp;height=200%&amp;hl=en&amp;q=IRAN,TEHRAN%20+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
@@ -49,6 +59,7 @@
       </div>
     </div>
   </section>
+  <script src="src/script/loader.js"></script>
 </body>
 
 </html>
