@@ -1,0 +1,93 @@
+ul.main__list {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 10px 0 0 0;
+}
+
+.logo__header {
+  /* display: flex; */
+  /* display: flex; */
+  position: relative;
+  top: -5px;
+}
+
+.header__logo {
+  width: 200px;
+  height: auto;
+  /* position: absolute; */
+  right: 200px;
+  height: 30px;
+  margin: 10px 0 0 0;
+}
+
+header {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.hidden__hambergermenu {
+  display: none;
+}
+
+.signup__header {
+  background: #000;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+@media screen and (min-width: 200px) and (max-width: 766px) {
+  img.hidden__hambergermenu {
+    position: absolute;
+    right: 0;
+    top: 10px;
+  }
+  a.signup__header {
+    position: absolute;
+    left: 3px;
+    top: 5px;
+  }
+  img.hidden__hambergermenu {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    display: flex;
+  }
+  .hidden__link {
+    display: none;
+  }
+}
+@media screen and (max-width: 730px) {
+  .hidden__link {
+    display: none;
+  }
+  .hidden__hambergermenu {
+    display: flex;
+  }
+  button.signup__header {
+    position: absolute;
+    left: 0;
+    margin-left: 10px;
+  }
+  img.hidden__hambergermenu {
+    position: absolute;
+    right: 0;
+  }
+  .main__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header__logo {
+    /* display: flex; */
+    position: relative;
+    right: 50px;
+  }
+}
+aside#menu {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+}/*# sourceMappingURL=navbar.css.map */

@@ -110,17 +110,22 @@
     margin-right: 10px;
   }
 
-  #logo__header {
-    position: absolute;
-    right: 4rem;
-    top: 1.1rem;
-  }
+  // #logo__header {
+  //   position: absolute;
+  //   right: 4rem;
+  //   top: 1.1rem;
+  // }
 
-  .left__position {
-    position: absolute;
-    top: 10px;
-    left: 4px;
-  }
+  // .left__position {
+  //   position: absolute;
+  //   top: 10px;
+  //   left: 4px;
+  // }
+  // #show_modal{
+  //   position: absolute;
+  //   top: 10px;
+  //   left: 4px;
+  // }
 
   // .hamberger__show{
   //   display: none;
@@ -128,18 +133,16 @@
   // .hamberger__show {
   //   visibility: hidden;
   // }
-    .desktop {
-      display: flex;
-      justify-content: space-around;
-    }
+    // .desktop {
+    //   display: flex;
+    //   justify-content: space-around;
+    // }
 
     #hide__link {
       display: none;
     }
 
-    .sidebar {
-      display: flex;
-    }
+    
   }
 
 
@@ -168,11 +171,17 @@
 
 @media screen and (min-width:862px){
   .hamberger__show{
-    right: 0;
     width: 40px;
     height: 40px;
     position: absolute;
+    right: 10px;
+    top: 10px;
   }
+ button.bg__color.color__txt{
+  margin-left: 10px;
+  position: absolute;
+  left: 0;
+ }
   #logo__header{
     display: none;
   }
@@ -181,21 +190,17 @@
  #logo__header{
   display: flex;
  }
+ button.bg__color.color__txt{
+  margin-left: 10px;
+  position: absolute;
+  left: 150px;
+  top: 4px;
+ }
 }
-// }
-// @media screen and (min-width:900px){
-//   .non__active{
-//     display: flex;
-//   }
-//    .hamberger__show{
-//     display: none;
-//    }
-//    #logo__header{
-//     display: flex;
-//    }
-//    ul.desktop.sidebar{
-//     display: flex;
-//     justify-content: space-around;
-//     align-items: baseline;
-//    }
-// }
+
+@media screen and ( min-width:500px) and (max-width:100px) {
+  .left__position{
+    position: absolute;
+    left: 0;
+  }
+}
