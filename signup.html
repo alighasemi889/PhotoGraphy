@@ -24,7 +24,7 @@
         </h3>
       </div>
     </div>
-    <form  name="myform" id="myform"  class="space-y-5">
+    <form onsubmit="return validateform()"  name="myform" id="myform"  class="space-y-5">
       <div>
         <label class="font-medium text-dark"> ایمیل </label>
         <input id="email"
@@ -120,61 +120,21 @@ if (email==null || email==""){
   }}
 </script>  
    -->
-<script>
-  
-  let form = document.getElementById("myform");
-  form.addEventListener('submit'), (event) =>{
-    event.preventDefault();
-    //--------------- varraibels--------------
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
-    let repass = document.getElementById("repassword").value;
-    // eror text
-    let passwordEror = document.querySelector(".error__pass");
-    let email__eror = document.querySelector(".email__eror")
-    let repass__eror = document.querySelector(".repass__eror");
-    // ----------------input forms----------------
-    let emailInput = document.getElementById("email");
-    let passwordInput = document.getElementById("password");
-    let repassInput = document.getElementById("repassword");
+<!-- <script>
+  const email = document.myform.email.value;
+  const emailInput = document.myform.email;
+  const passwd  =  document.myform.password.value;
+  const passwdInput  =  document.myform.password;
+  function validateform (){
     if (email === "" || email === null) {
-      email__eror.textContent = "ایمیل خود را وارد کنید";
-      email__eror.style.color = "red";
-      console.log('email is not valid');
-      emailInput.style.border = "2px solid red"
-    }else{
-      console.log('email is valid');
-    }  
-    if(repass === null || repass === ""){
-      console.log('repass is not valid');
-      repassInput.style.border = "2px solid red";
-      repass__eror.textContent = "تکرار رمز خالی است";
-      repass__eror.style.color = "red"
+      alert("it is not");
+      emailInput.style.border = "2px solid red";
+      return false;
+    }else if (email){
+      emailInput.style.border = "2px solid teal"
     }
-    if (password.length < 6) {
-      passwordEror.textContent = "طول رمز باید بیشتر از 6 کاراکتر باشد";
-      passwordEror.style.color = "red"
-      console.log('password is not valid');
-      passwordInput.style.border = "2px solid red"
-
-    }else if(password.length > 6){
-      passwordInput.style.border = "2px solid teal";
-      passwordEror.textContent = "آفرین😍";
-      passwordEror.style.color = "teal"
-    }
-    if (email !== "") {
-     emailInput.style.border = "2px solid teal";
-     email__eror.textContent = "آفرین😍";
-     email__eror.style.color = "teal"
-    }
-  }
    
-  
-    form.onsubmit();
-  
-  // })
-    
- 
+  } -->
 </script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <!-- <script>
