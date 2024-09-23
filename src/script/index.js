@@ -23,13 +23,17 @@ setTimeout(() => {
 }, 4000);
 
 // sidebar logic
+const main = document.querySelector(".low__seen");
 const sidebar = document.getElementById("menu");
 const hamberger = document.getElementById("hamberger__menu");
 const close_sidebar = document.getElementById("close_side_right");
 close_sidebar.onclick = () =>{
-  sidebar.style.display = "none"
+  sidebar.style.display = "none";
+  sidebar.style.transition = "3s ease-in-out";
+  main.style.opacity = "1";
 }
 hamberger.onclick = () =>{
   sidebar.style.display = "block";
+  main.style.opacity = "10%";
 }
 
