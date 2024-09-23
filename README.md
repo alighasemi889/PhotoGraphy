@@ -36,7 +36,7 @@ Here're some of the project's best features:
 <h2>🛠️ Installation Steps:</h2>
 
 <p>1. Run npm install </p>
-<p>1. Run npm run dev</p>
+<p>1. Run npm start</p>
 
 
 
