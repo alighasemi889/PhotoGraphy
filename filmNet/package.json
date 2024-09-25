@@ -1,0 +1,23 @@
+{
+  "name": "filmnet",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "postcss ./src/css/tailwind.css -o ./public/build/tailwind.css --watch",
+    "prod": "cross-env NODE_ENV=production postcss ./src/css/main.css -o ./public/build/tailwind.css "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.1.0",
+    "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "cssnano": "^7.0.0"
+  }
+}

@@ -1,0 +1,170 @@
+/* Header */
+.header {
+    @apply flex justify-between items-center mt-8
+}
+
+.container_section {
+    @apply container my-0 mx-auto px-4 md:px-0
+}
+
+nav {
+    @apply flex items-center
+}
+
+nav .nav_ul {
+    @apply flex items-center
+}
+
+.nav_ul li:not(:first-child) {
+    @apply hidden lg:block
+}
+
+.nav_ul li {
+    @apply mx-4 text-white
+}
+
+.nav_ul li:hover {
+    @apply mx-4 text-[#1FCCB7]
+}
+
+.nav_link {
+    @apply flex items-center justify-center
+}
+
+.nav_link svg {
+    @apply mr-2
+}
+
+.header_left {
+    @apply flex items-center gap-2
+}
+
+.buy {
+    @apply bg-[#F2F2F2] p-[6px] rounded-md w-[85px] text-sm
+}
+
+/* Main */
+.main {
+    @apply flex xl:justify-between justify-center mt-[150px] gap-4
+}
+
+aside {
+    @apply bg-[#292929] w-[313px] h-auto py-6 px-4
+}
+
+.user_image {
+    @apply flex justify-center items-center flex-col gap-3 border-b-2 border-solid border-[#5B5B5B] pb-4
+}
+
+.user_info {
+    @apply text-white font-medium text-lg
+}
+
+.sidebar_ul, .log_off {
+    @apply mt-6 cursor-pointer
+}
+
+.sidebar_ul li {
+    @apply py-2 text-white
+}
+
+.sidebar_ul .active {
+    @apply bg-[#424242] p-2 rounded-md text-[#1FCCB7]
+}
+
+.sidebar_ul .sidebar_ul_link:hover {
+    @apply bg-[#424242] p-2 rounded-md text-[#1FCCB7]
+}
+
+.sidebar_ul .sidebar_ul_link:hover svg path{
+    @apply fill-[#1FCCB7]
+}
+
+.sidebar_ul_link {
+    @apply flex items-center gap-4 my-2
+}
+
+.log_off {
+    @apply border-t-2 border-solid border-[#5B5B5B] text-white
+}
+
+.main_content-ul {
+    @apply flex lg:justify-start justify-center gap-8 text-white mb-6
+}
+
+.main_content-li-active {
+    @apply text-[#1FCCB7]
+}
+
+.main_content-left {
+    @apply bg-[#292929] w-full lg:w-[832px] px-3 lg:px-6
+}
+
+.main_ul-link {
+    @apply flex items-center gap-6
+}
+
+.main_content-input {
+    @apply flex lg:justify-between flex-col lg:flex-row lg:items-center gap-6 lg:gap-0 my-6 text-[#F2F2F2]
+}
+
+.main_content-input ::placeholder {
+    @apply text-white
+}
+
+input {
+    @apply w-full md:w-[350px] rounded-lg h-[44px] mt-2 px-3 outline-none bg-[#424242]
+}
+
+.main_content-birthday {
+    @apply flex lg:justify-between flex-col lg:flex-row lg:items-center gap-6 lg:gap-0 text-[#F2F2F2]
+}
+
+.select_gender {
+    @apply w-full md:w-[350px] rounded-lg h-[44px] mt-2 px-3 outline-none bg-[#424242]
+}
+
+.main_content-footer {
+    @apply flex flex-col justify-center items-center mt-12 border-t-2 border-solid border-[#5B5B5B] pt-8
+}
+
+.main_content-toggle {
+    @apply flex gap-3 items-center
+}
+
+
+
+
+.buttons {
+    @apply mt-7 flex gap-4
+}
+
+.btn {
+    @apply py-[10px] px-[36px] rounded-lg
+}
+
+.btn-primary {
+    @apply bg-[#1FCCB7] text-black
+}
+
+.btn-secondary {
+    @apply bg-[#5B5B5B] text-white
+}
+
+/* Footer */
+footer {
+    @apply mt-[150px] bg-[#363636] flex justify-center items-center flex-col w-full h-[144px] gap-8
+}
+
+.footer_ul {
+    @apply flex gap-6 justify-center items-center relative flex-wrap
+}
+
+.footer_ul li:not(:last-child)::after {
+    @apply content-[""] absolute w-[2px] h-5 bg-white
+}
+
+
+.footer_ul li a {
+    @apply pl-4 text-white
+}
