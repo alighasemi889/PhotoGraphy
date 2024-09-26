@@ -22,3 +22,10 @@ html {
   height: auto;
   font-size: 1.2rem;
 }/*# sourceMappingURL=signup.css.map */
+
+#main__top{
+  margin-top: 5rem;
+}
+#top{
+  margin-top: 1.9rem;
+}
