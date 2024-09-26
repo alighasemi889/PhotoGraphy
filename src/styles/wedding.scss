@@ -124,3 +124,16 @@ button.signup {
         display: none;
     }
 }
+@media screen and (min-width:1460px) {
+    #bg__wedding{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+@media screen and (min-width:1440px) {
+    #bg__wedding{
+        display: none;
+    }
+}
