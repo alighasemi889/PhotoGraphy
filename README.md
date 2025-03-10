@@ -15,7 +15,6 @@ In the name of god
 <h2>🚀 Demo</h2>
 
 
-https://alighasemi889.github.io/PhotoGraphy/
 
 <h2>Project Screenshots:</h2>
 
